@@ -1,4 +1,4 @@
-=Test page=
+=Test page 1=
 
 **bold text**
 
@@ -6,4 +6,8 @@
 * 2
 * 3
 
-Tests pending...
+Which one works?
+
+[[temp/test.creole|Link to Test page 2 (relative)]]
+
+[[temp/temp/test.creole|Link to Test page 2 (absolute)]]
