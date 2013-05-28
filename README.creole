@@ -2,3 +2,9 @@ NCPDocs
 =======
 
 Documentation for NoCheatPlus
+
+----
+
+This project is still experimental, not sure we will use the wiki or pages within root project. Could be we add automatically generated parts.
+
+[[https://github.com/asofold/NCPDocs/wiki|Wiki on GitHub]]
