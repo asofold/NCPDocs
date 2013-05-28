@@ -16,3 +16,9 @@ It is possible to use the main project: [[temp/test.creole|Test page]]
 In this case we could use the wiki for something else.
 
 Any ideas?
+
+----
+
+For now start with the normal project.
+
+[docs/main.creole|Suggested main page for the docs.]
