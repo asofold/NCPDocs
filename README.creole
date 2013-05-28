@@ -9,4 +9,10 @@ This project is still experimental, not sure we will use the wiki or pages withi
 
 [[https://github.com/asofold/NCPDocs/wiki|Wiki on GitHub]]
 
-[[temp/test.creole|Test page]]
+Pull the wiki with .wiki.git instead of the normal git link.
+
+It is possible to use the main project: [[temp/test.creole|Test page]]
+
+In this case we could use the wiki for something else.
+
+Any ideas?
