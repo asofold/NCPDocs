@@ -21,4 +21,6 @@ Any ideas?
 
 For now start with the normal project.
 
-[[docs/main.creole:main-page|Suggested main page for the docs.]]
+[[docs/main.creole|Suggested main page for the docs.]]
+
+[[https://github.com/asofold/NCPDocs/blob/master/docs/main.creole#main-page|How to link a certain paragraph without url?]]
