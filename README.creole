@@ -9,4 +9,4 @@ This project is still experimental, not sure we will use the wiki or pages withi
 
 [[https://github.com/asofold/NCPDocs/wiki|Wiki on GitHub]]
 
-[[temp/test|Test page]]
+[[temp/test.creole|Test page]]
