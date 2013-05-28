@@ -21,4 +21,4 @@ Any ideas?
 
 For now start with the normal project.
 
-[[docs/main.creole|Suggested main page for the docs.]]
+[[docs/main.creole#main-page|Suggested main page for the docs.]]
