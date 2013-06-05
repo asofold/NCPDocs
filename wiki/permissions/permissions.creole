@@ -1,7 +1,0 @@
-Permissions
-
-[[../main.creole|Back to main]]
-
-[[../main.creole#main-page|Back to main]]
-
-[[../../README.creole|Back to README]]

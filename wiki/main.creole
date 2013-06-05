@@ -1,9 +1,0 @@
-=Main Page=
-
-NoCheatPlus
-
-{{fractal3c_5.bmp|Asteroids Background}}
-
-[[configuration/configuration.creole|Configuration]]
-
-[[permissions/permissions.creole|Permissions]]
