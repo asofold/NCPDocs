@@ -25,4 +25,4 @@ For now start with the normal project.
 
 [[https://github.com/asofold/NCPDocs/blob/master/wiki/main.creole#main-page|URL link to header of main page.]]
 
-[[wiki/main.creole:main-page|How to link a certain paragraph without url?]]
+[[wiki/main.creole?main-page|How to link a certain paragraph without url?]]
