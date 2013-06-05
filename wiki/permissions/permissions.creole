@@ -1,3 +1,12 @@
 =Permissions=
 
 [[../main.creole|Back to main page.]]
+
+| Category      | Permission    | Explenation |
+| ------------- |:-------------:| -----:      |
+| Administration|               |             |
+|               | nocheatplus.admin.info      | The player gets access to the "/nocheatplus info" command, which can display all the information about a player.            |
+|               | nocheatplus.admin.notify    | The player will receive notifications through the in-game chat of players failing NoCheatPlus checks.                       |
+|               | nocheatplus.admin.lag       | Gives access to the "/ncp lag" commend which shows info about server latency.                                               |
+|               | nocheatplus.admin.reload    | The player gets access to the "/nocheatplus reload" command, which will cause NoCheatPlus to reread its config files.       |
+|               | nocheatplus.admin.plugins   | Allows the player to execute the "/plugins" or "/pl" command(protectplugins has be set to true in the configuration file).  |
