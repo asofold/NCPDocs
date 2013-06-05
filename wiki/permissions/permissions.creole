@@ -1,3 +1,5 @@
 Permissions
 
-[[../main.creole|Back to readme]]
+[[../main.creole|Back to main]]
+
+[[../../README.creole|Back to main]]
