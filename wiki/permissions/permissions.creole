@@ -3,7 +3,6 @@
 [[../main.creole|Back to main page.]]
 
 | Category      | Permission    | Explenation |
-| ------------- |:-------------:| -----:      |
 | Administration|               |             |
 |               | nocheatplus.admin.info      | The player gets access to the "/nocheatplus info" command, which can display all the information about a player.            |
 |               | nocheatplus.admin.notify    | The player will receive notifications through the in-game chat of players failing NoCheatPlus checks.                       |
