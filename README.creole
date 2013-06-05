@@ -5,4 +5,4 @@ Documentation for NoCheatPlus
 
 ----
 
-[[wiki/overview.creole|Link to wiki overview page.]]
+[[wiki/main.creole|Link to wiki overview page.]]
