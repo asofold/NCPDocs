@@ -1,6 +1,6 @@
 =NoCheatPlus=
 
-{{fractal3c_5.bmp|Asteroids Background, Cheers!}}
+{{fractal3c_5.jpg|Asteroids Background, Cheers!}}
 
 [[permissions/permissions.creole|Permissions]]
 
