@@ -1,0 +1,9 @@
+==BlockBreak==
+Direction: Min: 2 Max: 5
+FastBreak: Min: 1 Max: 6
+
+Problem: Information about different checks is scattered around different documents "almost randomly".
+
+Might do instead: Some "quick overview pages", but the core information about one check is on one page (permission + description + config + vl-description).
+
+How to: Might auto-generate parts of the wiki to be able to construct pages of other pages?
