@@ -6,4 +6,4 @@ Problem: Information about different checks is scattered around different docume
 
 Might do instead: Some "quick overview pages", but the core information about one check is on one page (permission + description + config + vl-description).
 
-How to: Might auto-generate parts of the wiki to be able to construct pages of other pages?
+How to: Might auto-generate parts of the wiki to be able to construct pages of other pages? OR just do it by hand and copy and paste if needed (more maintainance but easier editing).
