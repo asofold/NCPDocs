@@ -1,0 +1,3 @@
+==BlockBreak==
+Direction: Min: 2 Max: 5
+FastBreak: Min: 1 Max: 6
