@@ -1,0 +1,27 @@
+=Debugging=
+In order to test out bugs better you have three major options.
+
+**All these options are not really meant for (big) production servers, they can cause extreme console output and performance issues.**
+
+Mostly console output will be interesting, but also the in-game chat might be useful, check the output-client.log file to not need to use screenshots.
+
+==NCP Debug Output==
+
+For the most detailed output use a development build of NCP (or manually edit BuildParameters.properties in the jar and set DEBUG_LEVEL to something like 10000).
+
+Then set a/the check-group debug flat, like //moving.debug// to true.
+
+NoCheatPlus allows to set debug flags for almost all check groups. The flag in the logging section can also be set, but it will not lead to more check-output.
+
+
+==TestNCP==
+This plugin is found at the project site of NCPTools on BukkitDev. TestNCP allows you receiving console and in-game output for every violation, even if logging would not normally show the message due to low VL for instance.
+
+The plugins configuration allows setting testers, wither '*' for all players (spam), or the player names for distinct players.
+
+Input about violations can be confined to individual players using // /testncp input (player)//
+
+==EventMirror==
+This plugin is found at the project site of NCPTools on BukkitDev. EventMirror sends in-game info about players actions, to allow checking if certain events happened at all. It does not cover all existing events, though.
+
+Any Player can use // /mirror// to receive events in-game. The messages are restricted to the player that is involved.

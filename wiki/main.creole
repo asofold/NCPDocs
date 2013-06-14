@@ -5,3 +5,5 @@
 [[permissions/permissions.creole|Permissions]]
 
 [[configuration/configuration.creole|Configuration]]
+
+[[debugging/debugging.creole|Testing and Debugging]]
