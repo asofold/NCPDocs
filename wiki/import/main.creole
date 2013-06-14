@@ -1,0 +1,49 @@
+<<center>>{{https://dl.dropbox.com/u/34835222/NoCheatPlus_doughnut.png|NoCheatPlus}}<</center>>
+<<center>><<size 16px>>**Detect and fight the exploitation of various flaws/bugs in Minecraft!**<</size>><</center>>
+
+<<center>>{{https://dl.dropbox.com/u/14180705/NoCheatPlus/ButtonsHover/Main.gif|Main}}
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/features/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Features.gif|Features}}]]
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/permissions/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Permissions.gif|Permissions}}]]
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/commands/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Commands.gif|Commands}}]]
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/configuration/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Configuration.gif|Configuration}}]] [[http://dev.bukkit.org/server-mods/nocheatplus/pages/nocheat-plus-development/jenkins/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Jenkins.gif|Jenkins}}]]
+<</center>>
+
+===<<color #1999e4>>Introduction<</color>>===
+NoCheatPlus is an unofficial fork of the famous anti-cheat plugin [[http://dev.bukkit.org/server-mods/nocheat/|NoCheat]] created by [[http://dev.bukkit.org/profiles/Evenprime85/|Evenprime]]. NoCheatPlus attempts to enforce "vanilla Minecraft" mechanics, as well as preventing players from abusing weaknesses in Minecraft or its protocol, making your server safer. Organized in different sections, various //checks// are performed to test players doing, covering a wide range including flying and speeding, fighting hacks, fast block breaking and nukers, inventory hacks, chat spam and other types of malicious behaviour. For a more complete list have a look at the [[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/features/|Features Page]].
+
+NoCheatPlus still puts emphasis on configurability and allows you to alter all actions that are carried out when a player fails a check, according to your needs. So you can just have players actions be silently cancelled, log their actions to in-game chat or files, or let arbitrary commands be executed, all possible to be differentiated by the //level of violation//. Many aspects can be configured on a per world basis as well, there are plenty of bypass permissions for individual checks and you can also alter other aspects such as allowed speeds for walking, sprinting, flying, and more!
+
+Certainly NoCheatPlus is not a magical bullet, it uses a lot of heuristics and even guessing mixed with exact analysis as well as rather statistical judgement methods, so you will encounter false positives here and there and also not catch every single violation. One of the strengths of NoCheatPlus is the configurability, if your server happens to get many false positives you can apart from filing a support request also lessen the punishments by configuration or even deactivate the check if you want to allow players doing something.
+
+Protective plugins also have to take part in the classical cat and mice play, expect hack clients to update now and then, forcing protection plugins to also update, if you find any flaws or uncovered hacks, you can help us improving the plugin by telling us!
+
+===<<color #1999e4>>Video<</color>>===
+<<youtube H8BSpXfrtzI>>
+
+===<<color #1999e4>>Downloads and more<</color>>===
+* Download officially approved versions on the [[http://dev.bukkit.org/server-mods/nocheatplus/files/|Files]] page at BukkitDev.\\
+* Development builds have been moved over to the [[http://dev.bukkit.org/server-mods/nocheatplus/pages/nocheat-plus-development/jenkins/|Jenkins at EcoCityCraft]].
+* <<color RED>> Do not download from any other source, do not use jars other people send you.<</color>>
+* Changes by build number can be examined in the Jenkins [[http://dev.bukkit.org/server-mods/nocheatplus/pages/nocheat-plus-development/jenkins/|changes list]].
+* All commits can be seen in the GitHub [[https://github.com/NoCheatPlus/NoCheatPlus/commits/master|commit history]].\\
+* Developers might have a look at the [[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/api/|page describing the API]] of NoCheatPlus.
+* Plugin statistics are reported to [[http://mcstats.org/plugin/NoCheatPlus|mcstats.org]].
+
+===<<color #1999e4>>Support<</color>>===
+Consider first: [[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/faq/|Frequently asked Questions]] and [[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/known-issues/|Known Issues]].\\
+Quick questions can be asked on this page, for real issues or feature requests please create a [[http://dev.bukkit.org/server-mods/nocheatplus/create-ticket/|new ticket]] or add to an [[http://dev.bukkit.org/server-mods/nocheatplus/tickets/|existing ticket]].
+To send information that is not to be seen by all, you can also reach us by PM to [[http://dev.bukkit.org/home/send-private-message/|@asofold]] and [[http://dev.bukkit.org/home/send-private-message/|@MyPictures]].
+\\//Please state versions of NoCheatPlus, CraftBukkit, and if used cncp, otherwise we have to ask back. //
+\\<<color RED>> Please do not contact the user 'NoCheatPlus', it is for administrative purposes only and will likely not be answered in time. **Keep to BukkitDev and GitHub for support, do not trust users on other forums or websites, also not if their nick names are the same as NCP staff on BukkitDev.**<</color>>
+
+===<<color #1999e4>>Recommended<</color>>===
+The following plugins might be useful to have a look at.
+==== [[http://dev.bukkit.org/server-mods/compatnocheatplus-cncp/|CompatNoCheatPlus]] ====
+You have plugins like [[http://dev.bukkit.org/server-mods/mcmmo/|mcMMO]], [[http://dev.bukkit.org/server-mods/citizens/|Citizens]], [[http://dev.bukkit.org/server-mods/magicspells/|MagicSpells]] or [[http://dev.bukkit.org/server-mods/machinacraft/|MachinaCraft]]? NoCheatPlus would prevent skill use or NPCs actions on basis of what is allowed on vanilla Minecraft only, so to make it compatible with other plugins CompatNoCheatPlus provides a platform to do so. Not all possible plugins are covered (yet), but you can leave a note or ticket request there stating the plugin in question and what actions fail and which checks alert, maybe something can be done about it soon!
+==== [[http://dev.bukkit.org/server-mods/orebfuscator/|Orebfuscator]] ====
+Orebfuscator fights all sorts of X-ray-hacks by altering the map information that is sent to the players, such that they have to mine blocks to actually reveal what is behind. Orebfuscator also can hide chests out of visible range. It is not exactly light weight but can be configured to use less resources, it is certainly a "must look at".
+
+===<<color #1999e4>>Sponsors<</color>>===
+**Donators:** Thanks to all donators out there that support us!\\
+**RockServer:** Big thanks for giving us a vServer  where we can host our Jenkins, DevelopmentServer and websites on!\\
+[[https://www.rock-server.de/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/rockserverhd.png|Our work for your enjoyment}}]] [[http://minecraft-server.me/#!/list|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/bg-logo.png|MinecraftServer}}]]

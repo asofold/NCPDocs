@@ -1,0 +1,82 @@
+<<center>>{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Banners/Permissions.jpg|Permissions}}<</center>>
+
+== Permissions ==
+NoCheatPlus only supports "SuperPerms", CraftBukkit's official permission framework. You'll need to use a permissions plugin that supports "SuperPerms" to use it with NoCheatPlus. Here are some I know of:
+
+   * bPermissions;
+   * PermissionsEx;
+   * Essentials GroupManager.
+
+I personally recommend bPermissions, but any of them will do just fine.
+
+By default all these permissions are set to "op", which means players with OP-status have all permissions, unless you change it.\\\\
+
+=== Content ===
+|=|=Permission|= Explanation|
+|**Administration**|||
+||nocheatplus.admin.chatlog|The player will receive log messages that are directed at the "ingame chat" as a normal chat message ingame.|
+||nocheatplus.admin.commands|The player gets access to some of the "/nocheatplus" commands.|
+||nocheatplus.admin.reload|In combination with "nocheatplus.admin.commands", the player gets access to the "/nocheatplus reload" command, which will cause NoCheatPlus to reread its config files.|
+||nocheatplus.admin.plugins|Give this permissions to the players you want to be able to see the plugins your server is using.|
+|**Checks**|||
+|BlockBreak|nocheatplus.checks.blockbreak.fastbreak|Allows the player to break blocks very quickly.|
+||nocheatplus.checks.blockbreak.reach|Allows the player to break blocks that are further away than usual.|
+||nocheatplus.checks.blockbreak.direction|Don't force players to look at the blocks that they try to destroy.|
+||nocheatplus.checks.blockbreak.noswing|Don't force players to swing their arm when breaking blocks.|
+|BlockPlace|nocheatplus.checks.blockplace.fastplace|Allows the player to place blocks very quickly.|
+||nocheatplus.checks.blockplace.reach|Allows the player to place blocks that are further away than usual.|
+||nocheatplus.checks.blockplace.direction|Don't force players to look at the blocks that they try to place.|
+||nocheatplus.checks.blockplace.projectile|Allows the player to throw projectiles very quickly, like expbottles, eggs, monster eggs, eyes of ender, ender pearls. This is usually used by griefers to level up very quickly or to crash the server by spawning too much mobs.|
+||nocheatplus.checks.blockplace.autosign|Allows the player to place multiple signs with the same text. This is usually used by griefers to place quickly a lot of signs with their signature.|
+|Chat|nocheatplus.checks.chat.nopwnage|Don't limit the number of messages and commands that a player may send in a short timeframe, the delay allowed to join the server again, etc. in short everything watched by the NoPwnage check.|
+||nocheatplus.checks.chat.arrivalslimit|Don't limit the number of new players allowed to join in a short timeframe.|
+||nocheatplus.checks.chat.color|Don't filter color codes from messages that get sent by players, allowing them to use colors in their messages.|
+|Fight|nocheatplus.checks.fight.direction|Don't force players to look at their targets while fighting.|
+||nocheatplus.checks.fight.noswing|Don't force players to move their arms while fighting.|
+||nocheatplus.checks.fight.reach|Don't limit the distance for fights.|
+||nocheatplus.checks.fight.speed|Don't limit the number of attacks that the player can do per second.|
+||nocheatplus.checks.fight.godmode|Don't prevent the player from keeping the temporary invulnerability that he gets when taking damage.|
+||nocheatplus.checks.fight.instantheal|Don't prevent the player from accelerating their health generation by food saturation.|
+||nocheatplus.checks.fight.knockback|Don't prevent the player from doing knockbacks when it's not technically possible (if he hasn't really run [if he has just sent the packet before attacking the entity]).|
+||nocheatplus.checks.fight.critical|Don't prevent the player from doing critical hits when it's not technically possible (if he hasn't really jumped/fallen [if he has just sent a packet before attacking the entity]).|
+||nocheatplus.checks.fight.angle|Don't prevent the player from attacking multiple entities at the time (this check is mostly triggered when a player is using a forcefield).|
+|Inventory|nocheatplus.checks.inventory.drop|Don't limit the number of items that a player may drop within a short time.|
+||nocheatplus.checks.inventory.instantbow|Don't prevent players from shooting their bows instantly without taking the usual time to pull the string back.|
+||nocheatplus.checks.inventory.instanteat|Don't prevent players from eating their food instantly without taking the usual time to munch on it.|
+|Moving|nocheatplus.checks.moving.runfly|Allows the player to move freely. It also treats the player as if he has the ".flying", ".swimming", ".sneaking" and ".nofall" permission too.|
+||nocheatplus.checks.moving.flying|Allows the player to fly, independent of if he is in "creative mode" or not. He will be limited in speed by the config settings "flyingspeedvertical" and "flyingspeedhorizontal". It also treats the player as if he has the ".nofall" permission too.|
+||nocheatplus.checks.moving.nofall|Allows the player to avoid fall damage by using hacks. Normally NoCheatPlus will keep track of a player's movement and try to rectify the fall-damage calculations of Minecraft in case they seem to be wrong because of players tricking the server.|
+||nocheatplus.checks.moving.swimming|Allows the player to swim as fast as he is allowed to walk. Normally a player swims slower than he walks and NoCheatPlus prevents faster movement in water.|
+||nocheatplus.checks.moving.sneaking|Allows the player to sneak faster than he is allowed to walk. Normally a player sneaks a lot slower than he walks and NoCheatPlus prevents faster movement while sneaking.|
+||nocheatplus.checks.moving.blocking|Allows the player to move faster than he is allowed while blocking. Normally a player move a lot slower while blocking than when he walks and NoCheatPlus prevent faster movement while blocking. Please note this will also allow the player to attack an entity while blocking (which is not possible with an un- modified client).|
+||nocheatplus.checks.moving.cobweb|Allows the player to move fast than he is allowed while being into cobweb. Normally a player more a lot slower than when he walks and NoCheatPlus will try to prevent that kind of behavior.|
+||nocheatplus.checks.moving.morepackets|Allows players to make a lot more movements than normally possible. Doing more movements will result in faster overall movement speed and causes the server to spend a lot of additional time for processing these movements.|
+||nocheatplus.checks.moving.morepacketsvehicle|Allows players to make a lot more movements (while being in a vehicle) than normally possible. Doing more movements will result in faster overall movement speed and causes the server to spent a lot of additional time for processing these movements.|
+||nocheatplus.checks.moving.waterwalk|Allows players to walk on water (by using a griefing client). This functionality is also called Jesus mode.|
+||nocheatplus.checks.moving.respawntrick|Allows player to respawn on top if they are blocked by a gravel or a sand block (instead of removing the blocks blocking them). This is usually used by players to go quickly to the surface when they are in their mines).|
+||nocheatplus.checks.moving.boatonground|Allows players to place boats on the ground (and not only on the water).|
+|**Modifications**|||
+||nocheatplus.mods.cjb.fly|Don't prevent the player from using CJB's fly mod.|
+||nocheatplus.mods.cjb.xray|Don't prevent the player from using CJB's xray.|
+||nocheatplus.mods.cjb.radar|Don't prevent the player from using CJB's radar.|
+||nocheatplus.mods.minecraftautomap.ores|Don't prevent the player from using Minecraft AutoMap's ores detector.|
+||nocheatplus.mods.minecraftautomap.cave|Don't prevent the player from using Minecraft AutoMap's cave mode.|
+||nocheatplus.mods.minecraftautomap.radar|Don't prevent the player from using Minecraft AutoMap's radar.|
+||nocheatplus.mods.rei.cave|Don't prevent the player from using Rei's Minimap's cave mode.|
+||nocheatplus.mods.rei.radar|Don't prevent the player from using Rei's Minimap's radar.|
+||nocheatplus.mods.smartmoving.climbing|Don't prevent the player from using Smart Moving's climb.|
+||nocheatplus.mods.smartmoving.swimming|Don't prevent the player from using Smart Moving's swim.|
+||nocheatplus.mods.smartmoving.crawling|Don't prevent the player from using Smart Moving's crawl.|
+||nocheatplus.mods.smartmoving.sliding|Don't prevent the player from using Smart Moving's slide.|
+||nocheatplus.mods.smartmoving.jumping|Don't prevent the player from using Smart Moving's jump.|
+||nocheatplus.mods.smartmoving.flying|Don't prevent the player from using Smart Moving's fly.|
+||nocheatplus.mods.zombe.fly|Don't prevent the player from using Zombe's fly mod.|
+||nocheatplus.mods.zombe.xray|Don't prevent the player from using Zombe's noclip.|
+||nocheatplus.mods.zombe.cheat|Don't prevent the player from using Zombe's cheat.|\\
+
+=== Things to know about Permissions ===
+You can exclude a specific player from getting logged by appending ".silent" to the relevant permission node of the specific check. E.g.\\
+
+   * **nocheatplus.checks.moving.nofall.silent**\\
+
+will prevent NoCheatPlus from recording log messages for that player for the "nofall" check, while still executing all other actions as usual. These silent permissions won't show up elsewhere, e.g. when using the "nocheatplus permlist" command.

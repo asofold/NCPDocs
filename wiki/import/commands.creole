@@ -1,0 +1,26 @@
+== Commands ==
+
+[[http://dev.bukkit.org/server-mods/nocheatplus/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Main.gif|Main}}]]
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/features/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Features.gif|Features}}]]
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/permissions/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Permissions.gif|Permissions}}]]
+{{https://dl.dropbox.com/u/14180705/NoCheatPlus/ButtonsHover/Commands.gif|Commands}}
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/configuration/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Configuration.gif|Configuration}}]]
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/nocheat-plus-development/jenkins/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Jenkins.gif|Jenkins}}]]
+
+Latest version of NoCheatPlus integrate a lightweight and really efficient command system. It's allowing you to speedly exempt some players or to check data about a player. 
+The page here aim to give you a basic knowledge of this commands, for further information and more complicated commands we recommend you to type "/ncp commands" in chat and read the information. 
+
+==Permissions==
+All commands are located under the __nocheatplus.admin__ node. You can give a player access to a specific command by giving them the __nocheatplus.admin.//CommandName//__ permission in the usual permission files. For further information about permissions in NoCheatPlus, we recommend looking at the [[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/permissions/|permissions page]]. 
+
+==Commands list==
+**Argument in () are needed, while arguments in [] are optimal.**
+|=Commands|= Explanation|
+|**/ncp reload** | Reload NoCheatPlus configuration. Run this after a configuration change. 
+|**/ncp info (player)** | Display the violations levels of a given player
+|**/ncp lag** | Show info about lag. The average lag shows the percentage of the server running too slow (0% = 20 tps, 10% = 18 tps) for the last 1 second, 3.33 and 270 seconds, roughly. Also lag spikes are displayed, tracked over at most 1 hour with a resolution of 20 minutes buckets (i.e. not exact) for spikes > 150 ms (3x to 20x) and spikes > 1000 ms (20x +).
+|**/ncp removeplayer (player)** [check_type] | Remove all the data collected by NoCheatPlus so far for a given player. You can specify which checks are affected. 
+|**/ncp exempt (player)** [check_type] | Exempt a player from being checked by NoCheatPlus or by a specific check. 
+|**/ncp unexempt (player)** [check_type] | Remove any exemption you given to a specified player. 
+|**/ncp exemptions (player)** [check_type] | Show a player exemptions
+|**/ncp commands** | List all commands, more than shown here. The other commands are mainly for use with actions, such as delaying other commands, kicking with messager, telling players colored messages, deny login for a player, allow it again, and other.

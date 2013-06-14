@@ -1,0 +1,492 @@
+<<center>>{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Banners/Configuration.jpg|Configuration}}<</center>>
+
+<<center>>
+[[http://dev.bukkit.org/server-mods/nocheatplus/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Main.gif|Main}}]]
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/features/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Features.gif|Features}}]]
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/permissions/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Permissions.gif|Permissions}}]]
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/commands/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Commands.gif|Commands}}]]
+{{https://dl.dropbox.com/u/14180705/NoCheatPlus/ButtonsHover/Configuration.gif|Configuration}}
+[[http://dev.bukkit.org/server-mods/nocheatplus/pages/nocheat-plus-development/jenkins/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Jenkins.gif|Jenkins}}]]
+<</center>>
+
+== Defaults about config.yml ==
+
+* The config file for NoCheatPlus is called "config.yml" now.
+* You can have different config files for different worlds. To achieve this, copy the "config.yml" and rename the copy to "worldname_config.yml". Settings in that file will now only affect the world with the name "worldname". You may also delete all settings from that world-specific file that you won't use. They'll be implicitly taken from the master "config.yml" file.
+* If you have files named "config.txt", "default_actions.txt" or "actions.txt" please delete them. They are no longer used by NoCheatPlus and serve no purpose anymore.
+* Never change the amount of white-spaces in front of options in the config file "config.yml". It will break the configuration.
+\\ \\
+== How "actions" work, an overview ==
+
+NoCheatPlus allows defining in detail what should happen when a player fails a check in form of "actions". There are 4 possible things that may be done: \\
+|**Action**|**Description**|
+|**cancel**|The effects of the action "cancel" depend on the check that it is used for. Usually it means to prevent something from happening, e.g. stop an attack or prevent sending of a chat message.|
+|**log**|Create and show/log a message. Log messages can be customized in how often, when and where they are registered/shown.|
+|**cmd**|Execute a command of Bukkit or another plugin as if it were typed into the server console by an admin. Like logging, these can be customized.|
+|**vl>X**|Is meant to symbolize "violation level at least X". Used to define actions that will be executed only if players reached a certain violation level. Failing a check usually increases their "vl", not failing checks reduces it over time. Violation levels mean different things for different checks, e.g. they may describe moved distance beyond the limit, number of attacks above the attack limit, sent messages beyond the spam limit.|
+\\ \\
+== How to customize your "actions" ==
+**<<size 16>>Cancel:<</size>>**  Depended on the check you can use "cancel" to prevent something from happening.
+
+\\
+**<<size 16>>Log:<</size>>** The "log" action is a string of the form "log:string:delay:repeat:target".
+|**Action**|**Description**|
+|**log**|Is simply used to let NoCheatPlus know it is a log action. Don't remove it from the action, or NoCheatPlus will not know what it is and how to handle it.|
+|**string**|Is the message that will be logged. Because there is so little space here, you only give a name here and define the actual log message in the "strings" section of the config file.|
+|**delay**|A number declaring how many times that action initially has to be executed before it really leads to logging a message. Use this for situations where it's common to have false positives in checks and you only want the log message to be shown if a player fails the check multiple times within a minute.|
+|**repeat**|A number declaring how many seconds have to pass after logging the message before it will be logged again for that player. This is needed to prevent "log-spam". Usually a value of 5 seconds is acceptable, for rare events you can use lower values. It is recommended to at least use the value 1 (one second) here.|
+|**target**|Where should the message be logged to? You can use three letters here. The order that you use is not important. "**c**" means logging to console "**i**" means logging to ingame chat and "**f**" means logging to the log file.|
+\\
+**<<size 16>>Cmd:<</size>>** The "cmd" action is a string of the form "**cmd:string:delay:repeat**".
+|**Action**|**Description**|
+|**cmd**|Is simply used to let NoCheatPlus know it is a command action. Don't remove it from the action, or NoCheatPlus will not know what it is and how to handle it.|
+|**string**|Is the command that will be issued. Because there is so little space here, you only give a name here and define the actual command in the "strings" section of the config file.|
+|**delay**|A number declaring how many times that action initially has to be executed before it really leads to running the command in the console. Use this to create e.g. a 3-strikes-law by setting it to 3. Only if a player fails the check 3 times within 1 minute, the command will be really run.|
+|**repeat**|A number declaring how many seconds have to pass after running the command before it can be run again for that player. Because many commands are expensive (take time, resources), you may want to limit how often they can be called.|
+The ":delay:repeat" part can be omitted\\
+\\
+**<<size 16>>Vl:<</size>>** The "vl>" isn't really an action. It limits all actions that are written afterwards to be only executed if the players’ violation level has reached at least the given value. This allows defining layers of actions and handling repeated or severe failing of checks different. For example the spam check will only kick players if they reach a certain violation level (vl). \\**Currently you have to use vl>... with a log action like "vl>50 log:...", otherwise it would not work.**
+
+\\ \\
+===**Uncategorized**===
+|**Config**|**Description**|**Default**|
+|savebackconfig|If set to false, NoCheatPlus will not save the config back with default values filled in, this is useful to keep world-configs minimal, for instance to just set some checks to not active.|true|
+=== **Logging Section** ===
+Everything that in general has to do with controlling NoCheatPlus logging can be found at this part of the config.yml.
+
+\\ \\
+|**Config**|**Description**|**Default**|
+|**active**|Should messages get logged at all. If you are not interested in messages, set this to false and you'll hear and see (almost) nothing of NoCheatPlus.|true|
+|**debug**|Should some additional messages be displayed in the server console, e.g. about NoCheatPlus encountering lag. The displayed messages may change from version to version.|false|
+|**console**|Should the server console be used to display messages. Set to false if you don't want NoCheatPlus to show messages related to checks in the console. Error messages may still get displayed there though.|true|
+|**file**|Should the logfile be used at all. Set to false if you don't want to use the logfile.|true|
+|**filename**|The name of the logfile that NoCheatPlus will use to log its messages. The default name is "nocheatplus.log", but you can use a different one if you want to.|nocheatplus.log|
+|**ingamechat**|Should NoCheatPlus display messages in the ingame chat? Set to false if you want to disable all check-failure notification messages globally.|true|
+
+\\ \\
+=== **Miscellaneous Section** ===
+Everything that has nothing to do with the other categories
+
+|**Config**|**Description**|**Default**|
+|**allowclientmods**|Allow all your players to use all the client mods (Zombe, CJB, Rei's Minimap, Minecraft AutoMap and Smart Moving).|false|
+|**opbyconsoleonly**|Only allow the commands /op and /deop to be executed by the console.|false|
+|**protectplugins**|Don't not allow your players to access the /plugins, /pl, /? commands by default. Of course, the players having the explicit permission to use them won't be blocked.|true|
+|**managelisteners**|Use the "ListenerManager" to only register one event per type+priority with Bukkit. Also allows for reliable registration order for compatibility hooks. //This is not yet used, and since 1.4.5/1.4.6 we are not sure it registers correctly. So unless you are a developer in need of it (or interested in),  don't use this feature.//|false|
+|**reporttometrics**|Should NoCheatPlus send anonymous statistics to this site: https://mcstats.org/plugin/NoCheatPlus|true|
+|//lag (Hidden)//|//Should NC+ adapt the checks to be less intensive if the server gets a lag spike?//|//true//|
+
+\\ \\
+=== **Data Section** ===
+The data section allows you to specify an expiration duration for players data in minutes. If set to something greater than 0, this will periodically remove players data if the players have been logged out for longer than the specified amount of minutes. At present this would also delete set-back locations and current violation levels, if activated, so it should not be set to a too short duration.
+
+**Expiration:**
+|**Config**|**Description**|**Default**|
+|**duration**|Duration in minutes after logout, after which data gets erased.|0|
+|**history**|Should the players violation history also be deleted?|false|
+
+\\ \\
+=== Checks Section ===
+==== **<<size 18px>>Blockbreak Subsection<</size>>** ====
+Checks that at least technically have to do with the player breaking blocks.
+
+\\ \\
+**<<size 16px>>Frequency:<</size>>** This check monitors how many blocks a player breaks within some time. There is a general buffer counting in 2 seconds by default and allowing to accumulate as many blockbreaks as fit into the time given the intervalcreative and/or intervalsurvival settings interpreted as durations. In addition it has a short term setting, also counting the blocks within the last n ticks and limiting the short term amount. This way players cannot break 20 blocks at once and then pause for a second or two.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**intervalcreative**|The minimal interval in milliseconds between two block breaks assumed to be ok, for players in creative mode.|95|
+|**intervalsurvival**|The minimal interval in milliseconds between two block breaks assumed to be ok, for players //not// in creative mode.|45|
+|**shortterm** ticks|Number of server ticks to count for short term checking.|5|
+|**shortterm** limit|Maximal number of blocks to be allowed to break within the specified ticks.|7|
+
+
+\\ \\
+**<<size 16px>>Fastbreak:<</size>>** This check enforces realistic block breaking duration's for survival mode.
+|**Config**|**Description**|**Default**|
+|**active**|Should players be checked for this behavior.|true|
+|**strict**|If set to true, this check will measure the time from interaction to block break. If set to false, it will measure the time from block break to block break, which allows one cheated fast break always, but enforces normal speed for sequences of block breaks, being less strict in laggy environments, or in case the server mod does the interact events differently.|true|
+|**intervalsurvival**|Modifier for block breaking in survival mode. Do not set to something higher or all block breaking is likely to become violations.|100|
+|**delay**|This is a time in milliseconds that you are always allowed to mine faster than the normal breaking time. This is to account for minimum delays, such as events getting delayed by a server tick. This also means that every block with a lower breaking time can be mined "instantly", still covered by the blockbreak.frequency check, though. Default is somewhere around 100 ms (a tenth of a second), in addition to increasing the grace amount this can be used to deal with more lag. Settings should be tested using the blockbreak.debug or the fastbreak.debug flag to see the difference in timing (Permission nocheatplus.admin.debug - delete stats with /ncp remove <player>).|90|
+|**grace**|This is the amount of "time mined too fast" in milliseconds the players may accumulate before triggering a violation. The accumulation keeps track of the last two minutes with a four-seconds-resolution. The default value of 2000 allows you to mine two seconds faster than allowed within 2 minutes, roughly, to account for a little bit of lag. Servers with strong lag spikes might increase this value, or just to be more easy on players with too bad connections.|2000|
+
+\\ \\
+**<<size 16px>>WrongBlock:<</size>>** This check enforces that the player can only break blocks that he has interacted with before. It might lead to some false positives for instantly breakable materials involved, but usually high vls should be difficult to reach with normal clients.\\
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**level**|Accumulated value after which to trigger a violation.|10|
+
+\\ \\
+**<<size 16px>>Reach:<</size>>** Players may slightly increase the distance at which they can break blocks. This check will try to identify that by comparing player and block location.
+|**Config**|**Description**|**Default**|
+|**active**|Should players be checked for this behavior.|true|
+
+\\ \\
+**<<size 16px>>Direction:<</size>>** Players may break blocks without really looking at them. This is often combined with breaking a lot of blocks surrounding the player at the same time.
+|**Config**|**Description**|**Default**|
+|**active**|Should players get checked for this type of hack.|true|
+
+\\ \\
+**<<size 16px>>Noswing:<</size>>** Players may break blocks without moving their arm. This is confusing for nearby players, as they won't see who broke the blocks.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|
+
+\\ \\
+==== **<<size 16px>>Blockinteract Subsection<</size>>** ====
+Checks that at least technically have to do with the player interacting to blocks.
+
+\\ \\
+**<<size 16px>>Direction:<</size>>** Checks if the players is looking at the block, roughly.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|
+
+\\ \\
+**<<size 16px>>Reach:<</size>>** Interacting with blocks out of reach.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|
+
+\\ \\
+==== **<<size 16px>>Blockplace Subsection<</size>>** ====
+Checks that at least technically have to do with the player placing blocks.
+
+\\ \\
+**<<size 16px>>Fastplace:<</size>>** This check will prevent players from placing blocks too quickly by checking the interval of time elapsed since they've placed their last block. This should prevent players from using the features called "FastPlace" and "Build" of their griefing client.
+|**Config**|**Description**|**Default**|
+|**active**|Should players be checked for this behavior.|true|
+|**limit**|What's the allowed block place limit? ToDo|22|
+|**shortterm** ticks|ToDo|10|
+|**shortterm** limit|ToDo|6|
+
+\\ \\
+**<<size 16px>>Reach:<</size>>** Players may slightly increase the distance at which they can place blocks. This check will try to identify that by comparing player and block location.
+|**Config**|**Description**|**Default**|
+|**active**|Should players be checked for this behavior?|true|
+
+\\ \\
+**<<size 16px>>Direction:<</size>>** Players may place blocks without really looking at them. This is often combined with placing a lot of blocks in a certain shape.
+|**Config**|**Description**|**Default**|
+|**active**|Should players get checked for this type of hack?|true|
+
+\\ \\
+**<<size 16px>>Speed:<</size>>** Players may throw projectiles (experience bottles, eggs, monster eggs, eyes of ender, ender pearls) really quickly in order to crash the server.
+|**Config**|**Description**|**Default**|
+|**active**|Should players get checked for this type of hack?|true|
+|**interval**|The time (in milliseconds) between each thrown projectile. It takes more than 150 ms if the player is keeping its right button pressed.|45|
+
+\\ \\
+**<<size 16px>>Noswing:<</size>>** Players may place blocks without moving their arm. This is confusing for nearby players, as they won't see who placed the blocks.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|
+
+==== **<<size 16px>>Chat Subsection<</size>>** ====
+Checks that at least technically have to do with chat or commands.
+
+\\ \\
+**<<size 16px>>Color:<</size>>** Remainder of the old days, removes color from chat and commands.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|
+
+\\ \\
+**<<size 16px>>Commands:<</size>>** Simple commands frequency check. Also has a "shortterm" setting which monitors only a couple of ticks.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|
+|**exclusions**|A list of commands to exclude from the commands check. Case insensitive. The command has to match complete words, you cant add "/test" to allow "test123", whereas it is possible to use entries like "/region info" to exclude just that sub command.|-|
+|**handleaschat**|A list of commands to be handled by the text check instead, typically "/me". Matching is the same principle as with exclusions.|-|
+|**level**|Level for which to generate a violation.|10|
+|**shortterm** ticks|Number of server ticks to count commands for shortterm checking.|18|
+|**shortterm** level|Level for which to generate an exception.|3|
+
+\\ \\
+**<<size 14>>Captcha:<</size>>** This is not yet an independent check, if activated it will be used for the commands and the text checks in case of violations.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|false|
+|**characters**|Which chars should be used to generate a captcha code?|-|
+|**length**|How many characters should the captcha have?|6|
+|**question**|How should the question be worded? Use & to create colors. The text [captcha] will be replaced with the actual captcha.|-|
+|**success**|What message should be printed out if the player answers with the right capcha code?|-|
+|**tries**|How many attempts will a player have to give the correct answer. A failed attempt will display the question again. Be generous here, as players may not be fast enough to read the question the first few times or be otherwise distracted.|3|
+
+\\ \\
+**<<size 16>>Text:<</size>>** This combines the former globalchat and nopwnage into one check. Most important are the frequency entries, because they decide about when to raise violations. The frequency.shortterm section is for the fast spamming (last 5 seconds), the frequency.normal section is for the slower paced chat (last 30 seconds). Each message is assigned a weight, according to several weighting methods, for instance upper case use, repetition, letter-counts vs. word lengths and similar. The weights are accumulated, keeping track of about 5 (shortterm) or 30 (normal) seconds. The levels (frequency section) then allow defining a threshold when to regard the accumulated weights as a violation.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\
+**<<size 16>>Text Frequency:<</size>>**  These settings allow to specify what accumulated level will trigger a violation both for medium term and short term accumulation.
+
+\\
+**Normal:** This allows to set the bounds for the medium term tracking, which covers 30 seconds, roughly.
+|**Config**|**Description**|**Default**|
+|**minimum**|Each message will at least count in with this weight.|0.0|
+|**factor**|This describes how strong old chat messages count in, 1.0 would let them count in fully, with a smaller value the older messages count in with this factor, applied every 3 seconds of age, roughly.|0.9|
+|**weight**|This is a multiplier to balance out  things, the calculated weight will just be multiplied with this.|6|
+|**level**|Accumulated level for which to generate a violation for.|160|
+
+\\
+**Shortterm:** This describes the bounds for the short term tracking, covering 5 seconds, roughly.
+|**Config**|**Description**|**Default**|
+|**minimum**|Each message will at least count in with this weight.|2.0|
+|**factor**|Same as with the "normal" settings. By default lower, to make very fast repetition more expensive.|0.7|
+|**weight**|Weight for balancing (multiplier).|3.0|
+|**level**|Accumulated level for which to generate a violation for.|20.0|
+
+\\
+**<<size 16>>Text Message:<</size>>**  This section allows to alter message-specific weights.
+|**Config**|**Description**|**Default**|
+|**lettercount**|Counting the letters versus the word length. Unbalanced counts would be more expensive.|1.0|
+|**partition**|TODO|1.0|
+|**uppercase**|Uppercase costs more.|1.0|
+|**afterjoin**|Make chat right after joining the server more expensive.|1.5|
+|**nomoving**|Chatting and not having moved recently is also more expensive.|1.5|
+|**repeatviolation**|Repeating a message similar to the last cancelled message.|1.0|
+|**repeatglobal**|Repeat something similar to the last message (of any player)|1.0|
+|**repeatself**|Repeat oneself|1.5|
+|**words** lengthav|World length vs. average word length.|1.0|
+|**words** lengthmsg|Word length vs. message length.|1.0|
+|**words** noletter|This punishes the use of numbers and special characters. If set to 1.0, countdowns will be much more difficult.|0.0|
+
+\\
+**<<size 16>>Text Global:<</size>>**  Extended methods being fed by all players messages. (Deactivated by default.)
+\\These methods allow to track repetition of words or word parts better tan comparison to the last message etc. Repetitions of recently spoken words count in more. All methods have extra settings (here hidden), which differing presets. ["size" indicating how many words/nodes are kept at a time, "sort" to have a words letters sorted before feeding the check, "compress" to remove duplicate letters before feeding, "split" to split words into letters numbers and special characters and judge those individually, "weight" for balancing the results, "minwordsize" and "maxwordsize" to ignore too short or too long words.]
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**weight**|Weight to balance out the result of the global section.|1.0|
+|**words** active|Keeps track of whole words.|false|
+|**prefixes** active|Sort the words into a prefix-tree.|false|
+|**similarity** active|Checks words for similarity with the Levenshtein algorithm applied within a metric tree. (most heavy)|false|
+
+\\
+**<<size 16>>Text Player:<</size>>**  Extended methods keeping track of each player individually. (Deactivated by default.)
+\\//(See global settings, these methods just start off with smaller size parameters, because data is kept for players individually. Data cleanup is done automatically, disregarding the data settings.)//
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**words** active|TODO|false|
+|**prefixes** active|TODO|false|
+|**similarity** active|TODO|false|
+
+\\ \\
+**<<size 16>>Warning:<</size>>**  Warn the player of the chat.text and chat.commands levels, possibly before a violation is triggered.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**level**|Percentage of level at which to warn, currently warning does not necessarily happen before violations being triggered.|67|
+|**message**|This message will be sent to all of the players that fail a chat check, [[http://www.minecraftwiki.net/wiki/Formatting_codes|color codes]] are supported here.|-|
+|**timeout**|Timeout in seconds before warning again.|10|
+
+\\ \\
+**<<size 16>>**Relog:<</size>>**  Prevent too fast relogging.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**timeout**|Time in milliseconds which a player should delay before relog.|5000|
+|**warning** message|This message will be sent to all players that tried to relog too fast, [[http://www.minecraftwiki.net/wiki/Formatting_codes|color codes]] are supported here.|-|
+|**warning** number|Number of warnings before kicking a player on too fast relog. This resets after warning timeout.|1|
+|**warning** timeout|Time in milliseconds after which the number of warnings sent resets.|60000|
+|**kickmessage**|Message to display on kick.|-|
+
+\\ \\
+**<<size 16>>**Logins:<</size>>** Prevent too many players logging in within a short time.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**startupdelay**|Amount of time in seconds  that must pass since start of the server for this check to take effect.|300|
+|**perworldcount**|If set to true, the counting will be performed for each world individually and not server-wide.|false|
+|**seconds**|Duration in seconds for which logins are tracked.|10|
+|**limit**|Number of logins that may happen within the specified time (seconds).|6|
+|**kickmessage**|This message will be shown to those players that get kicked because too many other players logged in at the same time|-|
+
+\\ \\
+==== **<<size 18px>>Combined Subsection<</size>>** ====
+This section holds checks and parts of checks, that are used by several other checks, or that combine different types of inputs for something more general. Could also bechecks that don't fit anywhere else much better than here.
+
+\\ \\
+**<<size 16>>BedLeave:<</size>>** This check will prevent players from faking bed leave packets which could be used to confuse SurvivalFly, Godmode and some checks.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**<<size 16>>Improbable:<</size>>**  This check is aimed at "improbable" behavior, it is something like a medium to long term frequency check with several inputs, such as fighting speed, block placing, hitting at long range, turning around very quickly and other. [Subject to become really improbable: no normal fighting frequency, //just// count the really improbable checks. Might get removed for other methods later.]
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**level**|The required level before Improbable takes actions against those kind of hacks. ToDo|300|
+
+\\ \\
+**<<size 16>>Invulnerable:<</size>>**  TODO
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**triggers** always|TODO|false|
+|**triggers** falldistance|TODO|true|
+|**initialticks** join|TODO|-1|
+|**ignore** |TODO|-|
+|**modifiers** all|TODO|0|
+
+\\ \\
+**<<size 16>>Munchhausen:<</size>>**  ToDo
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|false|
+
+\\ \\
+**<<size 16>>Yawrate:<</size>>**  This check keeps track of how fast players turn around. It monitors moving and other actions like attacking. If a player turns too much in too short time, the player can not attack for a certain amount of time.
+|**Config**|**Description**|**Default**|
+|**rate** |Degrees per second in grad, allowed to turn without fighting penalty.|380|
+|**penalty** factor|How strong to count in too fast turning.|1.0|
+|**penalty** minimum|The minimal penalty for any violation in milliseconds.|250|
+|**penalty** maximum|The maximal penalty for any violation in milliseconds.|2000|
+|**improbable** |If to feed the improbable check in case of yawrate violations. If you have trouble with some rubberbanding causing improbable violations, set this to false.|true|
+
+\\ \\
+==== **<<size 18px>>Fight Subsection<</size>>** ====
+Checks that at least technically have to do with direct combat.
+|**caneldead**|TODO|true|
+
+\\ \\
+**<<size 16>>Yawrate:<</size>>**  TODO
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**<<size 16>>Direction:<</size>>** Players may attack other players and creatures without really looking at them. This is often combined with automatically attacking every living thing within reach ("kill-aura"). This check will check if the attacker looks at his target. 
+|**Config**|**Description**|**Default**|
+|**active**|Should players get checked for this type of hack?|true|
+|**penalty**|How strict should NoCheatPlus be when comparing the players line of view  with the his target's location. The value represents (roughly) the  amount of 1/100 blocks that the player is allowed to look past the to be attacked entity. 75 (0.75 blocks) seems a good default value.|500|
+
+\\ \\
+**<<size 16>>Angle:<</size>>** This check will prevent the player from hitting 2 or more entities at the same time. ToDo
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**threshold** |TODO|50|
+
+\\ \\
+**<<size 16>>Critical:<</size>>** This check will prevent the player from doing fake critical hits to give more damage to entities.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**falldistance**|TODO|0.01|
+|**velocity**|TODO|0.1|
+
+\\ \\
+**<<size 16>>Godmode:<</size>>**  Players may trick Bukkit into not dealing them damage when they get attacked. This will try to identify and correct that behavior.
+|**Config**|**Description**|**Default**|
+|**active**|Should players be checked for this behavior?|true|
+
+\\ \\
+**<<size 16>>Knockback:<</size>>** It shouldn't be possible for the player to deal knockback while standing still also faking knockback distance in any way shouldn't be possible. This check will make sure that the player only deals knockback if he/she is supposed to deal knockback (knockback enchantments are supported here).
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**interval**|TODO|50|
+
+\\ \\
+**<<size 16>>NoSwing:<</size>>** Players may attack entities without moving their arm. This is confusing for nearby players, as they won't see who is attacking them or the nearby creatures.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**<<size 16>>Reach:<</size>>**  Players may slightly increase the distance at which they can attack enemy creatures/players. This check will try to identify that by comparing player and target location.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**penalty**|If a player fails this check, how long should he be prevented from attacking stuff afterwards, in milliseconds. This is intended to make automated attacking of enemies harder. 0.5 second (value 500) is the default. Set to 0, if you don't want to limit players at all after failing this check.|500|
+|**reduce**|TODO|true|
+
+\\ \\
+**<<size 16>>Selfhit:<</size>>** This check will make sure that a player doesn't abuse knockback to win some height by doing self hits (supports the SurvivalFly check).
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**<<size 16>>Speed:<</size>>** Minecraft doesn't restrict the amount of hits a player can do in each second so we made a check that will prevent a player from going over the allowed hit speed limit (more hits = more damage).
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**limit**|How many hits should be allowed to do in each second?|15|
+|**shortterm** ticks|TODO|7|
+|**shortterm** limit|TODO|6|
+
+\\ \\
+==== **<<size 18px>>Inventory Subsection<</size>>** ====
+Checks everything that has to do with Inventory management.
+
+\\ \\
+**<<size 16>>Drop:<</size>>** Players could drop their entire inventory in 1 click to lag and crash the server, to prevent this we simply limit the amount of drops a player is allowed to do.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**limit**|TODO|100|
+|**timeframe**|TODO|20|
+
+\\ \\
+**<<size 16>>FastClick:<</size>>** To prevent chest stealer's or auto armor hacks we simple limit the click speed a player is allowed to use while managing his/her inventory. However this check will also prevent mods such as InvTweaks and other ones from working right (because they give advantage compared to vanilla players), if you want your players to be able to use those mods then disable this check or give them the right permission.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**sparecreative**|Set this to true if you don't want FastClick to check players that are in creative mode.|true|
+
+\\ \\
+**<<size 16>>InstantBow:<</size>>** This check will make sure that everyone uses the vanilla fire speed to shoot arrows with the bow. InstantBow will take actions if a player tries to go over the allowed limit. 
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**strict**|TODO|true|
+|**delay**|TODO|130|
+
+\\ \\
+**<<size 16>>InstantEat:<</size>>** Some players are in haste and try to eat very fast or even instant. InstantEat will make sure that they always use the vanilla eating speed to keep them healthy! This check has been tested and doesn't cause any problems with plugins that modify eat speed such as FastEat or AutoSoup, YEY!
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**<<size 16>>Items:<</size>>** TODO
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+==== **<<size 18px>>Moving Section<</size>>** ====
+Checks that at least technically have to do with the player moving around or impacting the world with his movement can be found here.
+
+\\
+**<<size 16>>CreativeFly:<</size>>** Limits the flying speed for players that are playing in creative gamemode.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**ignoreallowflight**|Compatibility option. Usually flying plugins should set that a player is allowed to fly, which then will be recognized by NCP to use creativefly instead of survivalfly for checking. With setting this to true you can force NCP to ignore this property. |false|
+|**ignorecreative**|Normally players in creative mode are checked by creativefly by default. Setting this to true will let NCP use survivalfly instead, unless for allow-flight or exemptions.|false|
+|**horizontalspeed**|Modifier for the maximally allowed horizontal speed. 100 means "normal" creative mode speed. 200 would be twice the speed.|100|
+|**verticalspeed**|Modifier for the maximally allowed vertical speed. 100 means "normal" creative mode speed. 200 would be twice the speed.|100|
+|**maxheight**|This is a height limit which is counted from above the worlds maximum height (usually resulting in 256 + maxheight).|128|
+\\ \\
+**<<size 16>>MorePackets:<</size>>** The morepackets check is complementary to the "runfly" check. While the "runfly" check(s) limit the distance a player can move per step, this "morepackets" check limits the number of "steps" a player may take per second. A normal value is 20 steps per second.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+ \\
+**<<size 16>>MorePacketsVehicle:<</size>>** The morepacketsvehicle check is complementary to the "morepackets" check. While the "morepacket" check limit the number of player-move packets send per second, this "morepacketsvehicle" limit the number of vehicle-move (minecarts, boats, ...) packets sent per second.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**<<size 16>>NoFall:<</size>>** A sub check of survivalfly, it makes sure that the player gets the damage he/she is supposed to get.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**<<size 16>>Passable:<</size>>** This check prevents moving into or inside of blocks (noclip). It might also trigger if players teleport or join and start sending moving events while not having received or rendered the chunk they stand on, yet. Thus the player assumes to be falling and communicates that to the server, NCP will see them moving into blocks - so no quick banning on these!
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**<<size 16>>SurvivalFly:<</size>>**Prevents flying, speeding, water walking etc.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**extended** vertical-accounting|TODO|true|
+
+==== **<<size 18px>>Strings Section<</size>>** ====
+This is the section that defines various strings for "log" or "cmd" actions. Each has a name (the part in front of ":") and a definition (the part behind the ":"). Whenever you use a "log" or "cmd" action in one of the "actions: " options of this config file, the string will be taken from this section. Arbitrary many additional strings may be defined here, or existing strings may be changed.
+\\ \\
+Most messages/commands use place-holders in [ ], which will be replaced at runtime with relevant information. Some of these may only be available in certain circumstances, only "[player]" can be used everywhere, especially in "cmd" actions.|
+\\
+
+==== **<<size 18px>>Compatibility Section<</size>>** ====
+TODO
+
+\\
+**<<size 16>>Blocks:<</size>>** TODO \\
+
+    **ignorepassable**:
+*    WOODEN_DOOR
+*    IRON_DOOR_BLOCK
+*    TRAP_DOOR
+*    PISTON_EXTENSION
+*    PISTON_MOVING_PIECE
+
+==== **<<size 18px>>Bleeding Edge: Development  Versions<</size>>** ====
+To allow you to keep track with the configuration and permission changes in the latest development versions, we have a simple page set up: **[[http://dev.bukkit.org/server-mods/nocheatplus/pages/nocheat-plus-development/pinboard/|Dev Pinboard]]**
+\\
+For quick overview over recent builds, see: [[http://dev.bukkit.org/server-mods/nocheatplus/pages/nocheat-plus-development/build-infos/|Important Changes By Build Number]]

@@ -1,0 +1,22 @@
+<<center>>{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Banners/FAQ.jpg|FAQ}}<</center>>
+
+**Will NoCheatPlus+ support plugins like mcMMO and Citizens out of the box?**\\
+No, because we want to spend our time more on the NoCheatPlus core and not on plugin compatibility. If you want a plugin to work with NoCheatPlus poke the developer of it and ask him/her to use the NoCheatPlus API.
+Example plugin that does things like that: [[http://dev.bukkit.org/server-mods/compatnocheatplus-cNoCheatPlusp/|CompatNoCheatPlus]].
+
+**NoCheatPlus does not block any hacks on my server, I can login with any hack client and grief as much as I want without getting blocked.**\\
+You probably have OP or permissions (administrator or owner rank) on your server which let you bypass all the NoCheatPlus checks. So if you want to test then deop yourself and set your rank to default. Also make sure your Minecraft version matches the version NoCheatPlus has been compiled for, it can be seen on the download pages of BukkitDev.
+
+**Where is the "donate" button?**\\
+On the upper right corner of this page, it's not a button to donate to Curse.
+
+**I gave my friend permissions for a mod but he stills get blocked by NoCheatPlus.**\\
+After giving permissions to a player, he/she has to relog to activate there mods they got permissions for. Be warned: **nocheatplus.mods.zombe.fly** for example only gives the permission to enable zombes fly mod, you will also need the **nocheatplus.checks.moving.survivalfly** permission to make it work right.
+
+**Why is CNCP not already integrated in NoCheatPlus?**\\
+Because it would slow down the development of NoCheatPlus, we would always have to keep up with the other plugins if those get changed, also changes to NoCheatPlus might break compatibility with other plugins, so we would have to fix those too or remove the broken hooks. Also the testing for those components takes a lot of time and can't really be done by us. We might at some point build in a couple of generic things that will help with //some// compatibility issues without endangering us of getting stuck with compatibility issues.
+
+**Why do you have commands like /ncp ban, /ncp kick and other?**\\
+
+**Why use NoCheatPlus instead of plugin X?**\\
+It is up to you! NoCheatPlus puts emphasis on configurability allowing you to choose when to kick, ban, log, do anything at all, also allowing to adjust a lot of parameters to tweak checks for your needs. Other plugins like AntiCheat put emphasis on simplicity of configuration. All plugins strive to work fine "out of the box" without need to adapt much. Of course every plugin might have strengths and weaknesses on different fields - we suggest you match your needs against the features of the plugins, and ask if in doubt, feature lists can be incomplete.
