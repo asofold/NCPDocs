@@ -5,6 +5,10 @@ In order to test out bugs better you have three major options.
 
 Mostly console output will be interesting, but also the in-game chat might be useful, check the output-client.log file to not need to use screenshots.
 
+If you try to report a false positive and want to help finding the causes faster this can be very helpful. Rather send a little longer log not to miss out parts, so unless familiar with it you should add a little before and after the violation message of TestNCP for instance. For moving always at least from jumpphase=0 until the violation and "set back to..." a couple of lines below. If possible or not sure it is a singular issue, include a couple of violations.
+
+**Please use a paste or send as a file attachment by mail if the output is a little bit longer.**
+
 ==NCP Debug Output==
 
 For the most detailed output use a development build of NCP (or manually edit BuildParameters.properties in the jar and set DEBUG_LEVEL to something like 10000).
