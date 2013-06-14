@@ -4,6 +4,7 @@ This folder is temporary to just contain copy and paste
 Do not move 1:1 to other sub folders. Most content needs adaptions, specifically:
 * Remove links to pictures.
 * Remove incompatible tags like <<center>> or <<color>>.
+* Other fixes like removing links in headers (not working here, example: Orebfuscator).
 * Change links to relative location of documents (only possible after decision where it will be put).
 ----
 This folder has a flat structure, it is meant temporary.
