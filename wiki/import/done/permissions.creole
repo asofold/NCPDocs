@@ -1,17 +1,5 @@
-<<center>>{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Banners/Permissions.jpg|Permissions}}<</center>>
-
-<<center>>
-[[http://dev.bukkit.org/server-mods/nocheatplus/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Main.gif|Main}}]]
-[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/features/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Features.gif|Features}}]]
-{{https://dl.dropbox.com/u/14180705/NoCheatPlus/ButtonsHover/Permissions.gif|Permissions}}
-[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/commands/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Commands.gif|Commands}}]]
-[[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/configuration/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Configuration.gif|Configuration}}]]
-[[http://dev.bukkit.org/server-mods/nocheatplus/pages/nocheat-plus-development/jenkins/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Buttons/Jenkins.gif|Jenkins}}]]
-<</center>>
-
-\\
-== Permissions ==
-NoCheatPlus only supports "SuperPerms", CraftBukkit's official permission framework. You'll need to use a permissions plugin that supports "SuperPerms" to manage all the permissions of NoCheatPlus. Here are some examples:
+= Permissions =
+NoCheatPlus supports "SuperPerms", CraftBukkit's official permission framework. You'll need to use a permissions plugin that supports "SuperPerms" to manage all the permissions of NoCheatPlus. Here are some examples:
 
    * PermissionsEx
    * bPermissions

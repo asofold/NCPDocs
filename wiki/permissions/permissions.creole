@@ -2,9 +2,156 @@
 
 [[../main.creole|Back to main page.]]
 
+NoCheatPlus supports "SuperPerms", CraftBukkit's official permission framework. You'll need to use a permissions plugin that supports "SuperPerms" to manage all the permissions of NoCheatPlus. Here are some examples:
+
+   * PermissionsEx
+   * bPermissions
+   * Essentials GroupManager
+
+Different team members have different preferences, any of these and even some other not mentioned permissions plugins should work fine with NoCheatPlus.
+
+By default NC+ assigns all permissions and give full rights to players that have been /op-ed on your server. If you don't want to give OPs full access to all NC+ features then take a look in the configuration of the permissions plugin your currently use (Example with PermissionsEx: allowOps: false).\\\\
+
 ==Administration==
-|**Permission**                      |**Explanation**                                                                                                              |
-|{{{nocheatplus.admin.notify}}}      | The player will receive notifications through the in-game chat of players failing NoCheatPlus checks.                       |
-|{{{nocheatplus.admin.lag}}}         | Gives access to the "/ncp lag" commend which shows info about server latency.                                               |
-|{{{nocheatplus.admin.reload}}}      | The player gets access to the "/nocheatplus reload" command, which will cause NoCheatPlus to reread its config files.       |
-|{{{nocheatplus.admin.plugins}}}     | Allows the player to execute the "/plugins" or "/pl" command(protectplugins has be set to true in the configuration file).  |
+|{{{nocheatplus.admin}}}|Parent permission for all administrative commands, including ban (do not give lightly).|
+===Notifications===
+|nocheatplus.admin.notify|The player will receive notifications through the in-game chat of players failing NoCheatPlus checks. Also gives access to the// /ncp notify on|off// command.|
+Mind the ".silent" permission for individual cheecks permissions (explained below on the bottom of this page).
+===Command permissions===
+|nocheatplus.admin.notify|(See above.)|
+|nocheatplus.admin.info|The player gets access to the "/nocheatplus info" command, which can display all the information about a player.|
+|nocheatplus.admin.lag|Gives access to the "/ncp lag" commend which shows info about server latency.|
+|nocheatplus.admin.reload|The player gets access to the "/nocheatplus reload" command, which will cause NoCheatPlus to reread its config files.|
+|nocheatplus.admin.plugins|Allows the player to execute the "/plugins" or "/pl" command(protectplugins has be set to true in the configuration file).|
+|nocheatplus.admin.version|Owners of this node can execute the inbuilt "/version" command from CraftBukkit (protectplugins has be set to true in the configuration file).|
+|nocheatplus.admin.exemptions|Gives permissions to use "/ncp exemptions" which is used to list all exemptions of an specified player.|
+|nocheatplus.admin.exempt|Gives access to the "/ncp exempt" command which allows to temporary exempt players from all or specified checks.|
+|nocheatplus.admin.unexempt|Allows to unexempt players from checks by using "/ncp unexempt".|
+|nocheatplus.admin.removeplayer|Gives access to execute the "/ncp removeplayer" command which allows to remove any stored data by NC+ from a specified player (reset VLs, does not remove exemptions).|
+|nocheatplus.admin.commands|Allows the player to use the "/ncp" command to list all NoCheatPlus commands.|
+|nocheatplus.admin.ban|Gives permissions to use the "/ncp ban" commands to ban a player.|
+|nocheatplus.admin.kick|Gives access to the "/ncp kick" command which allows kicking of players.|
+|nocheatplus.admin.tell|Gives access to the "/ncp tell" command which allows you to tell something to a specified player.|
+|nocheatplus.admin.delay|Allows to use the "/ncp delay" command which allows the node owner to run a command with delayed time.|
+|nocheatplus.admin.tempkick|Allows the player to tempkick/tempban someone from the server by using the "/ncp tempkick" command.|
+|nocheatplus.admin.kicklist|Gives access to the "/ncp kicklist" command which lists all players that got "tempkicked" by NCP actions or "/ncp tempkick" command.|
+|nocheatplus.admin.unkick|Gives access to remove a tempkick from a player with "/ncp unkick".|
+===Debug output===
+|nocheatplus.admin.debug|Owners of this node will receive debug messages of checks if NC+ debugging is turned on in the configuration.|
+==Bypass==
+Specific bypass permissions.
+|nocheatplus.bypass.denylogin|Allows to bypass the login denial, such as exists with the ncp tempkick command.|
+==Checks==
+Check permissions, directly related to players actions and associated checks.
+|nocheatplus.checks|Parent permission for all checks. TODO: Overview for "full" exemption by permissions (might need few additional permissions?).|
+===BlockBreak===
+|nocheatplus.checks.blockbreak|Parent permission for the blockbreak checks.|
+|nocheatplus.checks.blockbreak.direction|Don't force the player to look at the blocks that he/she wants to break.|
+|nocheatplus.checks.blockbreak.fastbreak|Allows the player to break blocks very quickly.|
+|nocheatplus.checks.blockbreak.frequency|Allows the player to break 2 or more blocks at the same time.|
+|nocheatplus.checks.blockbreak.noswing|Don't force players to swing their arm when breaking blocks.|
+|nocheatplus.checks.blockbreak.reach|Allows breaking of blocks that are out of reach distance.|
+|nocheatplus.checks.blockbreak.wrongblock|Don't force the player to interact with the block first before he/she is allowed break it (interacting=touching).|
+|nocheatplus.checks.blockbreak.break.liquid|Allows the player to break liquids such as water or lava (source blocks) by using a hack in creative gamemode.|
+===BlockInteract===
+|nocheatplus.checks.blockinteract|Parent permission for this check section.|
+|nocheatplus.checks.blockinteract.direction|Don't force the player to look at the blocks that he/she is trying to interact with (levers, doors and other).|
+|nocheatplus.checks.blockinteract.reach|Allows the player to interact with blocks that are further away than usual.|
+|nocheatplus.checks.blockinteract.speed|Allows the player to spam interaction on blocks such as levers, note blocks, doors and other.|
+|nocheatplus.checks.blockinteract.visible|Everyone that owns this node is allowed to interact through walls to open a chest, furnace and other container without actually seeing them (also prevents from entering a minecart, bed or boat through walls).|
+===BlockPlace===
+|nocheatplus.checks.blockplace|...|
+|nocheatplus.checks.blockplace.direction|Don't force the player to look at the block that he/she is trying to place on.|
+|nocheatplus.checks.blockplace.boatsanywhere|Allows the player to place boats everywhere and not only in the water.|
+|nocheatplus.checks.blockplace.fastplace|Allows the player to place blocks very quickly.|
+|nocheatplus.checks.blockplace.noswing|Don't force players to swing their arm when placing a block.|
+|nocheatplus.checks.blockplace.reach|Allows the player to place blocks that are too far away.|
+|nocheatplus.checks.blockplace.speed|Allows a player to throw projectiles very quickly (snowballs, splash potions and other).|
+|nocheatplus.checks.blockplace.against.liquids|Having this permission assigned allows to place block against liquids by using a special hack.|
+|nocheatplus.checks.blockplace.against.air|This permission allows a player to place blocks against air.|
+===Chat===
+|nocheatplus.checks.chat|...|
+|nocheatplus.checks.chat.color|Don't filter color codes from messages that get sent by players to allow them using colors in their messages. However nearly every chat plugin will override this.|
+|nocheatplus.checks.chat.text|Allows the player to bypass the chat spam check for written text.|
+|nocheatplus.checks.chat.commands|Allow players to bypass the command frequency check that protects against command spam.|
+|nocheatplus.checks.chat.captcha|Owners of this permission wont be forced to type in a captcha if they fail one of the chat checks (this feature is disabled by default).|
+|nocheatplus.checks.chat.relog|Every player that has this permission is allowed to completely bypass the re-log check of NC+.|
+|nocheatplus.checks.chat.logins|Allows the player to bypass the login check which prevents too many players loging in at the same time.|
+===Combined===
+|nocheatplus.checks.combined|Parent permission for the combined check group.|
+|nocheatplus.checks.combined.improbable|Allows the player to bypass the Combined_Improbable check which fights against kill-auras ,speed hacks and some other combined hacks also. It also prevents the player from using 2 or more hacks at the same time.|
+|nocheatplus.checks.combined.bedleave|Allows the player to send bed leave packets from anywhere (can be exploited to confuse some other checks of NC+).|
+|nocheatplus.checks.combined.munchhausen|Players with this node might be able to use fishing roods for flying (Check is disabled by default in configuration).|
+===Fight===
+|nocheatplus.checks.fight|Fight check group.|
+|nocheatplus.checks.fight.angle|Don't prevent the player from attacking multiple entities at the time.|
+|nocheatplus.checks.fight.critical|Don't prevent the player from doing fake critical hits when it's technically not possible to do so.|
+|nocheatplus.checks.fight.direction|Don't force the player to look at the targets while fighting them.|
+|nocheatplus.checks.fight.godmode|Don't prevent the player from keeping the temporary invulnerability that he/she gets when taking damage.|
+|nocheatplus.checks.fight.fastheal|The owner of this node is allowed to regenerate health faster then usually possible.|
+|nocheatplus.checks.fight.knockback|Don't prevent the player from doing knockbacks when it's technically not possible to do so.|
+|nocheatplus.checks.fight.noswing|Don't force the player to move the arm while fighting against someone or something.|
+|nocheatplus.checks.fight.reach|Allows the player to hit players and mobs that are out of allowed distance.|
+|nocheatplus.checks.fight.selfhit|Allows the player to do self hits for flying by exploiting the knockback of those hits.|
+|nocheatplus.checks.fight.speed|Don't limit the amount of attacks that the player can do per second.|
+===Inventory===
+|nocheatplus.checks.inventory|Inventory check group.|
+|nocheatplus.checks.inventory.drop|Don't limit the amount of items that a player may drop within a short timeframe.|
+|nocheatplus.checks.inventory.instantbow|Don't prevent the player from shooting arrows instantly over the bow without taking the usual time to pull the string back.|
+|nocheatplus.checks.inventory.instanteat|Don't prevent players from eating their food instantly without taking the usual time to munch on it.|
+|nocheatplus.checks.inventory.fastclick|Allows the player to move items around the inventory instantly without using there mouse/keyboard to do so.|
+|nocheatplus.checks.inventory.items|Allows the player to use illegal enchantments on signed books (This got fixed now in Minecraft 1.4.3 and higher).|
+===Moving===
+|nocheatplus.checks.moving|Parent permission for the moving checks group.|
+|nocheatplus.checks.moving.creativefly|Allows the player to fly faster in creative mode then usually possible.|
+|nocheatplus.checks.moving.morepackets|Allow the player to make a lot more movements than normally possible. Doing more movements will result in faster movement speed and causes the server to spend a lot of additional time for processing these movements.|
+|nocheatplus.checks.moving.morepacketsvehicle|Allows players to make a lot more movements in vehicles (boats, minecrats, pigs, ...) than normally possible.|
+|nocheatplus.checks.moving.nofall|Allows the player to avoid fall damage by using cheats. Normally NoCheatPlus will keep track of a player's movement and rectify the fall-damage calculations of Minecraft so the player always gets the fall damage he/she is supposed to get.|
+|nocheatplus.checks.moving.survivalfly|Allows the player to fly in survival mode. It also treats the player as if he has the ".nofall" permission too.|
+|nocheatplus.checks.moving.survivalfly.blocking|Allows the player to block while moving at normal speed.|
+|nocheatplus.checks.moving.survivalfly.sneaking|Allows the player to sneak while moving at normal speed.|
+|nocheatplus.checks.moving.survivalfly.sprinting|Allows the player to sprint backwards.|
+|nocheatplus.checks.moving.survivalfly.speeding|Allows the player to bypass the vanilla walk/run/sprint speed limits.|
+|nocheatplus.checks.moving.survivalfly.step|Don't check if the player is using the step hack to get faster over blocks then usually possible.|
+==Modifications==
+These permissions allow to control which feature/mod a player may use. There is no guarantee that players use the original client and obey the request to turn off/on features, though.
+===CJB===
+|nocheatplus.mods.cjb|All CJB features.|
+|nocheatplus.mods.cjb.fly|Don't prevent the player from using CJB's fly mod on the server.|
+|nocheatplus.mods.cjb.radar|Gives access to use CJB's radar mod on the server.|
+|nocheatplus.mods.cjb.xray|Don't prevent the player from using CJB's xray mod on the server.|
+===MinecraftAutoMap===
+|nocheatplus.mods.minecraftautomap|All features for MinecraftAutoMap.|
+|nocheatplus.mods.minecraftautomap.ores|Don't prevent the player from using the ore detector from Minecraft AutoMap's.|
+|nocheatplus.mods.minecraftautomap.cave|Don't prevent the player from using the cave mode feature of the Minecraft AutoMap's mod.|
+|nocheatplus.mods.minecraftautomap.radar|Don't prevent the player from using Minecraft AutoMap's inbuilt radar.|
+===Rei===
+|nocheatplus.mods.rei.cave|Don't prevent the player from using Rei's Minimap's cave mode.|
+|nocheatplus.mods.rei.radar|Don't prevent Rei's Minimap mod users from using all kind of available radar hacks.|
+|nocheatplus.mods.rei.radar.player|Allows the player to use the radar from Rei's Minimap to track down other players only.|
+|nocheatplus.mods.rei.radar.animal|Allows the player to only use the animal radar from Rei's Minimap mod.|
+|nocheatplus.mods.rei.radar.mob|Gives access to use the mob radar feature from Rei's Minimap mod.|
+|nocheatplus.mods.rei.radar.slime|Allows the player to track down slimes only by using the radar feature of Rei's Minimap.|
+|nocheatplus.mods.rei.radar.squid|Player is allowed to use the Rei's Minimap radar to track down squids only.|
+|nocheatplus.mods.rei.radar.other|Allows the player to use all the other features of the Rei's Minimap radar.|
+===SmartMoving===
+|nocheatplus.mods.smartmoving|All SmartMoving features.|
+|nocheatplus.mods.smartmoving.climbing|Don't prevent the player from using Smart Moving's climb feature.|
+|nocheatplus.mods.smartmoving.swimming|Don't prevent the player from using Smart Moving's swimming.|
+|nocheatplus.mods.smartmoving.crawling|Don't prevent the player from using Smart Moving's crawl.|
+|nocheatplus.mods.smartmoving.sliding|Don't prevent the player from using Smart Moving's slide.|
+|nocheatplus.mods.smartmoving.jumping|Don't prevent the player from using Smart Moving's jump.|
+|nocheatplus.mods.smartmoving.flying|Don't prevent the player from using Smart Moving's fly.|
+===Zombe===
+|nocheatplus.mods.zombe|All zombe features.|
+|nocheatplus.mods.zombe.fly|Don't prevent the player from using Zombe's fly mod.|
+|nocheatplus.mods.zombe.noclip|Don't prevent the player from using Zombe's noclip mod on the server.|
+|nocheatplus.mods.zombe.cheat|Don't prevent the player from using Zombe's cheat mods.|\\
+== Parent Nodes ==
+Most permissions have parent nodes, that in fact goes for all check types. Resulting in nocheatplus.admin, nocheatplus.checks.moving, nocheatplus.checks.moving.survivalfly, nocheatplus.checks.fight, etc.
+=== Things to know about Permissions ===
+You can exclude a specific player from getting logged by appending ".silent" to the relevant permission node of the specific check. E.g.\\
+
+   * **nocheatplus.checks.moving.nofall.silent**\\
+
+will prevent NoCheatPlus from recording log messages for that player for the "nofall" check, while still executing all other actions as usual.
