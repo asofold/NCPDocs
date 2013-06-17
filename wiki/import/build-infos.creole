@@ -12,7 +12,10 @@ For a changes history see: http://ci.ecocitycraft.com/job/NoCheatPlus/changes
 \\This page is a somewhat digested or altered version of the [[https://github.com/NoCheatPlus/NoCheatPlus/commits/master|Commit History page on GitHub]].
 
 ===Next build===
-===3.9.3-DEV-b538(cumulative)
+* ...
+===3.9.3-RC-b539(**planned release**)===
+* Release planned for BukkitDev.
+===3.9.3-DEV-b538(cumulative)===
 * New
 ** Add command to turn in-game notifications on and off, per player:\\// /ncp notify on|off//
 ** Change logging configuration to sub-sections (automatically changes config).
