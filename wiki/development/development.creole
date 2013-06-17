@@ -1,0 +1,21 @@
+=Development=
+
+[[../main.creole|Back to main page.]]
+
+This page mostly concerns development builds (future and past) and change history.
+
+==Unofficial Documentation==
+The [[dev-pinboard.creole|"dev-pinboard"]] might contain additional documentation for development builds,
+but also documentation of "unofficial" features or parts of documentation which still have to be worked into the man pages.
+
+==History of Changes==
+The following links allow an overview over past changes:
+* [[build-infos.creole|Important changes by build number]]\\Somewhat digested version of a change list.
+* [[http://ci.ecocitycraft.com/job/NoCheatPlus/changes|Jenkins change history]]\\Commits sorted by build number.
+* [[https://github.com/NoCheatPlus/NoCheatPlus/commits/master|GitHub commit history]]\\Just all commits.
+
+==Information for Testers and Reports==
+[[debugging.creole|Debug traces and detailed reports]] can help to identify and fix bugs fast.
+
+==API for Developers==
+[[api.creole|API overview page]]

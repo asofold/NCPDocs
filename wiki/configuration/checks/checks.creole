@@ -1,0 +1,7 @@
+=Checks=
+
+[[../configuration.creole|Back to configuration page.]]
+
+This page gives an overview of the configuration of the checks that NoCheatPlus contains.
+
+
