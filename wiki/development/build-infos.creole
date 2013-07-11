@@ -15,8 +15,35 @@ For a changes history see: http://ci.ecocitycraft.com/job/NoCheatPlus/changes
 
 ===Next build===
 * ...
-===3.9.3-RC-b539(**planned release**)===
-* Release planned for BukkitDev.
+===3.10.0-RC-b569(**release candidate**)===
+* **Planned release on BukkitDev.**
+* Hot
+** MC/CB 1.6.2 Support.
+* fixes
+** Metrics: Do start/cancel metrics on reloading as well, not only on startup.
+* Internals
+** More complete support for the health changes with 1.6.
+** Core dependency set to 1.6.2, so older versions suffer some slower compatibility methods rather.
+** Alter checking order for some fighting checks.
+** Minor cleanups.
+===3.9.4-DEV-b558("mostly stable"; cumulative)===
+* Hot
+** MC/CB 1.6.1 Support.
+** Few config paths got changed, old settings are preserved.
+* New
+** Make messages configurable for hiding plugins (unknown command, permission message), with color.
+** It is now possible to completely deactivate motd sending for client mods.
+** Added hook versions to the output of "ncp info".
+** Just in case: To keep the morepackets-vehicle check effective, auto-detection of vehicle events has been added. [Should work, missing: use new events for mount/dismount etc.]
+** Just in case: Force close inventories on portal use and world changes, also taking into account riding on entities (on entities...).
+* Fixes
+** Workarounds added for potential problems with other plugins that don't implement certain compatibility tweaks for the changes in Bukkit from MC 1.5.2 to 1.6.1.
+* Internals
+** Updated metrics to R7.
+** Make use of Material.hasGravity for CompatCBDev.
+** Optimize color handling.
+===3.9.3-RC-b539(**release**)===
+* Release on BukkitDev.
 ===3.9.3-DEV-b538(cumulative)===
 * New
 ** Add command to turn in-game notifications on and off, per player:\\// /ncp notify on|off//
