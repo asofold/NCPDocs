@@ -1,0 +1,22 @@
+==What is the problem? What do you expect to see instead?==
+
+
+==Can it be reproduced systematically and if so: How?==
+
+
+==How easy is it to reproduce? Does it always happen? Does it happen to all players? Does it happen with vanilla clients?==
+
+
+==**Versions of NCP and server: Post the output of the "ncp version" command!**==
+
+
+==Details about the configuration file of NCP.==
+//(Examples: What version of NCP was the config generated with? Did you change anything - if so: add a quick description.)//\\
+
+
+==Do you run any other special plugin next to NC+ (adding skills, machines, adding/changing blocks)?==
+//(Examples: SpoutPlugin, mcMMO, Heroes, MachinaCraft and others.)//\\
+
+
+==Please provide any additional information below!==
+//(Examples: Logs, screenshots, plugin list, player amount, NCP configuration files ... use http://dev.bukkit.org/paste/ or http://pastebin.com/ and add the link here if linked resources are longer than a few lines.)//\\
