@@ -2,9 +2,7 @@
 
 Somewhat digested version of a changes history.
 
-=Important Changes by Build Number=
-
-This section is probably not complete ever, but it can give a quick overview what parts to adapt or regenerate. The builds marked with //(**beta candidate**)// Are considered very stable and should be preferred over all previous dev/beta builds.
+This section is probably not complete ever, but it can give a quick overview what parts to adapt or regenerate. The builds marked with //(**mostly stable**)// Are considered very stable and should be preferred over all previous dev/beta builds.
 
 The //(cumulative)// note is meant to indicate that that build should be preferred over the lower numbers since the last entry.
 
@@ -13,8 +11,22 @@ Broken builds usually are marked as broken or removed from Jenkins, they should 
 For a changes history see: http://ci.ecocitycraft.com/job/NoCheatPlus/changes
 \\This page is a somewhat digested or altered version of the [[https://github.com/NoCheatPlus/NoCheatPlus/commits/master|Commit History page on GitHub]].
 
-===Next build===
+===Future===
 * ...
+===3.10.1-SNAPSHOT-b580(cumulative)===
+* Changes:
+** Configuration version: Now has its own section in the configuration, notification can be disabled.
+** Configuration outdated warnings and notify-off message are sent delayed, not from within PlayerJoinEvent-handling.
+** Health-API incompatibility warnings: Only show if logging.debug is set.
+* Fixes
+** Passable: Fence gates, moving out of blocks if stuck (tp, login), creativefly ignoring passable set-back, vcliponly covers up and down now.
+** SurvivalFly: Web + stairs/steps.
+* Internals
+** Moving debug output will contain walkspeed + flyspeed (future use).
+** Passable: Potentially improve performance by an earlier return for moves that are fully inside of ignored blocks.
+** More cleanup for health-API changes.
+** Event priorities for some core setup changed (world change + player join set to low), affects mod message sending.
+** Added global message-sending queue preserving registration-order (currently thread-safe). Used for delayed sending of notification messages and warnings for chat.txt.
 ===3.10.0-RC-b569(**release candidate**)===
 * **Planned release on BukkitDev.**
 * Hot
