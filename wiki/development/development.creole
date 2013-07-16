@@ -9,7 +9,7 @@ Development builds are available at the [[http://ci.ecocitycraft.com/job/NoCheat
 
 **Note that development builds are not checked and approved by Bukkit staff, you use them at your own risk!**
 \\Builds marked as "release" have been uploaded to BukkitDev and usually have been approved there, thus you can download them from there to be on the safe side.
-Builds marked as "mostly stable" have been around for some time and have been tested more and usually contain fixes and will more likely by stable than arbitrary development builds.
+Builds marked as "mostly stable" have been around for some time, thus have been tested more. They usually contain fixes also for issues introduced in previous development builds and will likely be more stable than random development builds.
 
 ==History of Changes==
 The following links allow an overview over past changes:
