@@ -57,6 +57,7 @@ For a changes history see: http://ci.ecocitycraft.com/job/NoCheatPlus/changes
 ** More cleanup for health-API changes.
 ** Event priorities for some core setup changed (world change + player join set to low), affects mod message sending.
 ** Added global message-sending queue preserving registration-order (currently thread-safe). Used for delayed sending of notification messages and warnings for chat.txt.
+----
 ===3.10.0-RC-b569(**release**)===
 * **Released on BukkitDev.**
 * Hot
@@ -84,6 +85,7 @@ For a changes history see: http://ci.ecocitycraft.com/job/NoCheatPlus/changes
 ** Updated metrics to R7.
 ** Make use of Material.hasGravity for CompatCBDev.
 ** Optimize color handling.
+----
 ===3.9.3-RC-b539(**release**)===
 * Release on BukkitDev.
 ===3.9.3-DEV-b538(cumulative)===
@@ -105,6 +107,7 @@ For a changes history see: http://ci.ecocitycraft.com/job/NoCheatPlus/changes
 ** PlayerData can carry arbitrary tags now.
 ** Rework commands for easier sub-command adding.
 ** Add a filter permission to use any command at all. There should be no need to add it, because it is set as child permission of all sub-command permissions.
+----
 ===3.9.2-RC-b520(**release**)===
 * Release on BukkitDev.
 * Add FastConsume check for consuming items (replaces instanteat).
@@ -114,6 +117,7 @@ For a changes history see: http://ci.ecocitycraft.com/job/NoCheatPlus/changes
 * Attempt to reduce problems with inventory features (shift+ double click with item in hand).
 * Internal changes (some API methods are non-static now).
 * Adjust some debug output for nofall/moving.
+----
 ===3.9.1-RC2-b510(**release**)===
 * Release on BukkitDev.
 * Add another default flag to steps (xz100).
@@ -138,6 +142,7 @@ For a changes history see: http://ci.ecocitycraft.com/job/NoCheatPlus/changes
 * Less strict default settings for chat.logins.
 * Fix breaking time for "locked chest".
 * Consistency fixes and extensions (fixes some chat checks data not resetting with the remove command).
+----
 ===3.9.0-RC-b488(**release**)===
 * Release on BukkitDev.
 ===3.9.0-b486(cumulative)===
@@ -146,6 +151,7 @@ For a changes history see: http://ci.ecocitycraft.com/job/NoCheatPlus/changes
 * Fixes for fastbreak with wood-pick + efficiency.
 * Might have given jumping on boats slightly more tolerance.
 * Consistency fixes (block setup, prevent CB2511 module loading for libigot/no-safeguard-mods).
+----
 ===3.8.12-RC2-b472(**release**)===
 * Release on BukkitDev. [Last minute fixes might follow.]
 * Catch on case for ArrayIndexOutOfBounds with InventoryClickEvent.

@@ -4,6 +4,7 @@
 
 Older builds are kept here to keep build-infos smaller.
 
+----
 ===3.8.11-RC-b467(**release**)===
 * Release on BukkitDev. 
 ===3.8.11-b466(cumulative)===
@@ -49,6 +50,7 @@ Older builds are kept here to keep build-infos smaller.
 ===3.8.11-b442(cumulative)===
 * Changes to on-ground judgement (ongoing), seems consolidated. Aiming at consistency, performance, spiders. [//amining at//, not yet done/finished!]
 * Adaption to debugging messages.
+----
 ===3.8.10-RC-b438(**release**)===
 * Release on BukkitDev.
 * Last minute fix: revert removing shortcut on-ground check, but fix it, instead.
@@ -104,6 +106,7 @@ Older builds are kept here to keep build-infos smaller.
 * All noswing actions were adjusted to not alert for lower levels.
 * Adjust some debug messages.
 * Bigger internal changes to reduce some dependencies (not affecting normal API use or function).
+----
 ===3.8.9-b353 (alpha release, cumulative)===
 * Alpha release on BukkitDev.
 * Fix false positives of flying/hover for fences, thin glass and similar.
@@ -155,6 +158,7 @@ Older builds are kept here to keep build-infos smaller.
 * Adjustments to set-backs for moving checks. \\//(See incompatibility note above)//\\Setting the set backs will use less object creation, getting them will create objects rather.
 * Add some lag-awareness, i.e. counting in lag durations or skipping short term checks.
 * Adjustments to debug output for moving.
+----
 ===3.8.8-b301 (beta release, cumulative )===
 * Beta release on BukkitDev.
 * Adaptions and fixes to combined.yawrate and combined.improbable.
@@ -162,6 +166,7 @@ Older builds are kept here to keep build-infos smaller.
 * The chat.logins data gets erased with reloading the configuration.
 * Updated some permissions in the plugin.yml.
 * Some internals, like using a logging utility where appropriate.
+----
 ===3.8.7-beta-b294 (cumulative)===
 * Beta release on BukkitDev.
 ===3.8.7-b293 (cumulative)===
@@ -169,6 +174,7 @@ Older builds are kept here to keep build-infos smaller.
 * Fix for yawrate.
 * Fix walking on brewing stands.
 * Better precise lag spike counting.
+----
 ===3.8.6-beta-b285 (cumulative)===
 * Beta release on BukkitDev.
 ===3.8.6-b284 (cumulative)===
@@ -178,11 +184,13 @@ Older builds are kept here to keep build-infos smaller.
 * Disable managelisteners option, needs to manually reset the flag, or regenerate the entry/config.
 * Spawn-egg dupe-prevention is bound to the inventory.items check being active, to allow turning it off.
 * Munchhausen check added, could be activated if you have trouble with players using a fishing rod for flying. (Now official tribute to BergerKiller, deactivated by default.)
+----
 ===--Bridge-MC_1_4-y2-DEV--===
 * <<color red>>This build contains bugs! It's not recommended to use it anymore.<</color>>
 * Compatibility release (beta) for 1.4 (CB2511 -> CB 2512).
 * Might work with all builds 1.4.2 ... 1.4.5.
 * <<color RED>>This build can not be found on our Jenkins site.<</color>>
+----
 ===--Bridge-CB2411_CB2412-x1--===
 * <<color red>>This build contains bugs! It's not recommended to use it anymore.<</color>>
 * Compatibility release (beta) for 1.4 (CB2511 -> CB 2512).
@@ -191,12 +199,14 @@ Older builds are kept here to keep build-infos smaller.
 ===3.8.5-b274 (cumulative)===
 * Fix aspects of NoFall.
 * Add command to display lag.
+----
 ===3.8.4-RC-b271===
 * Release on BukkitDev.
 ===3.8.4-b270 (cumulative)===
 * More sharp no-fall check.
 * Remove undoing command changes on disabling (caused issues with permissions).
 * Using a block-cache for ground checks with block breaking too.
+----
 ===3.8.3-RC-b267===
 * Release on BukkitDev. //Accidentally deleted.//
 ===3.8.3-b266 (**Release phase**, cumulative)===
@@ -220,6 +230,7 @@ Older builds are kept here to keep build-infos smaller.
 * Fix for custom snow heights.
 * Add safeguards for MC API access.
 * Spawn-egg dupe prevention.
+----
 ===3.8.1-RC-b244===
 * Release on BukkitDev.
 ===3.8.1-b243 (cumulative)===
@@ -241,6 +252,7 @@ Older builds are kept here to keep build-infos smaller.
 ** Caching results from checking block ids and data.
 ** Create slightly less history entries.
 * API extended. Managed listeners option for future compatibility improvements (not sure it wins any performance though).
+----
 ===3.8.0-RC-b207 (**Release**)
 * Release for 1.4(.2) on BukkitDev.
 ===3.8.0-b206 (**Release phase**, cumulative)===
@@ -253,6 +265,7 @@ Older builds are kept here to keep build-infos smaller.
 * Fix jump boost.
 * Avoid resetting set back in case of a workaround (few to none effect).
 
+----
 ===3.7.10-RC-MC1.3.2-b201===
 * **1.3.2 BACKPORT RELEASE (InventoryClick).**
 * Hotfix inventory click.
@@ -263,20 +276,24 @@ Older builds are kept here to keep build-infos smaller.
 * FastClick: Added Option to spare players in creative mode from the fastclick check.
 * Several adaptions to attempt to reduce false positives in survivalfly.
 
+----
 ===3.7.9-RC-b191 (Release)===
 * Release on BukkitDev (**critical hotfix for enchanted books**).
 ===3.7.9-b190 (cumulative)===
 * Critical hotfix for enchanted books.
 * Instanteat and Instantbow: Make these actually work, instantbow does have false positives still.
+----
 ===3.7.8-RC-b182 (Release)===
 * Release on BukkitDev (finally).
+----
 ===3.7.7-RC-b178 (Release)===
 * --Release on BukkitDev.--
+----
 ===3.7.7-RC-MC1.3.1-b177 (Release)===
 * Last "backport" release for MC1.3.1 on jenkins only.
 ===3.7.7-b176 (Release phase, cumulative)===
 * NoFall: Set fall distance on logout, remove actions from default config.
-* Fixes for godmode: check permission + active, remove use of old obfuscated method, changed since. [Parts of this check might get removed: obsolete.] 
+* Fixes for godmode: check permission + active, remove use of old obfuscated method, changed since. [Parts of this check might get removed: obsolete.]
 ===3.7.6-b174===
 * --Release on BukkitDev.-- //(cancelled due to long present problem with godmode demanding adaptions)//\\No reason to become nervous :) - just approval takes > 5-10 hours, so i will re-upload.
 ===3.7.6-b173 (Release phase, cumulative)===
@@ -286,6 +303,7 @@ Older builds are kept here to keep build-infos smaller.
 ===3.7.5-RC-b171
 * --Release on BukkitDev.-- //(cancelled due to bugs found + approval not done until then)//
 * Users of CompatNoCheatPlus should update to the latest release of cncp.
+----
 ===3.7.5-RC-1.3.1-b170===
 * "Backport" release for 1.3.1 (only on jenkins).
 * Users of CompaNoCheatPlus should update to the backport release of cncp.
@@ -306,6 +324,7 @@ Older builds are kept here to keep build-infos smaller.
 * Slight API extension (changes if not using AbstractNCPHook). **cncp needs updating!**
 * Completely remove nomovedtooquickly remainders (NetServerHandler).
 * Configuration changes !
+----
 ===3.7.4-RC-b156 (**Release**)===
 * Release on BukkitDev
 ===3.7.4-b155 (Release phase, cumulative)===
@@ -329,6 +348,7 @@ Older builds are kept here to keep build-infos smaller.
 ===3.7.4-b124 (cumulative)===
 * Various minor fixes.
 * Begin to re-structure chat section,
+----
 ===3.7.3-b111 (**beta release on bukkitdev**,cumulative)===
 * (111) Fix wrong speed check vl being added to history.
 * Cleanup flying permissions: creativefly bypass now also bypasses survivalfly by default. Slight optimization.
