@@ -34,11 +34,13 @@ For a changes history see: http://ci.ecocitycraft.com/job/NoCheatPlus/changes
 ** Waiting on more input on some issues.
 ** Waiting for more feedback on current changes.
 ----
-===3.10.1-SNAPSHOT-b584(cumulative)===
+===3.10.1-SNAPSHOT-b587(cumulative)===
 * Hot
 ** Account for per-player walk-speed and fly-speed **[More testing pending!]**.
 * Fixes
 ** Skip survivalfly for flying players (...). Previously only players that were allowed to toggle fly were exempted from sf.
+** Part-fix issues with throwing ender pearls at nearby cows and players, triggering survivalfly with limitjump.
+** Attempt to fix sprintback issues with horizontal velocity.
 * Internals
 ** BridgeHealth: attempt to improve compatibility with special player classes as used by Essentials.
 ** Alter/extend debug output (misc.).
