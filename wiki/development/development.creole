@@ -2,7 +2,10 @@
 
 [[../main.creole|Back to main page.]]
 
-This page mostly concerns development builds (future and past) and change history.
+Here you find links to changes history, issues, information about development builds and information for developers.
+
+==More on Issues==
+The [[issues.creole|Issues page]] contains information about incompatibilities and known issues.
 
 ==Unofficial Documentation==
 The [[dev-pinboard.creole|"dev-pinboard"]] might contain additional documentation for development builds,
