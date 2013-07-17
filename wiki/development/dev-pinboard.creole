@@ -134,16 +134,23 @@ This is a list of block ids or bukkit material names of blocks for which to allo
 ====overrideflags====
 This is a mapping of blocks ids or bukkit material names to a block-flag definition. These flags allow control over various aspects of block-collision handling like shapes or passability.
 
+For simple shaped blocks you might not need to change anything, but if the server does not tell the actual bounds of the block, or the block is more complex shaped (like a cauldron), overriding flags would be inevitable.
+
 Setting an entry overrides the present flags unless you add //default// (snow: default|ign_passable). Separate flags by '|' or '+', removing flags is not (yet) possible, one has to override fully for that purpose.
 
 A typical entry to make a new not fully solid block "playable" would be to allow standing on any place inside of the block including allowing to pass through:\\
-154: SOLID|GROUND|XZ100|HEIGHT100|GROUND_HEIGHT|IGN_PASSABLE
+154: GROUND|GROUND_HEIGHT|IGN_PASSABLE|XZ100|HEIGHT100
+
+\\The GROUND_HEIGHT flag allows to stand on any y-level inside of blocks that have IGN_PASSABLE set, it can be used with complex shaped blocks or blocks for which the server returns unusable bounds, in which case one would set GROUND|IGN_PASSABLE|XZ100|HEIGHT100|GROUND_HEIGHT.
+\\To use the shape the server tells, set to: GROUND|GROUND_HEIGHT|IGN_PASSABLE
+
+Do mind that with complex-shaped blocks IGN_PASSABLE allows players to pass and interact through the block, but even if GROUND is set, you might have to add GROUND_HIGHT to allow standing on any level of the block, because NCP does not count being inside of a block as being on ground by default.
 
 Available flags:
 STAIRS|LIQUID|SOLID|IGN_PASSABLE|WATER|LAVA|HEIGHT150|GROUND|HEIGHT100|CLIMBABLE|VARIABLE|XZ100|GROUND_HEIGHT|HEIGHT_8SIM_DEC|HEIGHT_8SIM_INC|HEIGHT_8_INC|RAILS
 \\TODO: Explain flags.
 
-A way to compare flags is to set blockbreak.debug to true, NCP will dump the default block properties to the console (should work with /ncp reload).
+A way to compare flags is to set blockbreak.debug to true, NCP will dump the default block properties to the console (should work with /ncp reload). This allows to set the same flags as other blocks of similar nature. However at present there are distinct workarounds for certain type of blocks so this might not work out on every sort of block.
 
 A way to obtain information about block shapes is to set moving.debug to true and walk over blocks. It is necessary to have a development build for this or to edit BuildParameters.properties in the jar, setting DEBUG_LEVEL to something big like 10000. There might be better methods of analysis available at a later point of time, but for some blocks one can't get the actual shape without knowing the blocks around it, e.g. fences.
 
