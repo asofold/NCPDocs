@@ -6,4 +6,4 @@
 
 [[configuration/configuration.creole|Configuration]]
 
-[[development/development.creole|Information about unofficial documentation, builds, change lists, debugging, testing, API]]
+[[development/development.creole|Information about unofficial documentation, mod-support, builds, change lists, debugging, testing, API]]

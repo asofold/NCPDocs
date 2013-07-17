@@ -20,6 +20,7 @@ The following links allow an overview over past changes:
 ==Unofficial Documentation==
 The [[dev-pinboard.creole|"dev-pinboard"]] might contain additional documentation for development builds,
 but also documentation of "unofficial" features or parts of documentation which still have to be worked into the man pages.
+\\**Check this for modded blocks (overrideflags).**
 
 ==More on Issues==
 The [[issues.creole|Issues page]] contains information about incompatibilities and known issues.
