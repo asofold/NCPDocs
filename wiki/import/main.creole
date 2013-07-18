@@ -22,7 +22,7 @@ Protective plugins also have to take part in the classical cat and mice play, ex
 
 ===<<color #1999e4>>Downloads and more<</color>>===
 * Download officially approved versions on the [[http://dev.bukkit.org/server-mods/nocheatplus/files/|Files]] page at BukkitDev.\\
-* Development builds have been moved over to the [[http://dev.bukkit.org/server-mods/nocheatplus/pages/nocheat-plus-development/jenkins/|Jenkins at EcoCityCraft]].
+* Development builds have been moved over to the [[http://dev.bukkit.org/server-mods/nocheatplus/pages/nocheat-plus-development/jenkins/|Jenkins at md-5.net]].
 * <<color RED>> Do not download from any other source, do not use jars other people send you.<</color>>
 * Changes by build number can be examined in the Jenkins [[http://dev.bukkit.org/server-mods/nocheatplus/pages/nocheat-plus-development/jenkins/|changes list]].
 * All commits can be seen in the GitHub [[https://github.com/NoCheatPlus/NoCheatPlus/commits/master|commit history]].\\

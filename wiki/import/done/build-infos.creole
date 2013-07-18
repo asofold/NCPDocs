@@ -8,7 +8,7 @@ The //(cumulative)// note is meant to indicate that that build should be preferr
 
 Broken builds usually are marked as broken or removed from Jenkins, they should not appear in this list.
 
-For a changes history see: http://ci.ecocitycraft.com/job/NoCheatPlus/changes
+For a changes history see: http://ci.md-5.net.com/job/NoCheatPlus/changes
 \\This page is a somewhat digested or altered version of the [[https://github.com/NoCheatPlus/NoCheatPlus/commits/master|Commit History page on GitHub]].
 
 ===Next build===
