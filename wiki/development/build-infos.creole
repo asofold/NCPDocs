@@ -34,13 +34,14 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** Waiting on more input on some issues.
 ** Waiting for more feedback on current changes.
 ----
-===3.10.1-SNAPSHOT-sMD5NET-b594(cumulative)===
+===3.10.1-SNAPSHOT-sMD5NET-b595(cumulative)===
 * Hot
 ** Change version naming, adding "series" hinting at build server/purpose.
 * Fixes
 ** Moving: Fix sprinting time not resetting. (Once the client tells not to be sprinting, we don't need to care for latency anymore.)
 ** SurvivalFly: Attempt to catch "glide" with vertical accounting [Could cause new false positives, NEED FEEDBACK].
 ** CreativeFly: Jump amplifier gets reset properly now.
+** SurvivalFly: The workaround for sprint/bunny while attacking others is modeled differently, which should now work with sprint effects.
 * API extensions / changes:
 ** Configuration handling: Action factories are set up lazily now in order to allow better overriding by other plugins. Effect could be that once per reload some events get a higher processing time (only the first getting of the config).
 ** INotifyReload can be registered with a priority set in an annotation, thus you can ensure your reload hook gets called before any NCP-internal hooks.
