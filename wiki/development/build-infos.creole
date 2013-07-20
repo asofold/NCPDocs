@@ -19,11 +19,12 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * Re-organize NCP-API.
 * Keep track of recently changed blocks (especially doors), in order to allow ray-tracing for doors as well.
 * Keep track of pistons moving blocks in order to reduce false positives.
-* Add check/notification for players not using any velocity (mostly sf).
-* Velocity handling: Also use for vertical velocity. Use same method for vertical velocity as with horizontal velocity.
+* Add check/notification for players not using any velocity (mostly sf), at least start to log it for testing.
+* Velocity handling: Add concept to merge / invalidate queued entries better (flying plugins).
+* Velocity handling: Use similar method for vertical velocity too. Currently uncertain: might switch to 3d-entries with "exact" per-axis/direction counting.
 ====Planned====
 * Moving/morepackets+survialfly: Attempt to prevent speeding better, relate packets and travel-distance.
-* SurvivalFly: Confine some workarounds more to make cheating harder (bunny-hopping, sprinting speed).
+* SurvivalFly: More adjustments based on so-far-experience (e.g. buffer redesign).
 * Moving/morepackets: distinguish client-side lag and server side lag, attempt to make it "pretty striking".
 * Method for fight.reach to account for more latency for the classic chasing situation.
 * New cancelling mechanisms for fight.speed (probability based / minimum frequency).
@@ -34,21 +35,23 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** Waiting on more input on some issues.
 ** Waiting for more feedback on current changes.
 ----
-===3.10.1-SNAPSHOT-sMD5NET-b595(cumulative)===
+===3.10.1-SNAPSHOT-sMD5NET-b596(cumulative)===
 * Hot
 ** Change version naming, adding "series" hinting at build server/purpose.
 * Fixes
 ** Moving: Fix sprinting time not resetting. (Once the client tells not to be sprinting, we don't need to care for latency anymore.)
 ** SurvivalFly: Attempt to catch "glide" with vertical accounting [Could cause new false positives, NEED FEEDBACK].
-** CreativeFly: Jump amplifier gets reset properly now.
 ** SurvivalFly: The workaround for sprint/bunny while attacking others is modeled differently, which should now work with sprint effects.
+** CreativeFly: Jump amplifier gets reset properly now.
+** Waterwalk: Fix waterwalk triggering for walking into water on some occasions.
 * API extensions / changes:
 ** Configuration handling: Action factories are set up lazily now in order to allow better overriding by other plugins. Effect could be that once per reload some events get a higher processing time (only the first getting of the config).
 ** INotifyReload can be registered with a priority set in an annotation, thus you can ensure your reload hook gets called before any NCP-internal hooks.
 ** LogAction: Constructor used for optimized action is now on protected visibility instead of private.
 * Internals
 ** Partial cleanup for SurvivalFly: Move some code into methods, alter checking order in some places, other cleanups.
-** SurvivalFly: Revert allowing to consume buffers and velocity for sprintback.
+** SurvivalFly: Revert allowing to consume buffers and velocity for sprintback, change extra buffer to counter for the "lost sprint" problem.
+** SurvivalFly: Reduce reference-sprinting-speed by changing the "bunny hop" modeling (hop + fly phase, compensate with buffer).
 ===3.10.1-SNAPSHOT-b587(cumulative)===
 * Hot
 ** Account for per-player walk-speed and fly-speed **[More testing pending!]**.
