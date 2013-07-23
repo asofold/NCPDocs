@@ -7,6 +7,7 @@ This page gives an overview of selected known issues and incompatibilities.
 For support Tickets see [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/|Tickets on BukkitDev]].
 ----
 ==Known issues==
+This section is incomplete and still needs to be updated.
 ===Bukkit-API only mode===
 This concerns the compatibility module that is used if no native access for the server mod is available, or if bukkitapionly is set.
 * Trap-doors: Falling through open trap doors will deal fall damage. Likely applies to some other blocks as well.
