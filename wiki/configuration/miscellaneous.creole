@@ -1,9 +1,0 @@
-=Miscellaneous=
-
-|**Setting**               |**Explanation**     |
-|{{{allowclientmods}}}     |Setting this to true will allow all players to use parts of much such as zombe fly, CJB xray and other ones regardless of what you have set in your permissions.                 |
-|{{{opinconsoleonly}}}     |NoCheatPlus will force the /op and /deop command to be executed in the console only if this is set to true.                                                                      |
-|{{{protectplugins}}}      |Prevents access to /pl and /plugins for players without permissions (by default CraftBukkit allows that to everyone).                                                            |
-|{{{managelisteners}}}     |BUGGED! Experimental feature which could gain a little bit of performance but currently it bugs with checks such as BedLeave and others.                                         |
-|{{{reporttometrics}}}     |We collect anonymous data from your server to improve NoCheatPlus using [[http://mcstats.org/plugin/NoCheatPlus|mcStats]] . You can disable this behaviour here if you wish. :(  |
-|//lag//                   |Should NoCheatPlus adapt to server sided lag? //This flag is hidden by default!//                                                                                                |

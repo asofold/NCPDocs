@@ -2,4 +2,89 @@
 
 [[../main.creole|Back to main page.]]
 
-[[checks.creole|Checks Overview]]
+This page describes the configuration of NoCheatPlus.
+
+**This page still needs updating and re-formatting.**
+
+The default configuration file (config.yml) can be supplemented by world-specific configuration files to override all or specific entries.
+
+The default configuration file should generate automatically, you can always rename it and use the "ncp reload" command to generate a new default configuration.
+
+==General notes on .yml configuration files==
+* Use spaces for indentation.
+* Keep the indentation level: Never change the amount of white-spaces in front of options in the config file "config.yml".
+* Don't insert special characters such as tabs for indentation. If you plan on complicated text entries, wrap them like '...' or "...".
+* Refer to the default config file for reference.
+
+Inserting unsupported characters or changing indentation levels can break the configuration.
+
+==World-Specific Configuration==
+
+At present you name a world-specific config with the world name as the prefix: WorldName_config.yml
+
+Notes:
+* The world name has to be exact case (MiningWorld, theWorld etc.).
+* You can set savebackconfig to false, in order to not have NoCheatPlus add default values to a config file. Thus you can override just the values you are interested in and keep a minimal world-specific configuration file.
+
+==Uncategorized==
+|savebackconfig|Set to false in order to prevent NoCheatPlus from adding default values and saving back the configuration file. Can be used to create minimal world-specific files with only the entries needed to change.|
+
+==configversion==
+Set {{{notify}}} to false to suppress the messages about outdated configurations. Only the main configuration file is checked at present.
+\\The other entries are not meant to be changed by hand, they indicate with which version the config was created and last saved back.
+
+==logging==
+
+Disable all logging with setting {{{active}}} to false.
+
+Individual logging targets can be configured in the sub sections within {{{backends}}}:
+* Set {{{active}}} to false to disable the individual backend. 
+* The {{{prefix}}} parameter allows to create a custom appearance for the log messages.
+* File logging allows specifying a file name.
+* For {{{ingamechat}}} you can force NoCheatPlus to check permissions subscriptions, if you use plugins that apply this technique to log to IRC and other for instance.
+
+==miscellaneous==
+* Set {{{opinconsoleonly}}} to true to prevent op and deop commands from in-game chat. [Will be changed to a list of commands.]
+* Set {{{managelisteners}}} to true to help us testing :) - this feature lets NCP register all its listeners inside of a ListenerManager that allows more intricate registration order than Bukkit. This is a "future feature" and is not needed, not even sure it improves performance.
+* Set {{{reporttometrics}}} to false in order to disable reporting usage-stats to htpp://mcstats.org (PluginMetrics). Setting this to falss also prevents NoCheatplus from creating the PluginMetrics folder, however other plugins or Spigot could still create that folder. 
+
+==data==
+The data section allows you to specify an expiration duration for players data in minutes. If set to something greater than 0, this will periodically remove players data if the players have been logged out for longer than the specified amount of minutes. At present this would also delete set-back locations and current violation levels, if activated, so it should not be set to a too short duration.
+
+**Expiration:**
+|**Config**|**Description**|**Default**|
+|**duration**|Duration in minutes after logout, after which data gets erased.|0|
+|**history**|Should the players violation history also be deleted?|false|
+
+==protection==
+===plugins===
+Features for this and other plugins.
+====hide====
+This section contains configuration for the yet-incomplete feature for hiding your plugins better. You can prevent help-contents display and command usage by setting permissions with a permissions plugin, if the command has a default permission set, but NoCheatPlus allows to set the permission message of some commands, which would otherwise reveal the presence of the command/plugin. So the permission message for some commands is changed to the "Unknown command" message to hide the presence.
+\\Currently this feature does not allow hiding arbitrary plugins, it does:
+* Set new permission defaults for the version and the plugins commands, so players can't use these to get
+* Hide the nocheatplus command itself.
+
+This does not hide the commands of other plugins from the help topics or from tab completion, if the commands don't have a permission set, neither does it prevent the default permission message for using a command.
+\\TODO: Link docs on how to configure help topics and other.
+===clients===
+Features that concern client mods.
+Set the {{{active}}} flag to false in the {{{motd}}} section to prevent NoCheatPlus sending any "blank lines" messages to clients on login. Otherwise blank lines can result disregarding if all clients are allowed or not, because some clients use a message to enable features, some need a message to disable features.
+\\Note that it is 100% up to the client to decide on enabling or disabling features, a modified version of any client may ignore any sent messages, without that being detectable.
+
+==Configuration of Checks==
+The checks section contains configuration mostly for checks related to players actions, most can generate violation log messages (few exceptions).
+
+===Checks Overview===
+
+See: [[checks.creole|Checks Overview]]
+
+
+===Checks Shortcuts===
+TODO: Individual check section pages and shortcuts.
+
+
+==Bleeding Edge: Development builds==
+To allow you to keep track with the configuration and permission changes in the latest development versions, we have a simple page set up: **[[../development/dev-pinboard.creole|Development Pinboard]]**
+\\
+For quick overview over recent builds, see: [[../development/build-infos.creole|Important Changes By Build Number]]
