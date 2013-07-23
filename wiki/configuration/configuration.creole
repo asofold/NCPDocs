@@ -77,7 +77,7 @@ The checks section contains configuration mostly for checks related to players a
 
 ===Checks Overview===
 
-See: [[checks.creole|Checks Overview]]
+See: [[checks/checks.creole|Checks Overview]]
 
 
 ===Checks Shortcuts===
