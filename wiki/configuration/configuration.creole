@@ -46,7 +46,7 @@ Individual logging targets can be configured in the sub sections within {{{backe
 ==miscellaneous==
 * Set {{{opinconsoleonly}}} to true to prevent op and deop commands from in-game chat. [Will be changed to a list of commands.]
 * Set {{{managelisteners}}} to true to help us testing :) - this feature lets NCP register all its listeners inside of a ListenerManager that allows more intricate registration order than Bukkit. This is a "future feature" and is not needed, not even sure it improves performance.
-* Set {{{reporttometrics}}} to false in order to disable reporting usage-stats to htpp://mcstats.org (PluginMetrics). Setting this to falss also prevents NoCheatplus from creating the PluginMetrics folder, however other plugins or Spigot could still create that folder. 
+* Set {{{reporttometrics}}} to false in order to disable reporting usage-stats to [[http://mcstats.org/plugin/NoCheatPlus|mcstats.org]] (PluginMetrics). Setting this to falss also prevents NoCheatplus from creating the PluginMetrics folder, however other plugins or Spigot could still create that folder. 
 
 ==data==
 The data section allows you to specify an expiration duration for players data in minutes. If set to something greater than 0, this will periodically remove players data if the players have been logged out for longer than the specified amount of minutes. At present this would also delete set-back locations and current violation levels, if activated, so it should not be set to a too short duration.
