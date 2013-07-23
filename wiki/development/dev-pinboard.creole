@@ -8,7 +8,8 @@ A list by build number is found at the bottom of the page, this page mostly desc
 
 For quick overview over recent builds, see: \\[[build-infos.creole|Important Changes By Build Number]]
 
-If you have an issue create a ticket or ask on the overview page to get this updated or explained.
+If you have an issue create a ticket or ask on the BukkitDev overview page to get this updated or explained.
+\\Mind the [[issues.creole|issues page]] for information on some typical incompatibilities.
 
 This page will be kept more simple in order to be able to fill in changes quickly.
 
@@ -16,7 +17,22 @@ This page will be kept more simple in order to be able to fill in changes quickl
 @maintainance: keep this site simple to read in edit mode :)
 ----
 ==Version naming==
-Version of NoCheatPlus usually consist of 3 basic numbers, like "3.8.6". The first number should be something major, like "generation of plugin", and is likely not to change ever, unless we switch to something completely different. The second number concerns major changes and might increase with new Minecraft versions, often rendering some features incompatible. The last number should increment with releases on BukkitDev, mainly, though it might increase with important internal changes too. The Jenkins build number is appended like "-b284", builds are pushed with arbitrary amounts/nature of changes. Releases on BukkitDev will get an extra tag between version numbers and build number, such as RC for release and beta for beta release, resulting in something like "3.8.6-beta-b285".
+Scheme: GENERATION.MAJOR.MINOR-INTENTION-sSERIES-bBUILD
+\\//Example: 3.10.1-sMD5NET-b599//
+* GENERATION: Likely to not to change ever, unless we switch to a fundamentally different architecture.
+* MAJOR: Should increment with Minecraft releases or bigger feature incompatibilities.
+* MINOR: Should increment with releases (currently only on BukkitDev).
+* INTENTION: Should be "SNAPSHOT" for development builds and RC or RC1... for release candidates. Note that release candidates can be rejected by the release authorities, so check the build information as explained below.
+* SERIES: Indicate build location or purpose. Might enable us to run several Jenkins with differing quality in mind. Added around build 600, custom builds usually show 's?'.
+* BUILD: The build number, increasing with every build on a Jenkins instance. Custom builds usually show 'b?'.
+
+In addition we label development builds with "promotion" symbols only for official releases and with additional information, usually stating the build "bXYZ:" and additional information, typically like:
+* "release on BukkitDev": The build has been uploaded to BukkitDev and approved by staff, you can download it from there.
+* "planned release": The release has been uploaded to BukkitDev and approval is pending. If the build is older, it might be a rejected build.
+* "mostly stable": Builds that seem to have been running stable for a while and either do not contain too many experimental additions or seem to be consolidated.
+* "(deficient)": Problematic build, some features are not working correctly or need to be deactivated to run the build. Not bad enough to get deleted, left over for testing against other builds.
+* "MC X.Y.Z": Indicate that support for the Minecraft version as specified has been added to this build, and should be in for later builds unless stated otherwise with later builds.
+
 ==NMS/OBC Access==
 This plugin accesses net.minecraft.server and org.bukkit.craftbukkit classes, due to missing features or performance reasons. The design of NoCheatPlus hides this access in modules set up extra for each package-naming-change. NoCheatPlus has a compatibility module for Bukkit-API only, which means not using OBC/NMS access, however some features will work with reduced effect, more impact on performance, or not work at all (list pending?).
 ==General settings==
