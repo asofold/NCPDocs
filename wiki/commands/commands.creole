@@ -4,7 +4,7 @@
 
 NoCheatPlus integrate a lightweight command system. It's allowing you to quickly exempt players from checks or to check data about a player. 
 
-The commands support tab completion, some allow shortcuts.
+The commands support tab completion, some allow shortcuts. The root command is named "nocheatplus", however the alias "ncp" should also work and is used for reference here.
 
 This page needs updating.
 
