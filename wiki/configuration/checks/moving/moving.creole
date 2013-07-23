@@ -1,0 +1,40 @@
+=moving=
+
+[[../checks.creole|<<<Back to Checks Overview<<<]]
+
+Checks that at least technically have to do with the player moving around or impacting the world with his movement can be found here.
+
+\\
+**CreativeFly:** Limits the flying speed for players that are playing in creative gamemode.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**ignoreallowflight**|Compatibility option. Usually flying plugins should set that a player is allowed to fly, which then will be recognized by NCP to use creativefly instead of survivalfly for checking. With setting this to true you can force NCP to ignore this property. |false|
+|**ignorecreative**|Normally players in creative mode are checked by creativefly by default. Setting this to true will let NCP use survivalfly instead, unless for allow-flight or exemptions.|false|
+|**horizontalspeed**|Modifier for the maximally allowed horizontal speed. 100 means "normal" creative mode speed. 200 would be twice the speed.|100|
+|**verticalspeed**|Modifier for the maximally allowed vertical speed. 100 means "normal" creative mode speed. 200 would be twice the speed.|100|
+|**maxheight**|This is a height limit which is counted from above the worlds maximum height (usually resulting in 256 + maxheight).|128|
+\\ \\
+**MorePackets:** The morepackets check is complementary to the "runfly" check. While the "runfly" check(s) limit the distance a player can move per step, this "morepackets" check limits the number of "steps" a player may take per second. A normal value is 20 steps per second.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+ \\
+**MorePacketsVehicle:** The morepacketsvehicle check is complementary to the "morepackets" check. While the "morepacket" check limit the number of player-move packets send per second, this "morepacketsvehicle" limit the number of vehicle-move (minecarts, boats, ...) packets sent per second.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**NoFall:** A sub check of survivalfly, it makes sure that the player gets the damage he/she is supposed to get.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**Passable:** This check prevents moving into or inside of blocks (noclip). It might also trigger if players teleport or join and start sending moving events while not having received or rendered the chunk they stand on, yet. Thus the player assumes to be falling and communicates that to the server, NCP will see them moving into blocks - so no quick banning on these!
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**SurvivalFly:**Prevents flying, speeding, water walking etc.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**extended** vertical-accounting|TODO|true|

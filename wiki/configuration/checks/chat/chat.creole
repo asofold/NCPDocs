@@ -1,0 +1,116 @@
+=chat=
+
+[[../checks.creole|<<<Back to Checks Overview<<<]]
+
+Checks that at least technically have to do with chat or commands.
+
+\\ \\
+**Color:** Remainder of the old days, removes color from chat and commands.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|
+
+\\ \\
+**Commands:** Simple commands frequency check. Also has a "shortterm" setting which monitors only a couple of ticks.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|
+|**exclusions**|A list of commands to exclude from the commands check. Case insensitive. The command has to match complete words, you cant add "/test" to allow "test123", whereas it is possible to use entries like "/region info" to exclude just that sub command.|-|
+|**handleaschat**|A list of commands to be handled by the text check instead, typically "/me". Matching is the same principle as with exclusions.|-|
+|**level**|Level for which to generate a violation.|10|
+|**shortterm** ticks|Number of server ticks to count commands for shortterm checking.|18|
+|**shortterm** level|Level for which to generate an exception.|3|
+
+\\ \\
+**<<size 14>>Captcha:** This is not yet an independent check, if activated it will be used for the commands and the text checks in case of violations.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|false|
+|**characters**|Which chars should be used to generate a captcha code?|-|
+|**length**|How many characters should the captcha have?|6|
+|**question**|How should the question be worded? Use & to create colors. The text [captcha] will be replaced with the actual captcha.|-|
+|**success**|What message should be printed out if the player answers with the right capcha code?|-|
+|**tries**|How many attempts will a player have to give the correct answer. A failed attempt will display the question again. Be generous here, as players may not be fast enough to read the question the first few times or be otherwise distracted.|3|
+
+\\ \\
+**Text:** This combines the former globalchat and nopwnage into one check. Most important are the frequency entries, because they decide about when to raise violations. The frequency.shortterm section is for the fast spamming (last 5 seconds), the frequency.normal section is for the slower paced chat (last 30 seconds). Each message is assigned a weight, according to several weighting methods, for instance upper case use, repetition, letter-counts vs. word lengths and similar. The weights are accumulated, keeping track of about 5 (shortterm) or 30 (normal) seconds. The levels (frequency section) then allow defining a threshold when to regard the accumulated weights as a violation.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\
+**Text Frequency:**  These settings allow to specify what accumulated level will trigger a violation both for medium term and short term accumulation.
+
+\\
+**Normal:** This allows to set the bounds for the medium term tracking, which covers 30 seconds, roughly.
+|**Config**|**Description**|**Default**|
+|**minimum**|Each message will at least count in with this weight.|0.0|
+|**factor**|This describes how strong old chat messages count in, 1.0 would let them count in fully, with a smaller value the older messages count in with this factor, applied every 3 seconds of age, roughly.|0.9|
+|**weight**|This is a multiplier to balance out  things, the calculated weight will just be multiplied with this.|6|
+|**level**|Accumulated level for which to generate a violation for.|160|
+
+\\
+**Shortterm:** This describes the bounds for the short term tracking, covering 5 seconds, roughly.
+|**Config**|**Description**|**Default**|
+|**minimum**|Each message will at least count in with this weight.|2.0|
+|**factor**|Same as with the "normal" settings. By default lower, to make very fast repetition more expensive.|0.7|
+|**weight**|Weight for balancing (multiplier).|3.0|
+|**level**|Accumulated level for which to generate a violation for.|20.0|
+
+\\
+**Text Message:**  This section allows to alter message-specific weights.
+|**Config**|**Description**|**Default**|
+|**lettercount**|Counting the letters versus the word length. Unbalanced counts would be more expensive.|1.0|
+|**partition**|TODO|1.0|
+|**uppercase**|Uppercase costs more.|1.0|
+|**afterjoin**|Make chat right after joining the server more expensive.|1.5|
+|**nomoving**|Chatting and not having moved recently is also more expensive.|1.5|
+|**repeatviolation**|Repeating a message similar to the last cancelled message.|1.0|
+|**repeatglobal**|Repeat something similar to the last message (of any player)|1.0|
+|**repeatself**|Repeat oneself|1.5|
+|**words** lengthav|World length vs. average word length.|1.0|
+|**words** lengthmsg|Word length vs. message length.|1.0|
+|**words** noletter|This punishes the use of numbers and special characters. If set to 1.0, countdowns will be much more difficult.|0.0|
+
+\\
+**Text Global:**  Extended methods being fed by all players messages. (Deactivated by default.)
+\\These methods allow to track repetition of words or word parts better tan comparison to the last message etc. Repetitions of recently spoken words count in more. All methods have extra settings (here hidden), which differing presets. ["size" indicating how many words/nodes are kept at a time, "sort" to have a words letters sorted before feeding the check, "compress" to remove duplicate letters before feeding, "split" to split words into letters numbers and special characters and judge those individually, "weight" for balancing the results, "minwordsize" and "maxwordsize" to ignore too short or too long words.]
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**weight**|Weight to balance out the result of the global section.|1.0|
+|**words** active|Keeps track of whole words.|false|
+|**prefixes** active|Sort the words into a prefix-tree.|false|
+|**similarity** active|Checks words for similarity with the Levenshtein algorithm applied within a metric tree. (most heavy)|false|
+
+\\
+**Text Player:**  Extended methods keeping track of each player individually. (Deactivated by default.)
+\\//(See global settings, these methods just start off with smaller size parameters, because data is kept for players individually. Data cleanup is done automatically, disregarding the data settings.)//
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**words** active|TODO|false|
+|**prefixes** active|TODO|false|
+|**similarity** active|TODO|false|
+
+\\ \\
+**Warning:**  Warn the player of the chat.text and chat.commands levels, possibly before a violation is triggered.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**level**|Percentage of level at which to warn, currently warning does not necessarily happen before violations being triggered.|67|
+|**message**|This message will be sent to all of the players that fail a chat check, [[http://www.minecraftwiki.net/wiki/Formatting_codes|color codes]] are supported here.|-|
+|**timeout**|Timeout in seconds before warning again.|10|
+
+\\ \\
+****Relog:**  Prevent too fast relogging.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**timeout**|Time in milliseconds which a player should delay before relog.|5000|
+|**warning** message|This message will be sent to all players that tried to relog too fast, [[http://www.minecraftwiki.net/wiki/Formatting_codes|color codes]] are supported here.|-|
+|**warning** number|Number of warnings before kicking a player on too fast relog. This resets after warning timeout.|1|
+|**warning** timeout|Time in milliseconds after which the number of warnings sent resets.|60000|
+|**kickmessage**|Message to display on kick.|-|
+
+\\ \\
+****Logins:** Prevent too many players logging in within a short time.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**startupdelay**|Amount of time in seconds  that must pass since start of the server for this check to take effect.|300|
+|**perworldcount**|If set to true, the counting will be performed for each world individually and not server-wide.|false|
+|**seconds**|Duration in seconds for which logins are tracked.|10|
+|**limit**|Number of logins that may happen within the specified time (seconds).|6|
+|**kickmessage**|This message will be shown to those players that get kicked because too many other players logged in at the same time|-|

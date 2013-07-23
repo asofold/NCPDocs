@@ -1,0 +1,23 @@
+=blockinteract=
+
+[[../checks.creole|<<<Back to Checks Overview<<<]]
+
+Checks that at least technically have to do with the player interacting to blocks.
+
+\\ \\
+**Direction:** Checks if the players is looking at the block, roughly.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|
+
+\\ \\
+**Reach:** Interacting with blocks out of reach.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|
+
+\\ \\
+**Speed:** Speed of interacting.
+TODO: More specific. Interacting can be very fast (shears), so this check just prevents extreme spamming.
+
+\\ \\
+**Visible:** Can a block be touched at all (ray tracing).
+TODO: More specific.

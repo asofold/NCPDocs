@@ -1,0 +1,34 @@
+=blockplace=
+
+[[../checks.creole|<<<Back to Checks Overview<<<]]
+
+Checks that at least technically have to do with the player placing blocks.
+
+\\ \\
+**Fastplace:** This check will prevent players from placing blocks too quickly by checking the interval of time elapsed since they've placed their last block. This should prevent players from using the features called "FastPlace" and "Build" of their griefing client.
+|**Config**|**Description**|**Default**|
+|**active**|Should players be checked for this behavior.|true|
+|**limit**|What's the allowed block place limit? ToDo|22|
+|**shortterm** ticks|ToDo|10|
+|**shortterm** limit|ToDo|6|
+
+\\ \\
+**Reach:** Players may slightly increase the distance at which they can place blocks. This check will try to identify that by comparing player and block location.
+|**Config**|**Description**|**Default**|
+|**active**|Should players be checked for this behavior?|true|
+
+\\ \\
+**Direction:** Players may place blocks without really looking at them. This is often combined with placing a lot of blocks in a certain shape.
+|**Config**|**Description**|**Default**|
+|**active**|Should players get checked for this type of hack?|true|
+
+\\ \\
+**Speed:** Players may throw projectiles (experience bottles, eggs, monster eggs, eyes of ender, ender pearls) really quickly in order to crash the server.
+|**Config**|**Description**|**Default**|
+|**active**|Should players get checked for this type of hack?|true|
+|**interval**|The time (in milliseconds) between each thrown projectile. It takes more than 150 ms if the player is keeping its right button pressed.|45|
+
+\\ \\
+**Noswing:** Players may place blocks without moving their arm. This is confusing for nearby players, as they won't see who placed the blocks.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|

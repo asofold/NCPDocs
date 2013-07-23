@@ -1,0 +1,44 @@
+=combined=
+
+[[../checks.creole|<<<Back to Checks Overview<<<]]
+
+This section holds checks and parts of checks, that are used by several other checks, or that combine different types of inputs for something more general. Could also bechecks that don't fit anywhere else much better than here.
+
+\\ \\
+**BedLeave:** This check will prevent players from faking bed leave packets which could be used to confuse SurvivalFly, Godmode and some checks.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+**EnderPearl:** This check attempts to prevent ender pearl abuse (throwing through walls).
+
+TODO: Specific docs. Issue: Sometimes players end up half inside a wall, unable to move on.
+
+\\ \\
+**Improbable:**  This check is aimed at "improbable" behavior, it is something like a medium to long term frequency check with several inputs, such as fighting speed, block placing, hitting at long range, turning around very quickly and other. [Subject to become really improbable: no normal fighting frequency, //just// count the really improbable checks. Might get removed for other methods later.]
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**level**|The required level before Improbable takes actions against those kind of hacks. ToDo|300|
+
+\\ \\
+**Invulnerable:**  TODO
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**triggers** always|TODO|false|
+|**triggers** falldistance|TODO|true|
+|**initialticks** join|TODO|-1|
+|**ignore** |TODO|-|
+|**modifiers** all|TODO|0|
+
+\\ \\
+**Munchhausen:**  ToDo
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|false|
+
+\\ \\
+**Yawrate:**  This check keeps track of how fast players turn around. It monitors moving and other actions like attacking. If a player turns too much in too short time, the player can not attack for a certain amount of time.
+|**Config**|**Description**|**Default**|
+|**rate** |Degrees per second in grad, allowed to turn without fighting penalty.|380|
+|**penalty** factor|How strong to count in too fast turning.|1.0|
+|**penalty** minimum|The minimal penalty for any violation in milliseconds.|250|
+|**penalty** maximum|The maximal penalty for any violation in milliseconds.|2000|
+|**improbable** |If to feed the improbable check in case of yawrate violations. If you have trouble with some rubberbanding causing improbable violations, set this to false.|true|

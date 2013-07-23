@@ -51,10 +51,13 @@ Individual logging targets can be configured in the sub sections within {{{backe
 ==data==
 The data section allows you to specify an expiration duration for players data in minutes. If set to something greater than 0, this will periodically remove players data if the players have been logged out for longer than the specified amount of minutes. At present this would also delete set-back locations and current violation levels, if activated, so it should not be set to a too short duration.
 
-**Expiration:**
+**expiration**
 |**Config**|**Description**|**Default**|
 |**duration**|Duration in minutes after logout, after which data gets erased.|0|
 |**history**|Should the players violation history also be deleted?|false|
+
+**consistencychecks**
+You can suppress consistency check warnings here and alter intervals for periodic checking (usually not needed).
 
 ==protection==
 ===plugins===
@@ -79,10 +82,27 @@ The checks section contains configuration mostly for checks related to players a
 
 See: [[checks/checks.creole|Checks Overview]]
 
+Shortcut links:
+\\| 
+[[blockbreak/blockbreak.creole|blockbreak]] | 
+[[blockinteract/blockinteract.creole|blockinteract]] | 
+[[blockplace/blockplace.creole|blockplace]] | 
+[[chat/chat.creole|chat]] | 
+[[combined/combined.creole|combined]] | 
+[[fight/fight.creole|fight]] | 
+[[inventory/inventory.creole|inventory]] | 
+[[moving/moving.creole|moving]] | 
 
-===Checks Shortcuts===
-TODO: Individual check section pages and shortcuts.
+== **Strings Section** ==
+This is the section that defines various strings for "log" or "cmd" actions. Each has a name (the part in front of ":") and a definition (the part behind the ":"). Whenever you use a "log" or "cmd" action in one of the "actions: " options of this config file, the string will be taken from this section. Arbitrary many additional strings may be defined here, or existing strings may be changed.
+\\ \\
+Most messages/commands use place-holders in [ ], which will be replaced at runtime with relevant information. Some of these may only be available in certain circumstances, only "[player]" can be used everywhere, especially in "cmd" actions.|
+\\
 
+== **Compatibility Section** ==
+This section allows to configure details for the case of compatibility issues, for instance with other server mods or custom blocks.
+
+[[compatibility/compatibility.creole|compatibility page]]
 
 ==Bleeding Edge: Development builds==
 To allow you to keep track with the configuration and permission changes in the latest development versions, we have a simple page set up: **[[../development/dev-pinboard.creole|Development Pinboard]]**

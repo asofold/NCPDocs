@@ -1,0 +1,45 @@
+=blockbreak=
+
+[[../checks.creole|<<<Back to Checks Overview<<<]]
+
+Checks that at least technically have to do with the player breaking blocks.
+
+\\ \\
+**Frequency:** This check monitors how many blocks a player breaks within some time. There is a general buffer counting in 2 seconds by default and allowing to accumulate as many blockbreaks as fit into the time given the intervalcreative and/or intervalsurvival settings interpreted as durations. In addition it has a short term setting, also counting the blocks within the last n ticks and limiting the short term amount. This way players cannot break 20 blocks at once and then pause for a second or two.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**intervalcreative**|The minimal interval in milliseconds between two block breaks assumed to be ok, for players in creative mode.|95|
+|**intervalsurvival**|The minimal interval in milliseconds between two block breaks assumed to be ok, for players //not// in creative mode.|45|
+|**shortterm** ticks|Number of server ticks to count for short term checking.|5|
+|**shortterm** limit|Maximal number of blocks to be allowed to break within the specified ticks.|7|
+
+
+\\ \\
+**Fastbreak:** This check enforces realistic block breaking duration's for survival mode.
+|**Config**|**Description**|**Default**|
+|**active**|Should players be checked for this behavior.|true|
+|**strict**|If set to true, this check will measure the time from interaction to block break. If set to false, it will measure the time from block break to block break, which allows one cheated fast break always, but enforces normal speed for sequences of block breaks, being less strict in laggy environments, or in case the server mod does the interact events differently.|true|
+|**intervalsurvival**|Modifier for block breaking in survival mode. Do not set to something higher or all block breaking is likely to become violations.|100|
+|**delay**|This is a time in milliseconds that you are always allowed to mine faster than the normal breaking time. This is to account for minimum delays, such as events getting delayed by a server tick. This also means that every block with a lower breaking time can be mined "instantly", still covered by the blockbreak.frequency check, though. Default is somewhere around 100 ms (a tenth of a second), in addition to increasing the grace amount this can be used to deal with more lag. Settings should be tested using the blockbreak.debug or the fastbreak.debug flag to see the difference in timing (Permission nocheatplus.admin.debug - delete stats with /ncp remove <player>).|90|
+|**grace**|This is the amount of "time mined too fast" in milliseconds the players may accumulate before triggering a violation. The accumulation keeps track of the last two minutes with a four-seconds-resolution. The default value of 2000 allows you to mine two seconds faster than allowed within 2 minutes, roughly, to account for a little bit of lag. Servers with strong lag spikes might increase this value, or just to be more easy on players with too bad connections.|2000|
+
+\\ \\
+**WrongBlock:** This check enforces that the player can only break blocks that he has interacted with before. It might lead to some false positives for instantly breakable materials involved, but usually high vls should be difficult to reach with normal clients.\\
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**level**|Accumulated value after which to trigger a violation.|10|
+
+\\ \\
+**Reach:** Players may slightly increase the distance at which they can break blocks. This check will try to identify that by comparing player and block location.
+|**Config**|**Description**|**Default**|
+|**active**|Should players be checked for this behavior.|true|
+
+\\ \\
+**Direction:** Players may break blocks without really looking at them. This is often combined with breaking a lot of blocks surrounding the player at the same time.
+|**Config**|**Description**|**Default**|
+|**active**|Should players get checked for this type of hack.|true|
+
+\\ \\
+**Noswing:** Players may break blocks without moving their arm. This is confusing for nearby players, as they won't see who broke the blocks.
+|**Config**|**Description**|**Default**|
+|**active**| Should players get checked for this type of hack?|true|

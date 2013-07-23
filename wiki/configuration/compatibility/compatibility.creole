@@ -1,0 +1,22 @@
+=compatibility=
+
+[[../configuration.creole|<<<Back to Configuration Overview<<<]]
+
+Set {{{bukkitapionly}}} to true to force using API-only mode. 
+This can be useful when using other server modifications than CraftBukkit, for the case that NoCheatPlus loads the wrong compatibility module.
+
+All blocks can be referenced by the type id or the [[http://jd.bukkit.org/rb/apidocs/org/bukkit/Material.html|Bukkit Material name]].
+
+The {{{ignorepassable}}} list is outdated you should use flag-overriding instead (see below). Blocks can be ignored for passability checks, but this can lead to issues with flying checks not recognizing them as ground properly.
+
+The {{{allowinstantbreak}}} list is a list of blocks for which you override the default breaking time settings. This is a last resort for blocks that just don't work. Unknown blocks are set to be instantly breakable by default, but not included here.
+
+The {{{overrideflags}}} section allows to specify specific flags, using blocks as keys.
+\\**See Development Pinboard, linked below.**
+
+----
+
+There might be more details available on the [[../../development/dev-pinboard.creole|Development Pinboard page]],
+such as hidden settings also for moving.
+
+More detailed explanations might be found there until put here.

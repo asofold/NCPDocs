@@ -1,0 +1,35 @@
+=inventory=
+
+[[../checks.creole|<<<Back to Checks Overview<<<]]
+
+Checks everything that has to do with Inventory management.
+
+\\ \\
+**Drop:** Players could drop their entire inventory in 1 click to lag and crash the server, to prevent this we simply limit the amount of drops a player is allowed to do.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**limit**|TODO|100|
+|**timeframe**|TODO|20|
+
+\\ \\
+**FastClick:** To prevent chest stealer's or auto armor hacks we simple limit the click speed a player is allowed to use while managing his/her inventory. However this check will also prevent mods such as InvTweaks and other ones from working right (because they give advantage compared to vanilla players), if you want your players to be able to use those mods then disable this check or give them the right permission.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**sparecreative**|Set this to true if you don't want FastClick to check players that are in creative mode.|true|
+
+\\ \\
+**InstantBow:** This check will make sure that everyone uses the vanilla fire speed to shoot arrows with the bow. InstantBow will take actions if a player tries to go over the allowed limit. 
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**strict**|TODO|true|
+|**delay**|TODO|130|
+
+\\ \\
+**InstantEat:** Some players are in haste and try to eat very fast or even instant. InstantEat will make sure that they always use the vanilla eating speed to keep them healthy! This check has been tested and doesn't cause any problems with plugins that modify eat speed such as FastEat or AutoSoup, YEY!
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+
+\\ \\
+**Items:** TODO
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
