@@ -39,7 +39,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 *** More feedback on current changes.
 *** Specific testing (mostly sprinting related).
 ----
-===3.10.1-SNAPSHOT-sMD5NET-b599(cumulative)===
+===3.10.1-SNAPSHOT-sMD5NET-b600(cumulative)===
 * Hot
 ** Change version naming, adding "series" hinting at build server/purpose.
 * Configuration Changes
@@ -60,6 +60,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** SurvivalFly: Revert allowing to consume buffers and velocity for sprintback, change extra buffer to counter for the "lost sprint" problem.
 ** SurvivalFly: Reduce reference-sprinting-speed by changing the "bunny hop" modeling (hop + fly phase, compensate with buffer).
 ** SurvivalFly: Perform less double checking (perm checks) by testing bunny first, and a second time afterwards only if necessary.
+** SurvivalFly: Bunny-hop: Also applies when not sprinting, also with not jumping. (Working towards confining/removing the buffer.)
 ===3.10.1-SNAPSHOT-b587(cumulative)===
 * Hot
 ** Account for per-player walk-speed and fly-speed.
