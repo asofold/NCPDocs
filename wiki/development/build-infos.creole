@@ -39,6 +39,8 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 *** More feedback on current changes.
 *** Specific testing (mostly sprinting related).
 ----
+===3.10.1-beta-sMD5NET-b601(beta release)===
+* Planned beta release on BukkitDev.
 ===3.10.1-SNAPSHOT-sMD5NET-b600(cumulative)===
 * Hot
 ** Change version naming, adding "series" hinting at build server/purpose.
@@ -51,6 +53,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** SurvivalFly: Prevent negative horizontal buffer.
 ** CreativeFly: Jump amplifier gets reset properly now.
 ** Waterwalk: Fix waterwalk triggering for walking into water on some occasions.
+** Worked around in earlier builds: carpets.
 * API extensions:
 ** Configuration handling: Action factories are set up lazily now in order to allow better overriding by other plugins. Effect could be that once per reload some events get a higher processing time (only the first getting of the config).
 ** INotifyReload can be registered with a priority set in an annotation, thus you can ensure your reload hook gets called before any NCP-internal hooks.
