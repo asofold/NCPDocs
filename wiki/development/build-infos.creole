@@ -41,8 +41,9 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 *** Specific testing (mostly sprinting related).
 *** @MyPictures
 ----
-===3.10.2-SNAPSHOT-sMD5NET-b602(cumulative)===
-* No changes, yet.
+===3.10.2-SNAPSHOT-sMD5NET-b603(cumulative)===
+* Fixes
+** Attempt to fix issues with horses and NoFall.
 ===3.10.1-beta-sMD5NET-b601(beta release)===
 * **//Beta// release on BukkitDev.**
 ===3.10.1-SNAPSHOT-sMD5NET-b600(cumulative)===
