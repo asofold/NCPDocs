@@ -32,12 +32,14 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * ...
 * //3 extra phases in random order: fight, velocity, morepackets+fly.//
 * //NCPDocs overhaul (does not concern the plugin).//
-* **Current:** Bug fix and consistency release (3.10.1).
+* **Current:** More bug fixes.
 ** Might add: Switch opinconsoleonly to a general list of commands.
 ** Missing:
+*** Test out (+fix) nofall questions with horses and similar.
 *** More input on potential issues.
 *** More feedback on current changes.
 *** Specific testing (mostly sprinting related).
+*** @MyPictures
 ----
 ===3.10.2-SNAPSHOT-sMD5NET-b602(cumulative)===
 * No changes, yet.
