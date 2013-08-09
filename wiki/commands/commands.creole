@@ -1,6 +1,6 @@
 =Commands=
 
-[[../main.creole|Back to main page.]]
+[[../README.creole|Back to main page.]]
 
 NoCheatPlus integrate a lightweight command system. It's allowing you to quickly exempt players from checks or to check data about a player. 
 
@@ -9,7 +9,10 @@ The commands support tab completion, some allow shortcuts. The root command is n
 This page needs updating.
 
 ==Permissions==
-All commands are located under the {{{nocheatplus.admin}}} node.
+Root node for commands:
+* **NoCheatPlus 3.10.2** and above: {{{nocheatplus.commands}}}
+* //NoCheatPlus 3.10.1// and below: {{{nocheatplus.admin}}}
+
 You can give a player access to a specific command by giving them the sub-node with the commands default name, like {{{nocheatplus.admin.info}}}.
 For further information about permissions in NoCheatPlus, we recommend looking at the [[../permissions/permissions.creole|permissions page]]. 
 
@@ -26,6 +29,8 @@ For further information about permissions in NoCheatPlus, we recommend looking a
 |**/ncp exemptions (player)** [check_type] | Show a player exemptions|
 |**/ncp commands** | List all commands, more than shown here. The other commands are mainly for use with actions, such as delaying other commands, kicking with messager, telling players colored messages, deny login for a player, allow it again, and other.|
 |**/ncp version**|Show version information about the server, plugin, compatibility modules and registered hooks.|
+
+TODO: kicklist, unkick for temporary login denial + rest of commands
 
 Some commands allow '*' instead of the player name. TODO: Which exactly (unexempt, removeplayer, ...)
 

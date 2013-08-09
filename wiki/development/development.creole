@@ -1,6 +1,6 @@
 =Development=
 
-[[../main.creole|<<<Back to main page<<<]]
+[[../README.creole|<<<Back to main page<<<]]
 
 Here you find links to changes history, issues, information about development builds and information for developers.
 

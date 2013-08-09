@@ -30,9 +30,9 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * New cancelling mechanisms for fight.speed (probability based / minimum frequency).
 ====Scheduled====
 * ...
-* //3 extra phases in random order: fight, velocity, morepackets+fly.//
+* //3 extra phases in rough order: fight, velocity, morepackets+fly.//
 * //NCPDocs overhaul (does not concern the plugin).//
-* **Current:** More bug fixes.
+* **Current:** Bug fix release (3.10.2).
 ** Might add: Switch opinconsoleonly to a general list of commands.
 ** Missing:
 *** Test out (+fix) nofall questions with horses and similar.
@@ -41,7 +41,11 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 *** Specific testing (mostly sprinting related).
 *** @MyPictures
 ----
-===3.10.2-SNAPSHOT-sMD5NET-b603(cumulative)===
+===3.10.2-SNAPSHOT-sMD5NET-b60X(cumulative)===
+* Permission changes
+** Breaking: The filter permissions for commands are now grouped under nocheatplus.filter.command.
+** Backwards compatible: New shortcut permissions, commands are grouped under nocheatplus.command.
+** Permissions for notifications are now split into nocheatplus.command.notify and nocheatplus.notify. 
 * Fixes
 ** Attempt to fix issues with horses and NoFall.
 ===3.10.1-beta-sMD5NET-b601(beta release)===
