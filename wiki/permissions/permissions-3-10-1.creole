@@ -1,9 +1,7 @@
-=Permissions=
+=Permissions 3.10.1 and below=
 
 [[../README.creole|Back to main page.]]
-
-**This page describes permissions for NoCheatPlus 3.10.2 and above,**\\
-//For older versions see the [[../permissions.creole|permissions page for 3.10.1 and below.]]//
+[[../permissions.creole|Back to permissions for 3.10.2 and above.]]
 
 NoCheatPlus supports "SuperPerms", CraftBukkit's official permission framework. You'll need to use a permissions plugin that supports "SuperPerms" to manage all the permissions of NoCheatPlus. Here are some examples:
 
@@ -14,35 +12,32 @@ NoCheatPlus supports "SuperPerms", CraftBukkit's official permission framework. 
    * zPermissions
 
 By default NoCheatPlus assigns all permissions and gives full rights to players that have been /op-ed on your server. If you don't want to give OPs full access to all NoCheatPlus features then take a look in the configuration of your permissions plugin (Example with PermissionsEx: allowOps: false).\\\\
-==Notifications==
-|nocheatplus.notify|The player will receive notifications through the in-game chat of players failing NoCheatPlus checks. .|
-If you want moderators to be able to toggle notifications, just give the permission nocheatplus.command.notify, which will also give this one then. Mind the ".silent" permission for individual checks permissions (explained on the bottom of this page).
 
 ==Administration==
-|{{{nocheatplus.admin}}}|Shortcut permission for all administrative commands including ban (do not give lightly). See nocheatplus.shortcut permissions for faster setup for moderators.|
+|{{{nocheatplus.admin}}}|Parent permission for all administrative commands including ban (do not give lightly).|
+===Notifications===
+|nocheatplus.admin.notify|The player will receive notifications through the in-game chat of players failing NoCheatPlus checks. It also gives access to the ///ncp notify on or off// command.|
+Mind the ".silent" permission for individual checks permissions (explained on the bottom of this page).
+===Command permissions===
+|nocheatplus.admin.info|The player gets access to "/ncp info", which displays all violations that a player has gotten (if any).|
+|nocheatplus.admin.lag|Gives access to "/ncp lag" which shows informations about your server latency (NoCheatPlus uses this informations to adapt some checks for serversided latency).|
+|nocheatplus.admin.reload|The player gets access to "/ncp reload", which causes NoCheatPlus to reread its configuration files (This doesn't clear NoCheatPlus data or exemptions!).|
+|nocheatplus.admin.plugins|Allows the player to execute the "/plugins" or "/pl" command from CraftBukkit (//protectplugins// has be set to true in the configuration file).|
+|nocheatplus.admin.version|Owners of this node can execute the "/version" or "/ver" command from CraftBukkit (//protectplugins// has be set to true in the configuration file).|
+|nocheatplus.admin.exemptions|Gives access to execute "/ncp exemptions" which list all exemptions for an specified player (Those exemptions will get reset after every reload/restart! For permanent exemptions use the check permissions!).|
+|nocheatplus.admin.exempt|Gives access to the "/ncp exempt" command which allows to temporary exempt players for either all (ALL) or specified checks only.|
+|nocheatplus.admin.unexempt|Allows to unexempt players from checks by using the "/ncp unexempt" command.|
+|nocheatplus.admin.removeplayer|Gives access to execute "/ncp removeplayer", which causes NoCheatPlus to wipe/clear specified or all collected data from a player including violations and temporary stored check data (This wont wipe exemptions!).|
+|nocheatplus.admin.commands|Allows the player to use the "/ncp" command which lists all NoCheatPlus commands.|
+|nocheatplus.admin.ban|Gives permissions to use "/ncp ban" which bans a player on your server.|
+|nocheatplus.admin.kick|Gives access to "/ncp kick" which kicks a player from your server.|
+|nocheatplus.admin.tell|Gives access to "/ncp tell" which allows whispering something to a specified player.|
+|nocheatplus.admin.delay|Gives permissions to use the "/ncp delay" command which has the ability to run a specified command with delayed time execution time.|
+|nocheatplus.admin.tempkick|Allows the player to tempkick/tempban someone from the server using "/ncp tempkick".|
+|nocheatplus.admin.kicklist|Gives access to the "/ncp kicklist" command which lists all players that got "tempkicked/tempbanned" from NoCheatplus by either using actions or "/ncp tempkick".|
+|nocheatplus.admin.unkick|Gives access to remove a tempkick/tempban from a player using "/ncp unkick".|
 ===Debug===
 |nocheatplus.admin.debug|Owners of this node will receive debug messages of checks if NoCheatPlus debugging is turned on.|
-==Command permissions==
-|nocheatplus.command.notify|Allow toggling notifications and also to receive them (nocheatplus.notify is included here).|
-|nocheatplus.command.info|The player gets access to "/ncp info", which displays all violations that a player has gotten (if any).|
-|nocheatplus.command.lag|Gives access to "/ncp lag" which shows informations about your server latency (NoCheatPlus uses this informations to adapt some checks for serversided latency).|
-|nocheatplus.command.reload|The player gets access to "/ncp reload", which causes NoCheatPlus to reread its configuration files (This doesn't clear NoCheatPlus data or exemptions!).|
-|nocheatplus.command.plugins|Allows the player to execute the "/plugins" or "/pl" command from CraftBukkit (//protectplugins// has be set to true in the configuration file).|
-|nocheatplus.command.version|Owners of this node can execute the "/version" or "/ver" command from CraftBukkit (//protectplugins// has be set to true in the configuration file).|
-|nocheatplus.command.exemptions|Gives access to execute "/ncp exemptions" which list all exemptions for an specified player (Those exemptions will get reset after every reload/restart! For permanent exemptions use the check permissions!).|
-|nocheatplus.command.exempt|Gives access to the "/ncp exempt" command which allows to temporary exempt players for either all (ALL) or specified checks only.|
-|nocheatplus.command.unexempt|Allows to unexempt players from checks by using the "/ncp unexempt" command.|
-|nocheatplus.command.removeplayer|Gives access to execute "/ncp removeplayer", which causes NoCheatPlus to wipe/clear specified or all collected data from a player including violations and temporary stored check data (This wont wipe exemptions!).|
-|nocheatplus.command.commands|Allows the player to use the "/ncp" command which lists all NoCheatPlus commands.|
-|nocheatplus.command.ban|Gives permissions to use "/ncp ban" which bans a player on your server.|
-|nocheatplus.command.kick|Gives access to "/ncp kick" which kicks a player from your server.|
-|nocheatplus.command.tell|Gives access to "/ncp tell" which allows whispering something to a specified player.|
-|nocheatplus.command.delay|Gives permissions to use the "/ncp delay" command which has the ability to run a specified command with delayed time execution time.|
-|nocheatplus.command.tempkick|Allows the player to tempkick/tempban someone from the server using "/ncp tempkick".|
-|nocheatplus.command.kicklist|Gives access to the "/ncp kicklist" command which lists all players that got "tempkicked/tempbanned" from NoCheatplus by either using actions or "/ncp tempkick".|
-|nocheatplus.command.unkick|Gives access to remove a tempkick/tempban from a player using "/ncp unkick".|
-==Filter permissions (plugin hiding)==
-|nocheatplus.filter.(commandname)|Allows to use a command protected by command protection for the case the command did not have a permission set. In case of incompatibilities of your permission plugin you might have to add nocheatplus.filter.command.nocheatplus to players that are to use /ncp ... commands.|
 ==Bypass==
 Specific bypass permissions.
 |nocheatplus.bypass.denylogin|Allows to bypass the login denial, such as exists with the /ncp tempkick command.|
@@ -160,11 +155,3 @@ You can exclude a specific player from getting logged by appending ".silent" to 
    * **nocheatplus.checks.moving.nofall.silent**\\
 
 will prevent NoCheatPlus from recording log messages for that player for the "nofall" check, while still executing all other actions as usual.
-==Shortcut permissions==
-|nocheatplus.admin| see above (full admin perms except check bypassing).|
-|nocheatplus.shortcut.info|info about players|
-|nocheatplus.shortcut.monitor|info about players and diagnostic info like version, lag,|
-|nocheatplus.shortcut.safeadmin|"Safe" admin perms, no banning or reloading but unkick, exemption, data removal|
-
-
-More to be added (shortcut.bypass - bypass about everything).

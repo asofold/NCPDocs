@@ -43,11 +43,13 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ----
 ===3.10.2-SNAPSHOT-sMD5NET-b60X(cumulative)===
 * Permission changes
-** Breaking: The filter permissions for commands are now grouped under nocheatplus.filter.command.
-** Backwards compatible: New shortcut permissions, commands are grouped under nocheatplus.command.
+** Backwards compatible: New shortcut permissions, commands are grouped under nocheatplus.command (.admin still works).
 ** Permissions for notifications are now split into nocheatplus.command.notify and nocheatplus.notify. 
 * Fixes
 ** Attempt to fix issues with horses and NoFall.
+** Fix colors for command hiding.
+* Internals
+** The filter permissions for commands are now grouped under nocheatplus.filter.command.
 ===3.10.1-beta-sMD5NET-b601(beta release)===
 * **//Beta// release on BukkitDev.**
 ===3.10.1-SNAPSHOT-sMD5NET-b600(cumulative)===
