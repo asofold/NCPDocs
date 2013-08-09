@@ -1,7 +1,7 @@
 =Permissions 3.10.1 and below=
 
 [[../README.creole|Back to main page.]]
-[[../permissions.creole|Back to permissions for 3.10.2 and above.]]
+[[permissions.creole|Back to permissions for 3.10.2 and above.]]
 
 NoCheatPlus supports "SuperPerms", CraftBukkit's official permission framework. You'll need to use a permissions plugin that supports "SuperPerms" to manage all the permissions of NoCheatPlus. Here are some examples:
 
