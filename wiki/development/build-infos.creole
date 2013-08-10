@@ -41,7 +41,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 *** Specific testing (mostly sprinting related).
 *** @MyPictures
 ----
-===3.10.2-SNAPSHOT-sMD5NET-b608(cumulative)===
+===3.10.2-SNAPSHOT-sMD5NET-b609(cumulative)===
 * New
 ** New shortcut permissions.
 * Configuration changes
@@ -50,6 +50,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** Backwards compatible: New shortcut permissions, commands are grouped under nocheatplus.command (.admin still works, child nodes will be kept compatible for a while).
 ** Permissions for notifications are now split into nocheatplus.command.notify and nocheatplus.notify. 
 * Fixes
+** SurvivalFly: Fix vertical accounting letting a variation of "glide" slip through. 
 ** Attempt to fix issues with horses and NoFall.
 ** BukkitCompat: Keep command protection operable (get the command map by reflection).
 * Internals
