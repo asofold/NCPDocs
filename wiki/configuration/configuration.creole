@@ -63,10 +63,12 @@ You can suppress consistency check warnings here and alter intervals for periodi
 ===plugins===
 Features for this and other plugins.
 ====hide====
-This section contains configuration for the yet-incomplete feature for hiding your plugins better. You can prevent help-contents display and command usage by setting permissions with a permissions plugin, if the command has a default permission set, but NoCheatPlus allows to set the permission message of some commands, which would otherwise reveal the presence of the command/plugin. So the permission message for some commands is changed to the "Unknown command" message to hide the presence.
-\\Currently this feature does not allow hiding arbitrary plugins, it does:
-* Set new permission defaults for the version and the plugins commands, so players can't use these to get
-* Hide the nocheatplus command itself.
+This section contains configuration for hiding (some of) your plugins better. You can prevent help-contents display and command usage by setting permissions with a permissions plugin, if the command has a default permission set, but NoCheatPlus allows to set the permission message of some commands, which would otherwise reveal the presence of the command/plugin. So the permission message for some commands can be changed to the "Unknown command" message to hide the presence. You do need to also set the aliases of the commands, use lower case rather.
+\\This feature allows to change command permissions to not be given by default or add a generic filter permission nocheatplus.filter.command.//(commandname)// to a command that does not have one set yet, the following settings allow configuring lists of commands and the message:
+\\**"nopermission":**\\
+Display the "no permission" message, default to "plugins" and "version" commands, useful for instance if a plugin does not set a permission for a command.
+\\**"unknowncommand":**\\
+Display the "unknown command" message, empty by default. This can be used to hide a command from users that don't have the default permission (or the filter permission added by NCP if none was set).
 
 This does not hide the commands of other plugins from the help topics or from tab completion, if the commands don't have a permission set, neither does it prevent the default permission message for using a command.
 \\TODO: Link docs on how to configure help topics and other.
