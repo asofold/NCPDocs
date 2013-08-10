@@ -70,7 +70,6 @@ Display the "no permission" message, default to "plugins" and "version" commands
 \\**"unknowncommand":**\\
 Display the "unknown command" message, empty by default. This can be used to hide a command from users that don't have the default permission (or the filter permission added by NCP if none was set).
 
-This does not hide the commands of other plugins from the help topics or from tab completion, if the commands don't have a permission set, neither does it prevent the default permission message for using a command.
 \\TODO: Link docs on how to configure help topics and other.
 ===clients===
 Features that concern client mods.
