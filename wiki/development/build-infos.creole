@@ -45,17 +45,20 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * New
 ** New shortcut permissions.
 * Configuration changes
+** opinconsoleonly: Add a commands list for more general use, put into protection.commands.consoleonly section.
+** All command lists in the configuration can be set up without using the prefix "/".
 ** Plugin hiding: Individual sections for "unknown command" and "no permission", adding lists of commands to change.
 * Permission changes
 ** Backwards compatible: New shortcut permissions, commands are grouped under nocheatplus.command (.admin still works, child nodes will be kept compatible for a while).
 ** Permissions for notifications are now split into nocheatplus.command.notify and nocheatplus.notify. 
 * Fixes
-** SurvivalFly: Fix vertical accounting letting a variation of "glide" slip through. 
+** SurvivalFly: Fix vertical accounting letting a variation of "glide" slip through.
 ** Attempt to fix issues with horses and NoFall.
 ** BukkitCompat: Keep command protection operable (get the command map by reflection).
 * Internals
-** The filter permissions for commands are now grouped under nocheatplus.filter.command.
+** Chat processing also attempts to test the original command label (consoleonly, handleaschat, exclusions).
 ** Command/plugin hiding now is done via permissions and permission-message for the commands, not parsing commands.
+** The filter permissions for commands are now grouped under nocheatplus.filter.command.
 ===3.10.1-beta-sMD5NET-b601(beta release)===
 * **//Beta// release on BukkitDev.**
 ===3.10.1-SNAPSHOT-sMD5NET-b600(cumulative)===
