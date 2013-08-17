@@ -1,0 +1,44 @@
+==TicketManagement==
+
+Simple guide on how to procedure on all tickets that have been reported by NoCheatPlus users.
+
+* Make sure we know the version of NoCheatPlus in use (as with /version NoCheatPlus).
+* Might also want to know CB version, or server mod name + version.
+* Ask the simple questions that help to understand what actually might be the case.
+* If you can reproduce an issue, simply state so, if appropriate with a short description how so.
+* Use search function of tickets to find duplicates, alter the title once problem is understood and can be put into optimally findable keywords.
+* Do not "rush" to present a solution, make sure you understand the problem, ask back the simple questions!
+* Do not close tickets too fast if they might be a hot topic at present. Just state you might close it soon, Give people a day or two in general.
+* Before closing a ticket, give short notice about why it is closed as the state as chosen (invalid, fixed , ...). Do mention now and then that people are invited to continue discussion or open a new ticket, depending on matter and how it was resolved.
+* Be polite or positive, keep it simple if possible.
+* Remind users that use a wrong ticket template to always use the right one!
+* Users that modify ticket templates and accidently forget important informations should be asked to provide those.
+* Tickets that include offensive or insecure text, images links, attachments or other content have to be marked as "Invalid" instantly. Also report to @asofold and/or @MyPictures as soon as possible.
+* other points...
+
+=Template usage=
+**Defect**: Used for existing defects in NoCheatPlus such as false positives, bugs, performance drops, damaged parts, incompatibility's and other.
+**Enhancement**: Used for suggestions to make NoCheatPlus better such as implementing a new check for example.
+**Task**: Used to give informations to plan a task which doesn't change the NoCheatPlus source code or the docs. We actually don't really make use of this one so I suggest to use "Defect" or "Enhancement" template instead.
+**Patch**: Used to provide source code additions/deletions which either enhance NoCheatPlus or fix a defect in it. GitHub PRs (PullRequests) should be used instead of the "Patch" template but we support this one also if you dont like GitHub.
+**Other**: Any other issue that wont fit any of those templates above should be posted with this one.
+
+=Statues=
+**Accepted**: We mark a ticket as "Accepted" as soon as we could reproduce the defect or enhancement and agree with it needing to get implemented or fixed.
+**Started**: Use this statue if we started working on an enhancement or defect but didn't fully finish it yet.
+**Waiting**: We should mark a ticket as "Waiting" if we need more informations or time to test and reproduce the issue. 
+**Replied**: Applying statue "Waiting" to that ticket and making a comment afterwards will turn it to "Replied". No special use just DevBukkit stuff.
+**Fixed**: Use this statue if you believe that a described issue or enhancement in a ticket has been fixed/finished.
+**Verified**: If you could reproduce and prove that a fix or enhancement has worked then mark the ticket as "Verified".
+**Invalid**: Only mark a ticket as invalid if you could prove it being invalid! As invalid we see: 
+* Issue that we couldn't reproduce and we have to be 100% sure that the issue isnt coming from NoCheatPlus
+* Issue that is caused by another plugin and cant be fixed over NoCheatPlus
+* Issue that cant be fixed because of the limitations of Minecraft, CraftBukkit, Java, network and computers
+**Duplicate**: If a ticket has been already made for this specific issue then mark it as "Duplicate" and try to link both tickets over the ticket comments (just post links of both tickets there).
+**Declined**: If we decide to not take actions for this issue or enhancement we mark it as "Declined". Example: If we find out that another plugin is causing the issue but it could technically get fixed over NoCheatPlus also. 
+
+=Priority's=
+Low: If we agree it being useful but rather prefer to focus on other features instead first.
+Medium: Default priority of every ticket.
+High: Features that we focus on implementing will get the priority "High" assigned.
+Critical: Crash exploits, Dupes or other problems in NoCheatPlus which may harm the server.

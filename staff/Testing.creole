@@ -1,0 +1,15 @@
+==Testing==
+
+Two basic things that already help a lot:
+* Report any bugs or strange things that might be related to NoCheatPlus.
+* Test development versions (http://ci.ecocitycraft.com/job/NoCheatPlus), for "real" or production servers be minimally careful and check the changes since last build that you used or ask which version is safe to "test".
+
+Extended testing could be:
+* Try to check if features claimed to be implemented in DEV versions really work as they should.
+* Try to reproduce problems mentioned in tickets or on the main page and report back if reproduced or ask for more details on how to, according to given info in tickets etc.
+* Test new features of hack clients with the development versions.
+* Report potential exploits and bugs for Minecraft / CB that we might be able to fix with NoCheatPlus.
+* Try to always provide a [[wiki\development\debugging.creole|debug trace]] if you find a false positive in NoCheatPlus. Also try to provide a plugins list and step by step tutorial on what you were actually doing to reproduce the false positive.
+* If you run NoCheatPlus on a productive server then feel free to leave us some /timings. Those will support us in making the performance of NoCheatPlus better.
+
+The extended stuff would be what an official team-member-tester would do for some part. On the other hand the two things on the top can already help a great lot (false positives, effects of live-server use, performance issues...).
