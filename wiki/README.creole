@@ -1,6 +1,6 @@
 =NoCheatPlus=
 
-{{https://github.com/asofold/NCPDocs/blob/master/wiki/resources/NoCheatPlus.jpg|NoCheatPlus}}
+{{https://raw.github.com/asofold/NCPDocs/master/wiki/resources/NoCheatPlus.png|NoCheatPlus}}
 
 ==Documentation and resources for NoCheatPlus==
 
