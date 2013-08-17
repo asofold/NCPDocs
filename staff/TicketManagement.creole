@@ -35,6 +35,7 @@ Simple guide on how to procedure on all tickets that have been reported by NoChe
 * Issue that is caused by another plugin and cant be fixed over NoCheatPlus
 * Issue that cant be fixed because of the limitations of Minecraft, CraftBukkit, Java, network and computers
 \\
+
 **Duplicate**: If a ticket has been already made for this specific issue then mark it as "Duplicate" and try to link both tickets over the ticket comments (just post links of both tickets there). \\
 **Declined**: If we decide to not take actions for this issue or enhancement we mark it as "Declined". Example: If we find out that another plugin is causing the issue but it could technically get fixed over NoCheatPlus also. 
 
