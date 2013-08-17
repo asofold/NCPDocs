@@ -1,5 +1,3 @@
-=NoCheatPlus=
-
 {{resources/NoCheatPlus.png|NoCheatPlus}}
 
 ==Documentation and resources for NoCheatPlus==
