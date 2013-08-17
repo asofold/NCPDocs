@@ -8,45 +8,46 @@
 ** Prevent players from cheating the server's time
 ** Prevent players from using the "safe-respawn" exploit
 ** Prevent walking on top of water and lava [modern hacks just keep jumping, though]
-** Prevent players from crashing the server by doing "illegal movements" [CraftBukkit does contain checks, but on some occasions these move data gets put through to plugins.]
+** Prevent players from crashing the server by doing "illegal movements" (CraftBukkit does contain checks, but on some occasions these move data gets put through to plugins.)
 ** Prevent players from faking BedLeave packets
-** Prevent players from hovering around in mid air 
-** Prevent players from exploiting "block jumping" to get over walls 
-** Prevent players from V-Clipping or teleporting 
+** Prevent players from hovering around in mid air
+** Prevent players from exploiting "block jumping" to get over walls
+** Prevent players from V-Clipping or teleporting
+** Prevent players from using their glide cheat **NEW!**
 ** Prevent players from abusing fishing roods to get around the fly check (This is kinda a joke...) [Untested! Disabled by default!]
-** Prevent players from abusing enderpearls to get through walls, roofs and floors 
+** Prevent players from abusing enderpearls to get through walls, roofs and floors **NEW!**
 
 * **Block Interacting:**
 ** Prevent players from interacting with blocks that are out of reach
-** Force players to look at the blocks that they want to interact with 
-** Prevent players from interacting through walls 
-** Prevent players from spamming interaction on blocks (note-blocks, doors, ...) 
+** Force players to look at the blocks that they want to interact with
+** Prevent players from interacting through walls
+** Prevent players from spamming interaction on blocks (note-blocks, doors, stone, wood, ...)
 
 * **Block Breaking:**
-** Prevent players from using "Survival Nuker", "Smasher", "Click Nuker" and "Creative Nuker"\\
+** Prevent players from using "Survival Nuker", "Smasher", "Click Nuker" and "Creative Nuker"
 ** Prevent breaking blocks faster than vanilla Minecraft allows, prevent breaking too many blocks too fast in total.
 ** Limit the reach for breaking blocks
-** Force players to look at the blocks 
+** Force players to look at the blocks
 ** Prevents "noswing" hacks (the player breaks blocks without showing the arm animation)
 ** Prevents players from breaking 2 or more blocks at the same time
-** Prevent players from breaking water or lava blocks in creative gamemode 
+** Prevent players from breaking water or lava blocks in creative gamemode
 
 * **Block Placing:**
 ** Prevent players from using "FastPlace" and "Build" cheats
 ** Limit the reach for block placing
-** Force players to look at the blocks 
+** Force players to look at the blocks
 ** Prevent players from throwing projectiles too quickly
 ** Prevent players from placing bloats anywhere else then water/lava
-** Prevent players from using the AutoSign feature of their client 
-** Prevent players from placing blocks in mid air. [[http://forums.bukkit.org/threads/sec-nocheat-v3-5-0-cb-1-2-4-r1-0-abandoned.4523/page-3#post-64865|Read more here!]] 
-** Prevents placing blocks against liquids 
+** Prevent players from using the AutoSign feature of their client
+** Prevent players from placing blocks in mid air. [[http://forums.bukkit.org/threads/sec-nocheat-v3-5-0-cb-1-2-4-r1-0-abandoned.4523/page-3#post-64865|Read more here!]]
+** Prevents placing blocks against liquids
 
 * **Player Chat:**
 ** Partly inspired by **[[http://dev.bukkit.org/server-mods/nopwnage/|NoPwnage]]** by **[[http://dev.bukkit.org/profiles/Evenprime85/|Evenprime]]**.
 ** Fast spam check + toolbox for slower paced annoyances (can take into account a players chat history and global chat history).
 ** Limit the number of new players allowed to join within a specific timeframe
 ** Prevent too fast re-login.
-** Filter colors from player messages [TODO: Outdated?]
+** Filter colors from player messages
 ** Limit the amount of players that can join the server at the same time
 ** Supports text and command spam blocking
 
@@ -59,18 +60,18 @@
 
 * **Fight:**
 ** Prevent players from attacking too many entities (players and mobs) at the same time
-** Prevent attacking of enemies that aren't in the line of sight of the player 
+** Prevent attacking of enemies that aren't in the line of sight of the player
 ** Prevent attacking without first swinging your arm
 ** Prevent attacking too many times within one second
 ** Prevent attacking of targets that are too far away
 ** Prevent players becoming invulnerable by exploitation of a design flaw of Minecraft
 ** Prevent players from knocking back other players when it's not technically possible
 ** Prevent players from giving critical hits to other players when it's not technically possible
-** Prevent players from hit other players while blocking with their sword 
+** Prevent players from hit other players while blocking with their sword
 ** Penalize players that change their direction by a lot (against force fields)
 ** Prevent players from doing self hits to fly by using the knockback of those
-** Feed combined check to find players that try to execute 2 or more cheats at the same time 
-** Prevent players from regenerating health too fast 
+** Feed combined check to find players that try to execute 2 or more cheats at the same time
+** Prevent players from regenerating health too fast
 
 * **Miscellaneous:**
 ** Disable Zombe's mod (fly, noclip, cheat)
@@ -81,4 +82,4 @@
 ** Restrict the OP management commands to a console usage only (disabled by default)
 ** Adapts to server sided lag for less false positives on heavy server load
 ** Provides a [[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/api/|API]] that allows making other plugins compatible with NoCheatPlus
-** Use of BukkitAPI only if the used CraftBukkit version is not supported 
+** Use of BukkitAPI only if the used CraftBukkit version is not supported
