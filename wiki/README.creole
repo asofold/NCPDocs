@@ -1,6 +1,6 @@
 =NoCheatPlus=
 
-{{fractal3c_5.jpg|Asteroids Background, Cheers!}}
+{{https://github.com/asofold/NCPDocs/blob/master/wiki/resources/NoCheatPlus.jpg|NoCheatPlus}}
 
 ==Documentation and resources for NoCheatPlus==
 
