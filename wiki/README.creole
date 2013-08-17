@@ -4,7 +4,7 @@
 
 [[permissions/permissions.creole|Permissions]]
 
-[[commands/commands.creole|Commands]]
+[[Commands.creole|Commands]]
 
 [[configuration/configuration.creole|Configuration]]
 
