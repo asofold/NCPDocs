@@ -13,8 +13,8 @@
 ** Prevent players from hovering around in mid air
 ** Prevent players from exploiting "block jumping" to get over walls
 ** Prevent players from V-Clipping or teleporting
-** Prevent players from using their glide cheat **NEW!**
 ** Prevent players from abusing fishing roods to get around the fly check (This is kinda a joke...) [Untested! Disabled by default!]
+** Prevent players from using their glide cheat **NEW!**
 ** Prevent players from abusing enderpearls to get through walls, roofs and floors **NEW!**
 
 * **Block Interacting:**
@@ -66,6 +66,7 @@
 ** Prevent attacking of targets that are too far away
 ** Prevent players becoming invulnerable by exploitation of a design flaw of Minecraft
 ** Prevent players from knocking back other players when it's not technically possible
+** Prevent players from exploiting extremely low jumps to get a pseudo criticals cheat going **NEW!**
 ** Prevent players from giving critical hits to other players when it's not technically possible
 ** Prevent players from hit other players while blocking with their sword
 ** Penalize players that change their direction by a lot (against force fields)
