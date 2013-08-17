@@ -5,6 +5,7 @@
 NoCheatPlus integrates a lightweight command system. It's allowing you to quickly exempt players from checks or to access and manage check data about a player. 
 
 All commands support tab completion and some even allow shortcuts. The root command is named "nocheatplus", however the alias "ncp" should also work and is used for reference here.
+
 NoCheatPlus also supports aliases from Bukkit [[http://wiki.bukkit.org/Bukkit.yml#aliases|BukkitAliases]] if you wish to have another alias command aside form "nocheatplus" and "ncp".
 
 ==Permissions==
