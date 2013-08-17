@@ -13,9 +13,9 @@
 ** Prevent players from hovering around in mid air
 ** Prevent players from exploiting "block jumping" to get over walls
 ** Prevent players from V-Clipping or teleporting
-** Prevent players from using their glide cheat ^^**NEW!**^^
+** Prevent players from using their glide cheat **NEW!**
 ** Prevent players from abusing fishing roods to get around the fly check (This is kinda a joke...) [Untested! Disabled by default!]
-** Prevent players from abusing enderpearls to get through walls, roofs and floors ^^**NEW!**^^
+** Prevent players from abusing enderpearls to get through walls, roofs and floors **NEW!**
 
 * **Block Interacting:**
 ** Prevent players from interacting with blocks that are out of reach
