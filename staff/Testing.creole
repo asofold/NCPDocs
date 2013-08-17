@@ -2,7 +2,7 @@
 
 Two basic things that already help a lot:
 * Report any bugs or strange things that might be related to NoCheatPlus.
-* Test development versions (http://ci.ecocitycraft.com/job/NoCheatPlus), for "real" or production servers be minimally careful and check the changes since last build that you used or ask which version is safe to "test".
+* Test development versions ([[http://ci.ecocitycraft.com/job/NoCheatPlus|md5-Jenkins]]), for "real" or production servers be minimally careful and check the changes since last build that you used or ask which version is safe to "test".
 
 Extended testing could be:
 * Try to check if features claimed to be implemented in DEV versions really work as they should.
