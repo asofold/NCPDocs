@@ -24,5 +24,4 @@ The usage statistics help us to judge some aspects of how this plugin is used, s
 Development builds of this project can be acquired at the provided continuous integration server. 
 These builds have not been approved by the BukkitDev staff. **Use them at your own risk!**
 
-Grab the latest development versions from here: [[http://ci.md-5.net/job/NoCheatPlus/|Jenkins]] \\
-Change log: [[http://ci.md-5.net/job/NoCheatPlus//changes|changes list]]
+[[http://ci.md-5.net/job/NoCheatPlus/|NoCheatPlus development builds]] - [[http://ci.md-5.net/job/NoCheatPlus//changes|ChangeLog]]
