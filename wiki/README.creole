@@ -4,8 +4,8 @@ The NCPDocs wiki will provide you with useful informations about NoCheatPlus suc
 
 ==Navigation==
 
-** [[permissions/permissions.creole|Permissions]]
-** [[Commands.creole|Commands]]
-** [[configuration/configuration.creole|Configuration]]
+** [[permissions/permissions.creole|Permissions]] \\
+** [[Commands.creole|Commands]] \\
+** [[configuration/configuration.creole|Configuration]] \\
 
 ** [[development/development.creole|Development page:]]

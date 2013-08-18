@@ -7,10 +7,10 @@ Welcome to the NCPDocs! This page will explain you everything you need to know a
 ==Navigation==
 ** [[wiki/|Wikipedia]]
 
-** [[Features.creole|Features]]
-** [[FAQ.creole|FAQ]]
-** [[Known Issues.creole|Known Issues]]
-** [[staff/|Staff submissions]]
+** [[Features.creole|Features]] \\
+** [[FAQ.creole|FAQ]] \\
+** [[Known Issues.creole|Known Issues]] \\
+** [[staff/|Staff submissions]] \\
 
 ==Usage Statistics==
 By default this plugin reports usage statistics to [[http://mcstats.org/plugin/NoCheatPlus|mcstats.org]] (PluginMetrics).
@@ -24,5 +24,5 @@ The usage statistics help us to judge some aspects of how this plugin is used, s
 Development builds of this project can be acquired at the provided continuous integration server. 
 These builds have not been approved by the BukkitDev staff. **Use them at your own risk!**
 
-[[http://ci.md-5.net/job/NoCheatPlus/|Jenkins}}]]
-Changelog: [[http://ci.md-5.net/job/NoCheatPlus//changes|changes list]]
+Grab the latest development versions from here: [[http://ci.md-5.net/job/NoCheatPlus/|Jenkins]] \\
+Change log: [[http://ci.md-5.net/job/NoCheatPlus//changes|changes list]]
