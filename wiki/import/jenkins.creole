@@ -1,8 +1,0 @@
-<<center>>{{https://dl.dropbox.com/u/14180705/NoCheatPlus/Banners/Jenkins.jpg|Jenkins}}<</center>> \\ \\
-
-<<center>><<size 18>>Development builds of this project can be acquired at the provided continuous integration server. 
-These builds have not been <<color Green>>approved<</color>> by the BukkitDev staff. **<<color RED>>Use them at your own risk!<</color>>** <</size>><</center>> \\
-
-<<center>>[[http://ci.md-5.net/job/NoCheatPlus/|{{https://dl.dropbox.com/u/14180705/NoCheatPlus/JenkinsButtons.gif|Jenkins}}]]<</center>>
-----
-Quick link: [[http://ci.md-5.net/job/NoCheatPlus//changes|changes list]]

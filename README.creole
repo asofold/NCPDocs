@@ -1,8 +1,28 @@
-NCPDocs
-=======
+=NCPDocs=
 
-Documentation for NoCheatPlus
+Welcome to the NCPDocs! This page will explain you everything you need to know about NoCheatPlus.
 
-----
+[[wiki/README.creole|NoCheatPlus]] is a CraftBukkit plugin which tries to distinguish improper or impossible behaviour on your server using heuristic based checks. It provides a massive palate of checks to fight a long range of cheats and exploits in Minecraft and CraftBukkit, allowing you to have a more stable and safe server for everyone.
 
-[[wiki/README.creole|Link to wiki overview page.]]
+==Navigation==
+** [[wiki/|Wikipedia]]
+
+** [[Features.creole|Features]]
+** [[FAQ.creole|FAQ]]
+** [[Known Issues.creole|Known Issues]]
+** [[staff/|Staff submissions]]
+
+==Usage Statistics==
+By default this plugin reports usage statistics to [[http://mcstats.org/plugin/NoCheatPlus|mcstats.org]] (PluginMetrics).
+
+You can prevent all plugins using mcstats with setting opt-out to true in {{{plugins/PluginMetrics/config.yml}}},
+or just tell NoCheatPlus to not send usage statistics by [[wiki/configuration/configuration.creole|configuration]].
+
+The usage statistics help us to judge some aspects of how this plugin is used, specifically which versions are in use.
+
+==Development Builds==
+Development builds of this project can be acquired at the provided continuous integration server. 
+These builds have not been approved by the BukkitDev staff. **Use them at your own risk!**
+
+[[http://ci.md-5.net/job/NoCheatPlus/|Jenkins}}]]
+Changelog: [[http://ci.md-5.net/job/NoCheatPlus//changes|changes list]]
