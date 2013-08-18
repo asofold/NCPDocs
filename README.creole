@@ -9,7 +9,7 @@ Welcome to the NCPDocs! This page will explain you everything you need to know a
 
 * [[Features.creole|Features]]
 * [[FAQ.creole|FAQ]]
-* [[Known Issues.creole|Known Issues]]
+* [[Known%20Issues.creole|Known Issues]]
 * [[staff/|Staff submissions]]
 
 ==Usage Statistics==
