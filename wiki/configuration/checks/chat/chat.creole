@@ -20,7 +20,7 @@ Checks that at least technically have to do with chat or commands.
 |**shortterm** level|Level for which to generate an exception.|3|
 
 \\ \\
-**<<size 14>>Captcha:** This is not yet an independent check, if activated it will be used for the commands and the text checks in case of violations.
+Captcha:** This is not yet an independent check, if activated it will be used for the commands and the text checks in case of violations.
 |**Config**|**Description**|**Default**|
 |**active**|Should this check be active?|false|
 |**characters**|Which chars should be used to generate a captcha code?|-|
@@ -96,7 +96,7 @@ Checks that at least technically have to do with chat or commands.
 |**timeout**|Timeout in seconds before warning again.|10|
 
 \\ \\
-****Relog:**  Prevent too fast relogging.
+**Relog:**  Prevent too fast relogging.
 |**Config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
 |**timeout**|Time in milliseconds which a player should delay before relog.|5000|
@@ -106,7 +106,7 @@ Checks that at least technically have to do with chat or commands.
 |**kickmessage**|Message to display on kick.|-|
 
 \\ \\
-****Logins:** Prevent too many players logging in within a short time.
+**Logins:** Prevent too many players logging in within a short time.
 |**Config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
 |**startupdelay**|Amount of time in seconds  that must pass since start of the server for this check to take effect.|300|
