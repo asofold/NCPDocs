@@ -5,7 +5,7 @@ Welcome to the NCPDocs! This page will explain you everything you need to know a
 [[wiki/README.creole|NoCheatPlus]] is a CraftBukkit plugin which tries to distinguish improper or impossible behaviour on your server using heuristic based checks. It provides a massive palate of checks to fight a long range of cheats and exploits in Minecraft and CraftBukkit, allowing you to have a more stable and safe server for everyone.
 
 ==Navigation==
-* [[wiki/|Wikipedia]]
+* [[wiki/|Wiki]]
 
 * [[Features.creole|Features]]
 * [[FAQ.creole|FAQ]]
