@@ -37,7 +37,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 *** More input on potential issues.
 *** More feedback on current changes.
 ----
-===3.10.2-SNAPSHOT-sMD5NET-b616(cumulative)===
+===3.10.2-SNAPSHOT-sMD5NET-b617(cumulative)===
 * New
 ** New shortcut permissions.
 ** Command "ncp inspect (player)": info about health, walkspeed and similar.
@@ -52,7 +52,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * Fixes
 ** SurvivalFly: Fix vertical accounting letting a variation of "glide" slip through.
 ** Attempt to fix issues with horses and NoFall.
-** Passable: Reduce false positives mostly with stairs.
+** Passable: fixes for ray-tracing (incl. alse postives).
 ** Fixes with inventory closing.
 ** BukkitCompat: Keep command protection operable (get the command map by reflection).
 * Internals
