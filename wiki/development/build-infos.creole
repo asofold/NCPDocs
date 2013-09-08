@@ -34,10 +34,9 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * //NCPDocs overhaul (does not concern the plugin).//
 * **Current:** Bug fix release (3.10.2).
 ** Missing:
-*** More input on potential issues.
-*** More feedback on current changes.
+*** Check on false positives (sf + hbuf).
 ----
-===3.10.2-SNAPSHOT-sMD5NET-b617(cumulative)===
+===3.10.2-SNAPSHOT-sMD5NET-b618(cumulative)===
 * New
 ** New shortcut permissions.
 ** Command "ncp inspect (player)": info about health, walkspeed and similar.
@@ -51,7 +50,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** Permissions for notifications are now split into nocheatplus.command.notify and nocheatplus.notify. 
 * Fixes
 ** SurvivalFly: Fix vertical accounting letting a variation of "glide" slip through.
-** Attempt to fix issues with horses and NoFall.
+** Nofall: Fix fractional damage for too low fall distances. Attempt to fix issues with horses.
 ** Passable: fixes for ray-tracing (incl. alse postives).
 ** Fixes with inventory closing.
 ** BukkitCompat: Keep command protection operable (get the command map by reflection).
