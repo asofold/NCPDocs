@@ -36,7 +36,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** Missing:
 *** Check on false positives (sf + hbuf).
 ----
-===3.10.2-SNAPSHOT-sMD5NET-b618(cumulative)===
+===3.10.2-SNAPSHOT-sMD5NET-b619(cumulative)===
 * New
 ** New shortcut permissions.
 ** Command "ncp inspect (player)": info about health, walkspeed and similar.
@@ -49,7 +49,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** Backwards compatible: New shortcut permissions, commands are grouped under nocheatplus.command (.admin still works, child nodes will be kept compatible for a while).
 ** Permissions for notifications are now split into nocheatplus.command.notify and nocheatplus.notify. 
 * Fixes
-** SurvivalFly: Fix vertical accounting letting a variation of "glide" slip through.
+** SurvivalFly: Fix vertical accounting letting a variation of "glide" slip through. Further reduce false positives (lost bunny).
 ** Nofall: Fix fractional damage for too low fall distances. Attempt to fix issues with horses.
 ** Passable: fixes for ray-tracing (incl. alse postives).
 ** Fixes with inventory closing.
