@@ -2,8 +2,9 @@
 
 [[../README.creole|Back to main page.]]
 
-**This page describes permissions for NoCheatPlus 3.10.2 and above,**\\
-//For older versions see the [[permissions-3-10-1.creole|permissions page for 3.10.1 and below.]]//
+**This page describes permissions for NoCheatPlus 3.10.2 and above,**
+\\**NoCheatPlus 3.10.2-RC-sMD5NET-b620 adds new permissions for commands and new short-cut permissions, updates following soon.**
+\\//For older versions see the [[permissions-3-10-1.creole|permissions page for 3.10.1 and below.]]//
 
 NoCheatPlus supports "SuperPerms", CraftBukkit's official permission framework. You'll need to use a permissions plugin that supports "SuperPerms" to manage all the permissions of NoCheatPlus. Here are some examples:
 

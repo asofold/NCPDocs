@@ -5,6 +5,7 @@
 This page describes the configuration of NoCheatPlus.
 
 **This page still needs updating and re-formatting.**
+\\**Some settings have been changed and/or moved with NoCheatPlus 3.10.2-RC-sMD5NET-b620, updates following soon.**
 
 The default configuration file (config.yml) can be supplemented by world-specific configuration files to override all or specific entries.
 

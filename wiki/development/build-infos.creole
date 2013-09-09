@@ -32,10 +32,11 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * ...
 * //3 extra phases in rough order: fight, velocity, morepackets+fly.//
 * //NCPDocs overhaul (does not concern the plugin).//
-* **Current:** Bug fix release (3.10.2).
-** Missing:
-*** Check on false positives (sf + hbuf).
 ----
+===3.10.3-SNAPSHOT-sMD5NET-b621(cumulative)===
+* (...)
+===3.10.2-RC-sMD5NET-b620(**release**)===
+* Release on BukkitDev.
 ===3.10.2-SNAPSHOT-sMD5NET-b619(cumulative)===
 * New
 ** New shortcut permissions.
