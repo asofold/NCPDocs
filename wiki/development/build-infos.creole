@@ -33,8 +33,15 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * //3 extra phases in rough order: fight, velocity, morepackets+fly.//
 * //NCPDocs overhaul (does not concern the plugin).//
 ----
-===3.10.3-SNAPSHOT-sMD5NET-b621(cumulative)===
-* (...)
+===3.10.3-RC-sMD5NET-b626(**release**)===
+* Planned release.
+===3.10.3-SNAPSHOT-sMD5NET-b625(cumulative)===
+* Fixes:
+** Fix creativefly allowing small horizontal moves to equal out too far vertical moves.
+** Fixes for shortcut permissions in the plugin.yml.
+* Log messages:
+** Let metrics fail silently unless logging.debug is set.
+** Start and end of "post-enable" is now logged.
 ===3.10.2-RC-sMD5NET-b620(**release**)===
 * Release on BukkitDev.
 ===3.10.2-SNAPSHOT-sMD5NET-b619(cumulative)===
