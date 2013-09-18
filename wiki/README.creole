@@ -1,4 +1,4 @@
-{{resources/NoCheatPlus.png|NoCheatPlus}}
+=NoCheatPlus Wiki=
 
 The NCPDocs wiki will provide you with useful informations about NoCheatPlus such as in-depth configuration about all checks, useful informations for developers and more.
 
@@ -7,5 +7,4 @@ The NCPDocs wiki will provide you with useful informations about NoCheatPlus suc
 * [[permissions/permissions.creole|Permissions]]
 * [[Commands.creole|Commands]]
 * [[configuration/configuration.creole|Configuration]]
-
-* [[development/development.creole|Development page]]
+* [[development/development.creole|Development]]
