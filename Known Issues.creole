@@ -37,7 +37,7 @@ CompatNoCheatPlus and Spout seem to have issues, however I am not sure if they w
 ===Passable check===
 The SpoutCraft client seems to allow moving into the corners of fence-arrangements, which is not possible in vanilla. Ladders can be added to the ignorepassable list in the config of NCP.
 
-===Other===
+==Other==
 All issues that didn't fit in any category above are listed here.
 
 ===Special (cheat) Client-Mods===
