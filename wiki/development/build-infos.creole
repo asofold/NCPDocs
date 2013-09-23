@@ -33,12 +33,12 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * //3 extra phases in rough order: fight, velocity, morepackets+fly.//
 * //NCPDocs overhaul (does not concern the plugin).//
 ----
-===3.10.4-SNAPSHOT-sMD5NET-b628(cumulative)===
-* CB/MC 1.6.4 support.
+===3.10.4-SNAPSHOT-sMD5NET-b629(cumulative)===
+* MC/CB 1.6.4 support.
 * General Changes
 ** Removed metrics. Might get re-added once certain which services to use.
 * Configuration Changes
-** Preparation: The inventory closing is moved to its own check (no violations triggered), allowing to track some fighting cheats better. No real changes yet, just preparations.
+** The inventory closing is moved to its own check (no violations triggered), allowing to track some fighting cheats better. No changes for processing yet, just preparations.
 * Internals
 ** Add Listeners for plugin-disable, use for some cleanup of internally used static members.
 ===3.10.3-RC-sMD5NET-b626(**release**)===
