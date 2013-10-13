@@ -32,9 +32,14 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * ...
 * //3 extra phases in rough order: fight, velocity, morepackets+fly.//
 * //NCPDocs overhaul (does not concern the plugin).//
-* Bugfix release (3.10.5)
-** Rumors about rubberbanding.
+* Bugfix release (3.10.6)
+** SurvivalFly: false positives with sprint+jump.
 ----
+===3.10.6-SNAPSHOT-sMD5NET-b634(cumulative)===
+* Fixes
+** SurvivalFly: Attempt to fix a false positive with sprint+jump.
+===3.10.5-RC-sMD5NET-b633(**release**)===
+* Release on BukkitDev (planned).
 ===3.10.5-SNAPSHOT-sMD5NET-b632(cumulative)===
 * Configuration changes (only needs updating the spots mentioned below):
 ** Add missing cancel action for fight.fastheal.
