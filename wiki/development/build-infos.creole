@@ -35,10 +35,14 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * Bugfix release (3.10.6)
 ** SurvivalFly: false positives with sprint+jump.
 ----
-===3.10.6-SNAPSHOT-sMD5NET-b634(cumulative)===
+===3.10.6-SNAPSHOT-sMD5NET-b639(cumulative)===
+Build 639 might lack testing for new false positives or problems resulting from altered set-back handling. Any feedback will be much appreciated.
 * Fixes
-** Moving checks: attempt fixes (partly potential).
+** Vehicles: Attempt to confine the player to the vehicles location (roughly).
+** Vehicles: Adjust set-back handling + prevent destroying ones own vehicle.
+** Passable: Attempt to harden set-back handling against certain exploits.
 ** SurvivalFly: Attempt to fix a false positive with sprint+jump.
+** SurvivalFly: Fix and simplify vertical accounting.
 ===3.10.5-RC-sMD5NET-b633(**release**)===
 * Release on BukkitDev (planned).
 ===3.10.5-SNAPSHOT-sMD5NET-b632(cumulative)===
