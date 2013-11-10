@@ -19,7 +19,7 @@ The default configuration file should generate automatically, you can always ren
 {{https://raw.github.com/asofold/NCPDocs/master/wiki/resources/Configuration/Notepad++.jpg|Notepad++}}
 
 ==World-Specific Configuration==
-How to create a world specific configuration file ?:
+How to create a world specific configuration file ?: \\
 1. First create a empty file according to that world name. Example: world_config.yml (the _ is required! And everything is case sensitive!) \\
 2. Start-up your server or just run /ncp reload if your server is already running \\
 3. NoCheatPlus should now write every setting available for world specific configuration \\
