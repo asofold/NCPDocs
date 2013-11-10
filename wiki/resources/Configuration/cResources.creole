@@ -1,0 +1,11 @@
+==FAQ==
+Storage for the [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole|configuration]] page.
+
+# [[https://github.com/asofold/NCPDocs/blob/master/wiki/resources/Configuration/cResources.creole#notepad++|Notepad++]]
+# [[https://github.com/asofold/NCPDocs/blob/master/wiki/resources/Configuration/cResources.creole#world-specific-configuration|World-Specific configuration]]
+
+==Notepad++==
+{{https://raw.github.com/asofold/NCPDocs/master/wiki/resources/Configuration/MultiWorld.jpg|MultiWorld}}
+
+==World-Specific configuration==
+{{https://raw.github.com/asofold/NCPDocs/master/wiki/resources/Configuration/MultiWorld.jpg|MultiWorld}}

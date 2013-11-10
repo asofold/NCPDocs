@@ -1,7 +1,7 @@
 =Configuration=
 
 **Contents**
-# [[#general-notes-on-yml-configuration-files|General notes on .yml configuration files]]
+# [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#general-notes-on-yml-configuration-files|General notes on .yml configuration files]]
 # [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#world-specific-configuration|World-Specific configuration]]
 # [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#configversion|Configversion]]
 # [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#logging|Logging]]
@@ -35,7 +35,7 @@ The default configuration file should generate automatically, you can always ren
 * Use a [[http://yaml-online-parser.appspot.com/|YAML parser]] to make sure your configuration file is formatted properly.
 * Inserting unsupported characters or changing indentation levels can break the configuration.
 * For those that use Notepad++ to edit their YAML files we recommend to enable "Replace by space" in Settings -> Preferences -> Tab Settings
-{{https://raw.github.com/asofold/NCPDocs/master/wiki/resources/Configuration/Notepad++.jpg|Notepad++}}
+{{https://github.com/asofold/NCPDocs/blob/master/wiki/resources/Configuration/cResources.creole#notepad++|Notepad++}}
 
 ==World-Specific configuration==
 How to create a world specific configuration file ?:
@@ -44,8 +44,7 @@ How to create a world specific configuration file ?:
 # NoCheatPlus should now write every setting available for world specific configuration in that/those empty yaml files
 # If you rather prefer to use some settings of your global config.yml then set "savebackconfig" to false and remove them from your world specific configuration file
 
-* End result in your explorer window after successfully creating some world specific config.yml files:
-{{https://raw.github.com/asofold/NCPDocs/master/wiki/resources/Configuration/MultiWorld.jpg|MultiWorld}}
+* End result in your [[https://github.com/asofold/NCPDocs/blob/master/wiki/resources/Configuration/cResources.creole#world-specific-configuration|explorer window]] after successfully creating some world specific config.yml files
 * Other examples: WorldName_config.yml, world_nether_config.yml, world_the_end_config.yml, HungerGames_config.yml or BackupWorld_config.yml
 
 Notes:
