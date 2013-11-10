@@ -9,32 +9,33 @@ The default configuration file (config.yml) can be supplemented by world-specifi
 The default configuration file should generate automatically, you can always rename it and use the "ncp reload" command to generate a new default configuration.
 
 ==General notes on .yml configuration files==
-* Use spaces for indentation .
+* Use spaces for indentation.
 * Keep the indentation level: Never change the amount of white-spaces in front of options in the config file "config.yml".
 * Don't insert special characters such as tabs for indentation. If you plan on complicated text entries, wrap them like '...' or "...".
 * Refer to the default config file for reference.
-* Use a [[http://yaml-online-parser.appspot.com/|YAML parser]] to make sure your configuration file is formatted properly
+* Use a [[http://yaml-online-parser.appspot.com/|YAML parser]] to make sure your configuration file is formatted properly.
 * Inserting unsupported characters or changing indentation levels can break the configuration.
-* For those that use Notepad++ to editor their YAML file we recommend to enable "Replace by space" in Settings -> Preferences -> Tab Settings
+* For those that use Notepad++ to edit their YAML files we recommend to enable "Replace by space" in Settings -> Preferences -> Tab Settings
 {{https://raw.github.com/asofold/NCPDocs/master/wiki/resources/Configuration/Notepad++.jpg|Notepad++}}
 
 ==World-Specific Configuration==
 How to create a world specific configuration file ?: \\
-1. First create a empty file according to that world name. Example: world_config.yml (the _ is required! And everything is case sensitive!) \\
-2. Start-up your server or just run /ncp reload if your server is already running \\
-3. NoCheatPlus should now write every setting available for world specific configuration \\
+1. First create a empty yml file according to a world name on your server. Example: world_config.yml (the _ is required! And everything is case sensitive!) \\
+2. Start-up your server or just run /ncp reload or /nocheatplus reload if your server is already running \\
+3. NoCheatPlus should now write every setting available for world specific configuration in that/those empty yaml files \\
 4. If you rather prefer to use some settings of your global config.yml then set "savebackconfig" to false and remove them from your world specific configuration file \\
 
-* End look in your explorer after successfully creating some world specific config.yml files:
+* End result in your explorer window after successfully creating some world specific config.yml files:
 {{https://raw.github.com/asofold/NCPDocs/master/wiki/resources/Configuration/MultiWorld.jpg|MultiWorld}}
-* Other examples: WorldName_config.yml, world_nether_config.yml, world_the_end_config.yml or BackupWorld_config.yml
+* Other examples: WorldName_config.yml, world_nether_config.yml, world_the_end_config.yml, HungerGames_config.yml or BackupWorld_config.yml
 
 Notes:
 * The world name is case sensitive (MiningWorld, theWorld etc.).
 * You can set savebackconfig to false, in order to not have NoCheatPlus add default values to a config file. Thus you can override just the values you are interested in and keep a minimal world-specific configuration file.
 * WorldName_config.yml has always higher priority then config.yml. So NoCheatPlus will first apply all settings from config.yml and then override them for a specific world using WorldName_config.yml
-* Some settings can only be used in the global config.yml and aren't multiworld compatible
-* World specific files can be created, changed or removed while your server and NoCheatPlus are running. Just use the /ncp reload or /nocheatplus reload command to let NoCheatPlus reread your ocnfiguration file.
+* Some settings can only be used in the global config.yml and aren't multiworld compatible (Please don't just copy config.yml and rename it to WorldName_config.yml or similar.) 
+* World specific files can be created, changed or removed while your server and NoCheatPlus are running. Just use the /ncp reload or /nocheatplus reload command to let NoCheatPlus reread your configuration file.
+* If a world gets unloaded, deleted or renamed then NoCheatPlus will automaticly ignore your world specific configuration files you made for it
 
 ==configversion==
 Set {{{notify}}} to false to suppress the messages about outdated configurations. Only the main configuration file is checked at present.
