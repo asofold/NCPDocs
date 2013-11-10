@@ -1,7 +1,7 @@
 =Configuration=
 |[[../README.creole|Back to wiki]]|
-**Table of content**
-# [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#general-notes-on-yml-configuration-files|General notes on .yml configuration files]]
+|**Table of content**|
+|# [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#general-notes-on-yml-configuration-files|General notes on .yml configuration files]]
 # [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#world-specific-configuration|World-Specific configuration]]
 # [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#configversion|Configversion]]
 # [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#logging|Logging]]
@@ -15,7 +15,7 @@
 ## [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#checks-overview|Checks overview]]
 # [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#strings-section|Strings section]]
 # [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#compatibility-section|Compatibility section]]
-# [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#bleeding-edge-development-builds|Bleeding Edge: Development builds]]
+# [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#bleeding-edge-development-builds|Bleeding Edge: Development builds]]|
 
 
 This page describes the configuration of NoCheatPlus.
