@@ -1,4 +1,7 @@
 =Configuration=
+
+Contents
+
 This page describes the configuration of NoCheatPlus.
 
 **This page still needs updating and re-formatting.**
@@ -19,11 +22,11 @@ The default configuration file should generate automatically, you can always ren
 {{https://raw.github.com/asofold/NCPDocs/master/wiki/resources/Configuration/Notepad++.jpg|Notepad++}}
 
 ==World-Specific Configuration==
-How to create a world specific configuration file ?: \\
-1. First create a empty yml file according to a world name on your server. Example: world_config.yml (the _ is required! And everything is case sensitive!) \\
-2. Start-up your server or just run /ncp reload or /nocheatplus reload if your server is already running \\
-3. NoCheatPlus should now write every setting available for world specific configuration in that/those empty yaml files \\
-4. If you rather prefer to use some settings of your global config.yml then set "savebackconfig" to false and remove them from your world specific configuration file \\
+How to create a world specific configuration file ?:
+# First create a empty yml file according to a world name on your server. Example: world_config.yml (the _ is required! And everything is case sensitive!)
+# Start-up your server or just run /ncp reload or /nocheatplus reload if your server is already running
+# NoCheatPlus should now write every setting available for world specific configuration in that/those empty yaml files
+# If you rather prefer to use some settings of your global config.yml then set "savebackconfig" to false and remove them from your world specific configuration file
 
 * End result in your explorer window after successfully creating some world specific config.yml files:
 {{https://raw.github.com/asofold/NCPDocs/master/wiki/resources/Configuration/MultiWorld.jpg|MultiWorld}}
