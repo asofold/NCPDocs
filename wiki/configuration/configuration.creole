@@ -2,8 +2,6 @@
 |[[../README.creole|Back to wiki]]|
 **Table of content**
 
-Test: [[~#miscellaneous|Miscellaneous]]
-
 # [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#general-notes-on-yml-configuration-files|General notes on .yml configuration files]]
 # [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#world-specific-configuration|World-Specific configuration]]
 # [[https://github.com/asofold/NCPDocs/blob/master/wiki/configuration/configuration.creole#configversion|Configversion]]
