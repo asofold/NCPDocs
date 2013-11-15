@@ -35,6 +35,10 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * Bugfix release (3.10.6)
 ** SurvivalFly: false positives with sprint+jump.
 ----
+===3.10.7-SNAPSHOT-sMD5NET-b645 (cumulative)===
+* ...
+===3.10.6-RC-sMD5NET-b644 (**release**)===
+* Release on BukkitDev.
 ===3.10.6-SNAPSHOT-sMD5NET-b643 (cumulative)===
 * Fixes
 ** Vehicles: Attempt to confine the player to the vehicles location (roughly).
