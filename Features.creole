@@ -81,5 +81,5 @@
 ** Disable Smart Moving (climbing, swimming, crawling, sliding, jumping, flying)
 ** Restrict the OP management commands to a console usage only (disabled by default)
 ** Adapts to server sided lag for less false positives on heavy server load
-** Provides a [[http://dev.bukkit.org/server-mods/nocheatplus/pages/documentation/api/|API]] that allows making other plugins compatible with NoCheatPlus
+** Provides a [[wiki/development/api.creole|API]] that allows making other plugins compatible with NoCheatPlus
 ** Use of BukkitAPI only if the used CraftBukkit version is not supported
