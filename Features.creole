@@ -44,15 +44,14 @@
 
 * **Player Chat:**
 ** Partly inspired by **[[http://dev.bukkit.org/server-mods/nopwnage/|NoPwnage]]** by **[[http://dev.bukkit.org/profiles/Evenprime85/|Evenprime]]**.
-** Fast spam check + toolbox for slower paced annoyances (can take into account a players chat history and global chat history).
-** Limit the number of new players allowed to join within a specific timeframe
+** Fast spam check + tool-box for slower paced annoyances (can take into account a players chat history and global chat history).
+** Limit the number of players allowed to join within a specific time frame
 ** Prevent too fast re-login.
 ** Filter colors from player messages
-** Limit the amount of players that can join the server at the same time
 ** Supports text and command spam blocking
 
 * **Inventory:**
-** Prevent players from dropping too many items within a short timeframe and therefore lagging the server
+** Prevent players from dropping too many items within a short time frame and therefore lagging the server
 ** Prevent players from charging and firing their bows too fast
 ** Prevent players from eating their food too fast
 ** Prevents players from managing there items to fast (inventory, enchantment table, beacon, ...)

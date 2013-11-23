@@ -1,24 +1,25 @@
 ==FAQ==
 
-**Will NoCheatPlus+ support plugins like mcMMO and Citizens out of the box?**\\
-NoCheatPlus will never have any special plugin dependencies because they delay the update process of our plugin. Instead we provide you with a compatibility bridge called [[http://dev.bukkit.org/server-mods/compatnocheatplus-cNoCheatPlusp/|CompatNoCheatPlus]]. \\
-CompatNoCheatPlus simply connects NoCheatPlus (reason why it needs to be installed alongside CNCP also) with other plugins such as [[http://dev.bukkit.org/bukkit-plugins/mcmmo/|mcMMO]], [[http://dev.bukkit.org/bukkit-plugins/citizens/citizens2|Citizens]] and others using the powerful [[development/api.creole|NoCheatPlus API]] to make them compatible together.
-If you would like to suggest or implement another plugin compatibility in CompatNoCheatPlus then contact @asofold for additional support.
-
-**Why isn't CNCP already integrated in NoCheatPlus?**\\
-Because it would slow down the development of NoCheatPlus, we would always have to keep up with the other plugins if those get changed, also changes to NoCheatPlus might break compatibility with other plugins, so we would have to fix those too or remove the broken hooks. Also the testing for those components takes a lot of time and can't really be done by us. We might at some point build in a couple of generic things that will help with //some// compatibility issues without endangering us of getting stuck with compatibility issues.
-
 **NoCheatPlus does not block any hacks on my server, I can login with any hack client and grief as much as I want without getting blocked?**\\
-You probably have OP or permissions (administrator or owner rank) on your server which let you bypass all the NoCheatPlus checks. So if you want to test then deop yourself and set your rank to default. Also make sure your Minecraft version matches the version NoCheatPlus has been compiled for, it can be seen on the download pages of BukkitDev or simply using /version NoCheatPlus or /nocheatplus version.
-
-**Where is the "donate" button?**\\
-On the upper right corner of this page, it's not a button to donate to Curse.
+You probably have OP or permissions (administrator or owner rank) on your server which let you bypass all the NoCheatPlus checks. So if you want to test then deop yourself and set your rank to default. Also make sure your Minecraft version matches the version NoCheatPlus has been compiled for, it can be seen on the download pages of BukkitDev or simply using /version NoCheatPlus or /nocheatplus version
 
 **I gave my friend permissions for a mod but he stills get blocked by NoCheatPlus?**\\
 After giving permissions to a player, he/she has to relog to activate there mods they got permissions for. Be warned: **nocheatplus.mods.zombe.fly** for example only gives the permission to enable zombes fly mod, you will also need the **nocheatplus.checks.moving.survivalfly** permission to make it work right.
 
-**Why do you have commands like /ncp ban, /ncp kick and other?**\\
-Those are actually auxiliary commands used by your NoCheatPlus actions but because NoCheatPlus uses the console to execute commands you can execute them by hand as well. They have no big difference compared to the vanilla commands except for the delay feature which is the main reason why we have own commands to kick, ban, tempban, etc.
+**Will NoCheatPlus support plugins like mcMMO and Citizens out of the box?**\\
+NoCheatPlus does not have any special plugin dependencies built in, because they delay the update process of our plugin. Instead we provide you with a compatibility bridge called [[http://dev.bukkit.org/server-mods/compatnocheatplus-cNoCheatPlusp/|CompatNoCheatPlus]]. \\
+CompatNoCheatPlus simply connects NoCheatPlus (reason why it needs to be installed alongside CNCP also) with other plugins such as [[http://dev.bukkit.org/bukkit-plugins/mcmmo/|mcMMO]], [[http://dev.bukkit.org/bukkit-plugins/citizens/citizens2|Citizens]] and others using the powerful [[development/api.creole|NoCheatPlus API]] to make them compatible together.
+If you would like to suggest or implement another plugin compatibility in CompatNoCheatPlus then contact @asofold for additional support.
+
+**Why isn't cncp (CompatNoCheatPlus) already integrated in NoCheatPlus?**\\
+Because it would slow down the development of NoCheatPlus, we would always have to keep up with the other plugins if those get changed, also changes to NoCheatPlus might break compatibility with other plugins, so we would have to fix those too or remove the broken hooks. Also the testing for those components takes a lot of time and can't really be done by us. We might at some point build in a couple of generic things that will help with //some// compatibility issues without endangering us of getting stuck with compatibility issues.
 
 **Why use NoCheatPlus instead of plugin X?**\\
 It is up to you! NoCheatPlus puts emphasis on configurability allowing you to choose when to kick, ban, log, do anything at all, also allowing to adjust a lot of parameters to tweak checks for your needs. Other plugins like AntiCheat put emphasis on simplicity of configuration. All plugins strive to work fine "out of the box" without need to adapt much. Of course every plugin might have strengths and weaknesses on different fields - we suggest you match your needs against the features of the plugins, and ask if in doubt, feature lists can be incomplete.
+
+**Why do you have commands like /ncp ban, /ncp kick and other?**\\
+Those are auxiliary commands used for NoCheatPlus actions, you can execute them by hand as well.
+
+**Where is the "donate" button?**\\
+It has been removed for the time being. We might re-add it once we are in need of donations.
+    
