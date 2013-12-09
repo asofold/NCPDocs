@@ -35,8 +35,12 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * Bugfix release (3.10.6)
 ** SurvivalFly: false positives with sprint+jump.
 ----
-===3.10.7-SNAPSHOT-sMD5NET-b646 (cumulative)===
-* Prevent LOCKED_CHEST crashing NCP on 1.7.
+===3.10.7-SNAPSHOT-sMD5NET-b650 (cumulative)===
+* New
+** Rough update to MC 1.7.2.
+* Changes:
+** Log "system time ran backwards" on warning level.
+** Removed some deprecated internal API.
 ===3.10.6-RC-sMD5NET-b644 (**release**)===
 * Release on BukkitDev.
 ===3.10.6-SNAPSHOT-sMD5NET-b643 (cumulative)===
