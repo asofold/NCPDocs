@@ -35,6 +35,13 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * Bugfix release (3.10.6)
 ** SurvivalFly: false positives with sprint+jump.
 ----
+===3.10.8-SNAPSHOT-sMD5NET-b654 (cumulative)===
+* Fixes
+** Fix breaking time for Acacia leaves + shears and similar.
+* Random
+** Close inventory on players leaving.
+===3.10.7-BETA-sMD5NET-b651===
+* Beta release on BukkitDev.
 ===3.10.7-SNAPSHOT-sMD5NET-b650 (cumulative)===
 * New
 ** Rough update to MC 1.7.2.
