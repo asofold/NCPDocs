@@ -1,6 +1,6 @@
-=compatibility=
+=Compatibility=
 
-[[../configuration.creole|<<<Back to Configuration Overview<<<]]
+|[[../configuration.creole|Back to Configuration overview]]|
 
 Set {{{bukkitapionly}}} to true to force using API-only mode. 
 This can be useful when using other server modifications than CraftBukkit, for the case that NoCheatPlus loads the wrong compatibility module.
