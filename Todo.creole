@@ -8,8 +8,8 @@
 ===Enhancements==
 * [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/283-movement-checks-should-be-stricter-with-water-and-lava/#comments|[Ticket 283] Movement checks should be stricter with water and lava]]
 * [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/341-extend-api-to-enable-disable-checks/|[Ticket 341] Extend API to enable/disable checks]]
-* [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/376-improve-chat-filtering-ip-caps-words-repetition/|[Ticket 376]Improve chat filtering (IP, CAPS, WORDS, REPETITION)]]
-" [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/469-moving-morepackets-count-in-server-side-lag/|[Ticket 469] moving.morepackets - count in server side lag]]
+* [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/376-improve-chat-filtering-ip-caps-words-repetition/|[Ticket 376] Improve chat filtering (IP, CAPS, WORDS, REPETITION)]]
+* [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/469-moving-morepackets-count-in-server-side-lag/|[Ticket 469] moving.morepackets - count in server side lag]]
 ===Features===
 * [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/51-improve-fight-checks-aimbot-reach/|[Ticket 51] Improve Fight checks (+aimbot, +reach)]]
 * [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/213-integrate-anti-xray-features/|[Ticket 213] Integrate anti xray features]]
