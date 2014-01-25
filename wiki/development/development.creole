@@ -23,7 +23,8 @@ but also documentation of "unofficial" features or parts of documentation which 
 \\**Check this for modded blocks (overrideflags).**
 
 ==More on Issues==
-The [[issues.creole|Issues page]] contains information about incompatibilities and known issues.
+The [[issues.creole|Issues page]] contains more information about incompatibilities and known issues.
+The [[tickets.creole|GitHub tickets page]] lists tickets from BukkitDev sorted by other categories.
 
 ==Information for Testers and Reports==
 [[debugging.creole|Debug traces and detailed reports]] can help to identify and fix bugs fast.
