@@ -3,4 +3,5 @@
 ==False positives==
 ==Bugs==
 ==Features==
-** [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/51-improve-fight-checks-aimbot-reach/|[Ticket 51] Improve Fight checks (+aimbot, +reach)]]
+* [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/51-improve-fight-checks-aimbot-reach/|Improve Fight checks (+aimbot, +reach) [Ticket 51]]]
+* [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/213-integrate-anti-xray-features/|Integrate anti xray features [Ticket 213]]]
