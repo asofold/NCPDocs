@@ -5,8 +5,8 @@ This pages shows links to tickets on BukkitDev, sorted by categories.
 ===False positives===
 * [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/364-improve-movement-checks-on-pistons/|[Ticket 364] Improve movement checks on pistons]]
 * [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/378-sprint-hack-work-ca-30/|[Ticket 378] Sprint hack work (ca. 30%)]]
-* [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/484-hits-get-cancelled/[Ticket 484] Hits get cancelled]]
-* [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/525-noswing-triggered-in-snow/|[ticket 525] noswing triggered in snow]] - Needs to be reproduced
+* [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/484-hits-get-cancelled/|[Ticket 484] Hits get cancelled]]
+* [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/525-noswing-triggered-in-snow/|[Ticket 525] noswing triggered in snow]] - Needs to be reproduced
 * [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/551-add-option-to-allow-sprint-jumping-in-two-block-high/|[Ticket 551] Add option to allow sprint-jumping in two-block high area/corridor without triggering moving.survivalfly]]
 * [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/563-boats-survivalfly/|[Ticket 563] Boats + survivalfly]] - Needs more testing
 * [[http://dev.bukkit.org/bukkit-plugins/nocheatplus/tickets/581-rail-seen-as-an-obstruction/|[Ticket 581] Rail seen as an obstruction]] - Needs to be reproduced
