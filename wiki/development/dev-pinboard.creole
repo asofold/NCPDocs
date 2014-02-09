@@ -49,6 +49,8 @@ The main moving checks are survivalfly and creativefly, nofall is a sub check of
 * nofall tries to deal fall damage if players try to avoid it by hacking. 
 * creativefly controls flying for those that are allowed to bypass the survivalfly check in order to control the flying speed. Giving bypass permission for creativefly lets player fly at any speed , which leaves them to the built in speed checks of CraftBukkit, potentially dangerous if those are disabled somehow.
 
+Latest builds (660 and up) contain a compatibility option (checks.moving.assumesprint). Set it to true to let NCP assume that players are always sprinting if their food bar allows it, e.g. if the ctrl-sprint in MC1.7.X feature poses problems.
+
 //(For experts there is a setting for the "on-ground" given the "seek for ground" distance for underneath the player, for the estimation for all moving checks except for nofall which has its extra setting. It defaults to 0.001 for normal checks: moving.yonground )//
 ===survivalfly===
 Often requested: Allow some bypasses for speeding but not flying.\\
