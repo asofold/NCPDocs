@@ -4,8 +4,14 @@
 
 Checks that at least technically have to do with the player moving around or impacting the world with his movement can be found here.
 
-\\
-**CreativeFly:** Limits the flying speed for players that are playing in creative gamemode.
+|**tempkickillegal**|If to deny login for some time for players, who sent illegal moves.|true|
+|**loadchunks** join|Load the chunks that the player is on into memory, on joining the server.|true|
+|**sprintinggrace**|Time in seconds to allow the player to move on at sprinting speed, despite having turned to walking. Covers up for latency.|2.0|
+|**assumesprint**||false|
+|**speedgrace**|Time in seconds to allow the player to move as if a speed effect was still present, after it's gone. Covers up for latency.|4.0|
+
+\\ \\
+**creativefly:** Limits the flying speed for players that are playing in creative gamemode.
 |**Config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
 |**ignoreallowflight**|Compatibility option. Usually flying plugins should set that a player is allowed to fly, which then will be recognized by NCP to use creativefly instead of survivalfly for checking. With setting this to true you can force NCP to ignore this property. |false|
@@ -14,27 +20,50 @@ Checks that at least technically have to do with the player moving around or imp
 |**verticalspeed**|Modifier for the maximally allowed vertical speed. 100 means "normal" creative mode speed. 200 would be twice the speed.|100|
 |**maxheight**|This is a height limit which is counted from above the worlds maximum height (usually resulting in 256 + maxheight).|128|
 \\ \\
-**MorePackets:** The morepackets check is complementary to the "runfly" check. While the "runfly" check(s) limit the distance a player can move per step, this "morepackets" check limits the number of "steps" a player may take per second. A normal value is 20 steps per second.
+**morepackets:** The morepackets check is complementary to the "runfly" check. While the "runfly" check(s) limit the distance a player can move per step, this "morepackets" check limits the number of "steps" a player may take per second. A normal value is 20 steps per second.
 |**Config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
 
- \\
-**MorePacketsVehicle:** The morepacketsvehicle check is complementary to the "morepackets" check. While the "morepacket" check limit the number of player-move packets send per second, this "morepacketsvehicle" limit the number of vehicle-move (minecarts, boats, ...) packets sent per second.
-|**Config**|**Description**|**Default**|
-|**active**|Should this check be active?|true|
-
-\\ \\
-**NoFall:** A sub check of survivalfly, it makes sure that the player gets the damage he/she is supposed to get.
+ \\ \\
+**morepacketsvehicle:** The morepacketsvehicle check is complementary to the "morepackets" check. While the "morepacket" check limit the number of player-move packets send per second, this "morepacketsvehicle" limit the number of vehicle-move (minecarts, boats, ...) packets sent per second.
 |**Config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
 
 \\ \\
-**Passable:** This check prevents moving into or inside of blocks (noclip). It might also trigger if players teleport or join and start sending moving events while not having received or rendered the chunk they stand on, yet. Thus the player assumes to be falling and communicates that to the server, NCP will see them moving into blocks - so no quick banning on these!
+**nofall:** A sub check of survivalfly, it makes sure that the player gets the damage he/she is supposed to get.
 |**Config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
+|**dealdamage**|Let NCP deal all fall damage, also for legit players. Prevents some exploits.|true|
+|**resetonvl**|Reset nofall data on attempts to take fall damage while not actually having hit the ground.|false|
+|**resetontp**|Reset nofall data on teleports. Compatibility fall-back option.|false|
+|**resetonvehicle**|Reset nofall data when in a vehicle. Compatibility option.|true|
+|**anticriticals**|Prevent some criticals-hacks by resetting small amounts of fall-distance "in time".|true|
 
 \\ \\
-**SurvivalFly:**Prevents flying, speeding, water walking etc.
+**passable:** This check prevents moving into or inside of blocks (noclip). It might also trigger if players teleport or join and start sending moving events while not having received or rendered the chunk they stand on, yet. Thus the player assumes to be falling and communicates that to the server, NCP will see them moving into blocks - so no quick banning on these!
 |**Config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
-|**extended** vertical-accounting|TODO|true|
+|**raytracing** active|Activate ray-tracing to prevent to move past/through blocks.|true|
+|**raytracing** blockchangeonly|Only perform ray-tracing for moving past block borders. More inaccurate, but faster in average.|true|
+|**raytracing** vcliponly|Only perform ray-tracing when moving vertically as well. Better performance, but no protection against moving through walls exactly side-ways.|false|
+
+
+\\ \\
+**survivalfly:**Prevents flying, speeding, water walking etc.
+|**Config**|**Description**|**Default**|
+|**active**|Should this check be active?|true|
+|**extended** vertical-accounting|Monitor how the players speed varies in-air. Enforces gravity for a minimum amount. |true|
+|**falldamage**|Deal fall-damage according to fall-distance on survivalfly violations. Meant to make exploiting the set-back to last ground location more expensive.|true|
+|**hover** active|Activate/deactivate the hover check, i.e. players staying in-air without moving.|true|
+|**hover** step|Tick-period for which to perform hover checking.|5|
+|**hover** ticks|Ticks after which a player is assumed to hover if still in-air and not moving.|85|
+|**hover** loginticks|Extra ticks added to hoverticks directly after login, to give more leniency. Set this on problems with hover + loging in.|0|
+|**hover** falldamage|Deal fall-damage according to fall-distance, to make avoiding fall-damage harder.|true|
+|**hover** sfviolation|A hover violation is counted as a survivalfly violations with this amount of violation level.|500|
+
+\\ \\
+**vehicles** Options to prevent cheaters abusing vehicles for teleportation and others.
+|**preventdestroyown**|Prevent destroying the vehicle a player is inside of. Minecraft does not allow this anymore.|true|
+|**enforcelocaiton**|Experimental: teleport the player back to the vehicle if the player is too far off. [Subject to review!]|true|
+
+\\ \\
