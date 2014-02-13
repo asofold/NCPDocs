@@ -48,6 +48,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** checks.fight.direction is now set to false by default.
 ** checks.moving.passable.raytracing.vcliponly is now set to false. This means much more checking but prevents moving through walls exactly horizontally by default.
 * Random
+** Review sprint-handling.
 ** Review penalty time handling.
 ** Allow removal of fight.selfhit data without removing all fight data.
 ===3.10.8-SNAPSHOT-sMD5NET-b655 ("mostly stable", cumulative)===
