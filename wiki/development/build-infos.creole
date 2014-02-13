@@ -56,7 +56,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * Random
 ** Close inventory on players leaving.
 ** Log if 1.7.2 blocks are added.
-===3.10.7-BETA-sMD5NET-b651===
+===3.10.7-BETA-sMD5NET-b651 (**release**)===
 * Beta release on BukkitDev.
 ===3.10.7-SNAPSHOT-sMD5NET-b650 (cumulative)===
 * New
