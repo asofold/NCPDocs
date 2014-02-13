@@ -32,14 +32,30 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * ...
 * //3 extra phases in rough order: fight, velocity, morepackets+fly.//
 * //NCPDocs overhaul (does not concern the plugin).//
-* Bugfix release (3.10.6)
-** SurvivalFly: false positives with sprint+jump.
+* Official 1.7.2 release (3.10.8)
+** ETA: Any time ...
+** SurvivalFly: Workaround for false positives with sprint+jump.
 ----
-===3.10.8-SNAPSHOT-sMD5NET-b654 (cumulative)===
+===3.10.8-SNAPSHOT-sMD5NET-b661 (cumulative)===
+* Fixes
+** Fix moving on ender portal frames with eyes on.
+** Adjust to work with latest CB and other 1.7.2 beta builds.
+* New features
+** Ctrl+sprint: Add a workaround option to let NCP assume a player is sprinting, whenever possible (checks.moving.assumesprint).
+** Changing the tool now leads to a configurable attack penalty (checks.fight.toolchangepenalty).
+** Changing the tool now resets the block-break timing.
+* Configuration changes
+** checks.fight.direction is now set to false by default.
+** checks.moving.passable.raytracing.vcliponly is now set to false. This means much more checking but prevents moving through walls exactly horizontally by default.
+* Random
+** Review penalty time handling.
+** Allow removal of fight.selfhit data without removing all fight data.
+===3.10.8-SNAPSHOT-sMD5NET-b655 ("mostly stable", cumulative)===
 * Fixes
 ** Fix breaking time for Acacia leaves + shears and similar.
 * Random
 ** Close inventory on players leaving.
+** Log if 1.7.2 blocks are added.
 ===3.10.7-BETA-sMD5NET-b651===
 * Beta release on BukkitDev.
 ===3.10.7-SNAPSHOT-sMD5NET-b650 (cumulative)===
