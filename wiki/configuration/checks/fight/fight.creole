@@ -15,6 +15,7 @@ Checks that at least technically have to do with direct combat.
 **Direction:** Players may attack other players and creatures without really looking at them. This is often combined with automatically attacking every living thing within reach ("kill-aura"). This check will check if the attacker looks at his target. 
 |**Config**|**Description**|**Default**|
 |**active**|Should players get checked for this type of hack?|true|
+|**strict**|Extra strict interpretation, makes close combat more difficult.|false|
 |**penalty**|How strict should NoCheatPlus be when comparing the players line of view  with the his target's location. The value represents (roughly) the  amount of 1/100 blocks that the player is allowed to look past the to be attacked entity. 75 (0.75 blocks) seems a good default value.|500|
 
 \\ \\
