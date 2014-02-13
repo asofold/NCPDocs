@@ -5,63 +5,69 @@
 Checks that at least technically have to do with direct combat.
 
 |**canceldead**|Prevent dead players from hitting due to latency (silent).|true|
+|**toolchangepenalty**|Attack penalty in milliseconds, applied for changing the tool.|500|
 
 \\ \\
-**Yawrate:**  TODO
-|**Config**|**Description**|**Default**|
+**yawrate:**  Deal penalties for too fast turning, mostly attacking with close and projectile combat.
+|**config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
 
 \\ \\
-**Direction:** Players may attack other players and creatures without really looking at them. This is often combined with automatically attacking every living thing within reach ("kill-aura"). This check will check if the attacker looks at his target. 
-|**Config**|**Description**|**Default**|
-|**active**|Should players get checked for this type of hack?|true|
-|**strict**|Extra strict interpretation, makes close combat more difficult.|false|
-|**penalty**|How strict should NoCheatPlus be when comparing the players line of view  with the his target's location. The value represents (roughly) the  amount of 1/100 blocks that the player is allowed to look past the to be attacked entity. 75 (0.75 blocks) seems a good default value.|500|
-
-\\ \\
-**Angle:** This check will prevent the player from hitting 2 or more entities at the same time. ToDo
-|**Config**|**Description**|**Default**|
+**angle:** This check will prevent the player from hitting 2 or more entities at the same time. ToDo
+|**config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
-|**threshold** |TODO|50|
+|**threshold** |Control the strictness of this check.|50|
 
 \\ \\
-**Critical:** This check will prevent the player from doing fake critical hits to give more damage to entities.
-|**Config**|**Description**|**Default**|
+**critical:** This check will prevent the player from doing fake critical hits to give more damage to entities.
+|**config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
 |**falldistance**|TODO|0.01|
 |**velocity**|TODO|0.1|
 
 \\ \\
-**Godmode:**  Players may trick Bukkit into not dealing them damage when they get attacked. This will try to identify and correct that behavior.
-|**Config**|**Description**|**Default**|
+**direction:** Players may attack other players and creatures without really looking at them. This is often combined with automatically attacking every living thing within reach ("kill-aura"). This check will check if the attacker looks at his target. 
+|**config**|**Description**|**Default**|
+|**active**|Should players get checked for this type of hack?|true|
+|**strict**|Extra strict interpretation, makes close combat more difficult.|false|
+|**penalty**|How strict should NoCheatPlus be when comparing the players line of view  with the his target's location. The value represents (roughly) the  amount of 1/100 blocks that the player is allowed to look past the to be attacked entity. 75 (0.75 blocks) seems a good default value.|500|
+
+TODO: fastheal
+
+\\ \\
+**godmode:**  Players may trick Bukkit into not dealing them damage when they get attacked. This will try to identify and correct that behavior.
+|**config**|**Description**|**Default**|
 |**active**|Should players be checked for this behavior?|true|
 
 \\ \\
-**Knockback:** It shouldn't be possible for the player to deal knockback while standing still also faking knockback distance in any way shouldn't be possible. This check will make sure that the player only deals knockback if he/she is supposed to deal knockback (knockback enchantments are supported here).
-|**Config**|**Description**|**Default**|
+**knockback:** It shouldn't be possible for the player to deal knockback while standing still also faking knockback distance in any way shouldn't be possible. This check will make sure that the player only deals knockback if he/she is supposed to deal knockback (knockback enchantments are supported here).
+|**config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
 |**interval**|TODO|50|
 
 \\ \\
-**NoSwing:** Players may attack entities without moving their arm. This is confusing for nearby players, as they won't see who is attacking them or the nearby creatures.
-|**Config**|**Description**|**Default**|
+**noswing:** Players may attack entities without moving their arm. This is confusing for nearby players, as they won't see who is attacking them or the nearby creatures.
+|**config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
 
 \\ \\
-**Reach:**  Players may slightly increase the distance at which they can attack enemy creatures/players. This check will try to identify that by comparing player and target location.
-|**Config**|**Description**|**Default**|
+**reach:**  Players may slightly increase the distance at which they can attack enemy creatures/players. This check will try to identify that by comparing player and target location.
+|**config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
-|**penalty**|If a player fails this check, how long should he be prevented from attacking stuff afterwards, in milliseconds. This is intended to make automated attacking of enemies harder. 0.5 second (value 500) is the default. Set to 0, if you don't want to limit players at all after failing this check.|500|
-|**reduce**|TODO|true|
+|**survivaldistance**|Maximum attack distance for survivalmode. Statically about 3 or 3.5 applies, with latency and moving 4.5 makes sense.|4.4|
+|**penalty**|Extra attack penalty for close combat, dealt on violations.|500|
+|**reduce**|Enable/disable the dynamic max-distance feature: If players hit rather at the limit of distance, the dynamic maximum is reduced, so it is harder to use kill-aura. A player that hits between dynamic max and max distance gets a "silent cancel" without violation level added.|true|
+|**reducedistance**|Maximum amount of distance by which the max-distance (survivaldistance) can be reduced.|0.9|
+|**reducestep**|Amount to change the dynamic max-distance per long-distance or short-distance hit.|0.15|
 
 \\ \\
-**Selfhit:** This check will make sure that a player doesn't abuse knockback to win some height by doing self hits (supports the SurvivalFly check).
-|**Config**|**Description**|**Default**|
+**selfhit:** This check will make sure that a player doesn't abuse knockback to win some height by doing self hits (supports the SurvivalFly check).
+|**config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
 
 \\ \\
-**Speed:** Minecraft doesn't restrict the amount of hits a player can do in each second so we made a check that will prevent a player from going over the allowed hit speed limit (more hits = more damage).
-|**Config**|**Description**|**Default**|
+**speed:** Minecraft doesn't restrict the amount of hits a player can do in each second so we made a check that will prevent a player from going over the allowed hit speed limit (more hits = more damage).
+|**config**|**Description**|**Default**|
 |**active**|Should this check be active?|true|
 |**limit**|How many hits should be allowed to do in each second?|15|
 |**shortterm** ticks|TODO|7|
