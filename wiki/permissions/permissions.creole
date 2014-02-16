@@ -43,7 +43,7 @@ If you want moderators to be able to toggle notifications, just give the permiss
 |nocheatplus.command.kicklist|Gives access to the "/ncp kicklist" command which lists all players that got "tempkicked/tempbanned" from NoCheatplus by either using actions or "/ncp tempkick".|
 |nocheatplus.command.unkick|Gives access to remove a tempkick/tempban from a player using "/ncp unkick".|
 ==Filter permissions (plugin hiding)==
-|nocheatplus.filter.(commandname)|Allows to use a command protected by command protection for the case the command did not have a permission set. In case of incompatibilities of your permission plugin you might have to add nocheatplus.filter.command.nocheatplus to players that are to use /ncp ... commands.|
+|nocheatplus.filter.command.(commandname)|Allows to use a command protected by command protection, only for the case the command did not have a permission set. In case of incompatibilities of your permission plugin you might have to add nocheatplus.filter.command.nocheatplus to players that are to use /ncp ... commands.|
 ==Bypass==
 Specific bypass permissions.
 |nocheatplus.bypass.denylogin|Allows to bypass the login denial, such as exists with the /ncp tempkick command.|
