@@ -36,17 +36,21 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** ETA: Any time ...
 ** SurvivalFly: Workaround for false positives with sprint+jump.
 ----
-===3.10.8-SNAPSHOT-sMD5NET-b661 (cumulative)===
+===3.10.8-SNAPSHOT-sMD5NET-b663 (cumulative)===
 * Fixes
+** Avoid sign duplication due to a bug in CraftBukkit.
 ** Fix moving on ender portal frames with eyes on.
 ** Adjust to work with latest CB and other 1.7.2 beta builds.
 * New features
 ** Ctrl+sprint: Add a workaround option to let NCP assume a player is sprinting, whenever possible (checks.moving.assumesprint).
 ** Changing the tool now leads to a configurable attack penalty (checks.fight.toolchangepenalty).
 ** Changing the tool now resets the block-break timing.
+** blockplace.against is a "full check" now - previously without history entries and without configuration.
 * Configuration changes
 ** checks.fight.direction is now set to false by default.
+** Increased the default kick-level for the moving.survivalfly actions to 1500.
 ** checks.moving.passable.raytracing.vcliponly is now set to false. This means much more checking but prevents moving through walls exactly horizontally by default.
+** Increase the fall distance for which the critical check can trigger. Now a moving event is forced, if a cheat-client wants to go just above this distance.
 * Random
 ** Review sprint-handling.
 ** Review penalty time handling.

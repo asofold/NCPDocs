@@ -34,7 +34,8 @@ In addition we label development builds with "promotion" symbols only for offici
 * "MC X.Y.Z": Indicate that support for the Minecraft version as specified has been added to this build, and should be in for later builds unless stated otherwise with later builds.
 
 ==NMS/OBC Access==
-This plugin accesses net.minecraft.server and org.bukkit.craftbukkit classes, due to missing features or performance reasons. The design of NoCheatPlus hides this access in modules set up extra for each package-naming-change. NoCheatPlus has a compatibility module for Bukkit-API only, which means not using OBC/NMS access, however some features will work with reduced effect, more impact on performance, or not work at all (list pending?).
+This plugin accesses net.minecraft.server and org.bukkit.craftbukkit classes, due to missing features or performance reasons. The design of NoCheatPlus hides this access in modules set up extra for each package-naming-change. NoCheatPlus has a compatibility module for Bukkit-API only, which means not using OBC/NMS access, however some features will work with reduced effect, more impact on performance.
+
 ==General settings==
 * Update checking (removed in beta):
 ** You can disable the version checking with the checkforupdates flag. 
