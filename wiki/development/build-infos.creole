@@ -36,7 +36,9 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** ETA: Any time ...
 ** SurvivalFly: Workaround for false positives with sprint+jump.
 ----
-===3.10.8-SNAPSHOT-sMD5NET-b663 (cumulative)===
+===3.10.8-RC-sMD5NET-b664(planned release)===
+* Planned release.
+===3.10.8-SNAPSHOT-sMD5NET-b663(cumulative)===
 * Fixes
 ** Avoid sign duplication due to a bug in CraftBukkit.
 ** Fix moving on ender portal frames with eyes on.
@@ -80,7 +82,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 ** SurvivalFly: Fix and simplify vertical accounting.
 ** Fight: Part-fix issues with TNT. Problems might remain with the death of the engineer.
 ===3.10.5-RC-sMD5NET-b633(**release**)===
-* Release on BukkitDev (planned).
+* Release on BukkitDev.
 ===3.10.5-SNAPSHOT-sMD5NET-b632(cumulative)===
 * Configuration changes (only needs updating the spots mentioned below):
 ** Add missing cancel action for fight.fastheal.
@@ -97,7 +99,7 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 * Internals
 ** Add Listeners for plugin-disable, use for some cleanup of internally used static members.
 ===3.10.3-RC-sMD5NET-b626(**release**)===
-* Planned release.
+* Release.
 ===3.10.3-SNAPSHOT-sMD5NET-b625(cumulative)===
 * Fixes:
 ** Fix creativefly allowing small horizontal moves to equal out too far vertical moves.
