@@ -14,30 +14,45 @@ For a changes history see: http://ci.md-5.net/job/NoCheatPlus/changes
 \\This page is a somewhat digested or altered version of the [[https://github.com/NoCheatPlus/NoCheatPlus/commits/master|Commit History page on GitHub]].
 ----
 ===Future===
-====Distantly Considered====
+====Planned (at distance)====
+Pretty hard targets, but too far off the schedule to give any ETA.
+* Full core-recode. API-independent core + on-the-fly adding and removal of checks and other.
 * Better mod support for arbitrary blocks and tools. Includes cleanup of block-properties-handling.
-* Re-organize NCP-API.
-* Keep track of recently changed blocks (especially doors), in order to allow ray-tracing for doors as well.
+* Packet-level checking (will depend on 3rd party packet APIs).
+* Fully asynchronous IO.
+* Ingame configuration management (convenience, comparison, suggestions, hot-fixes).
+* Allow making doors safe (e.g. enable ray-tracing by keeping track of redstone changes).
 * Keep track of pistons moving blocks in order to reduce false positives.
 * Add check/notification for players not using any velocity (mostly sf), at least start to log it for testing.
 * Velocity handling: Add concept to merge / invalidate queued entries better (flying plugins).
 * Velocity handling: Switch to 3d-entries with "exact" per-axis/direction counting.
-====Planned====
+====Planned (soon-ish)====
+Big topics, short- to medium-term.
 * Moving/morepackets+survialfly: Attempt to prevent speeding better, probably relate packets and travel-distance.
 * SurvivalFly: More adjustments based on so-far-experience (e.g. buffer redesign, ground modifiers).
 * Moving/morepackets: distinguish client-side lag and server side lag, attempt to make it "pretty striking".
-* Method for fight.reach to account for more latency for the classic chasing situation.
 * New cancelling mechanisms for fight.speed (probability based / minimum frequency).
-====Scheduled====
-* ...
-* //3 extra phases in rough order: fight, velocity, morepackets+fly.//
+* Method for fight.reach and other to account for more latency for moving players.
+====Scheduled (fixed)====
+Topics that are in focus right now, disregarding fixing bugs.
 * //NCPDocs overhaul (does not concern the plugin).//
-* Official 1.7.2 release (3.10.8)
-** ETA: Any time ...
-** SurvivalFly: Workaround for false positives with sprint+jump.
+* //morepackets checks: new method of accounting to deal with delay.//
+* //fight checks: new methods to deal with latency.//
+* General bugfix release (3.10.9)
+** ETA (upload): 2014/02/24-25
 ----
-===3.10.8-RC-sMD5NET-b664(planned release)===
-* Planned release.
+===3.10.9-SNAPSHOT-sMD5NET-b667(cumulative)===
+* Hot topic
+** Dropped compatibility with CB before 1.4.5-R1.0!
+* New
+** Experimental: Check location consistency (silent set-backs, at present).
+* Fixes
+** Still process captcha for cancelled chat events, e.g. with players muted by another plugin.
+** Confine conditions for survivalfly/sprintback further to avoid false positives.
+* Internals
+** More efficient location handling (less object creation).
+===3.10.8-RC-sMD5NET-b664(**release**)===
+* Release on BukkitDev.
 ===3.10.8-SNAPSHOT-sMD5NET-b663(cumulative)===
 * Fixes
 ** Avoid sign duplication due to a bug in CraftBukkit.
