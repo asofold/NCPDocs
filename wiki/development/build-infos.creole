@@ -41,16 +41,20 @@ Topics that are in focus right now, disregarding fixing bugs.
 * General bugfix release (3.10.9)
 ** ETA (upload): 2014/02/24-25
 ----
-===3.10.9-SNAPSHOT-sMD5NET-b667(cumulative)===
+===3.10.9-SNAPSHOT-sMD5NET-b670(cumulative)===
 * Hot topic
 ** Dropped compatibility with CB before 1.4.5-R1.0!
 * New
 ** Experimental: Check location consistency (silent set-backs, at present).
+* Configuration
+** Set checks.moving.assumesprint to true by default, to avoid a lot of false positives.
 * Fixes
+** WrongBlock should not generate extreme violation levels anymore.
 ** Still process captcha for cancelled chat events, e.g. with players muted by another plugin.
 ** Confine conditions for survivalfly/sprintback further to avoid false positives.
 * Internals
 ** More efficient location handling (less object creation).
+** Various cleanups (set-back handling, safety guards, code formatting)
 ===3.10.8-RC-sMD5NET-b664(**release**)===
 * Release on BukkitDev.
 ===3.10.8-SNAPSHOT-sMD5NET-b663(cumulative)===
