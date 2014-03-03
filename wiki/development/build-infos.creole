@@ -41,7 +41,7 @@ Topics that are in focus right now, disregarding fixing bugs.
 * General bugfix release (3.10.9)
 ** ETA (upload): 2014/02/24-25
 ----
-===3.10.9-SNAPSHOT-sMD5NET-b670(cumulative)===
+===3.10.9-SNAPSHOT-sMD5NET-b671(cumulative)===
 * Hot topic
 ** Dropped compatibility with CB before 1.4.5-R1.0!
 * New
@@ -52,6 +52,7 @@ Topics that are in focus right now, disregarding fixing bugs.
 ** WrongBlock should not generate extreme violation levels anymore.
 ** Still process captcha for cancelled chat events, e.g. with players muted by another plugin.
 ** Confine conditions for survivalfly/sprintback further to avoid false positives.
+** Fix block shape issue with stained glass panes.
 * Internals
 ** More efficient location handling (less object creation).
 ** Various cleanups (set-back handling, safety guards, code formatting)
