@@ -7,8 +7,9 @@ Checks that at least technically have to do with the player moving around or imp
 |**tempkickillegal**|If to deny login for some time for players, who sent illegal moves.|true|
 |**loadchunks** join|Load the chunks that the player is on into memory, on joining the server.|true|
 |**sprintinggrace**|Time in seconds to allow the player to move on at sprinting speed, despite having turned to walking. Covers up for latency.|2.0|
-|**assumesprint**|Since 3.10.8: Compatibility option to let NCP assume the player is sprinting, whenever possible. Use for issues with the ctrl-sprint feature.|false|
+|**assumesprint**|Since 3.10.8: Compatibility option to let NCP assume the player is sprinting, whenever possible. Use for issues with the ctrl-sprint feature.|true|
 |**speedgrace**|Time in seconds to allow the player to move as if a speed effect was still present, after it's gone. Covers up for latency.|4.0|
+|**enforcelocation**|Keep checking if players are where Bukkit told them to be, set back if not.|true|
 
 \\ \\
 **creativefly:** Limits the flying speed for players that are playing in creative gamemode.

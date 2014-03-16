@@ -37,16 +37,18 @@ Big topics, short- to medium-term.
 Topics that are in focus right now, disregarding fixing bugs.
 * //NCPDocs overhaul (does not concern the plugin).//
 * //morepackets checks: new method of accounting to deal with delay.//
-* //fight checks: new methods to deal with latency.//
-* General bugfix release (3.10.9)
-** ETA (upload): 2014/02/24-25
+* Milestone Release (3.10.10)
+** ETA (upload): 2014/03/23
+** Fight checks: new methods to deal with latency.
+** Bug fixes.
 ----
-===3.10.9-SNAPSHOT-sMD5NET-b671(cumulative)===
+===3.10.9-SNAPSHOT-sMD5NET-b672(cumulative)===
 * Hot topic
 ** Dropped compatibility with CB before 1.4.5-R1.0!
 * New
-** Experimental: Check location consistency (silent set-backs, at present).
+** Check location consistency, counters some new vclip/tp exploits. Silent set-backs, config: checks.moving.enforcelocation
 * Configuration
+** The message for console-only commands is now configurable.
 ** Set checks.moving.assumesprint to true by default, to avoid a lot of false positives.
 * Fixes
 ** WrongBlock should not generate extreme violation levels anymore.
