@@ -42,6 +42,12 @@ Topics that are in focus right now, disregarding fixing bugs.
 ** Fight checks: new methods to deal with latency.
 ** Bug fixes.
 ----
+===3.10.10-SNAPSHOT-sMD5NET-b674(cumulative)===
+* Fixes
+** NoFall: Potential fix for issues with players that are allowed to fly or in creative mode on logout.
+* Internals
+** Maintain a trace of past locations for players [maintained but not yet used]. Aiming at fight-checks.
+===3.10.9-RC-sMD5NET-b673(**release**)===
 ===3.10.9-SNAPSHOT-sMD5NET-b672(cumulative)===
 * Hot topic
 ** Dropped compatibility with CB before 1.4.5-R1.0!
