@@ -43,8 +43,9 @@ Topics that are in focus right now, disregarding fixing bugs.
 ** CB for MC 1.7.5 native support.
 ** Bug fixes.
 ----
-===3.10.10-SNAPSHOT-sMD5NET-b675(cumulative)===
+===3.10.10-SNAPSHOT-sMD5NET-b676(cumulative)===
 * New
+** Dedicated MC 1.7.5 Support (not much tested)
 ** fight.reach and fight.direction have been altered.\\Work in progress: In future they will allow hits to register for situations with a lot of latency. Currently only the latest location and those that arrived in the same tick are counted in, also the checking logics is the same as before, for the sake of finding bugs without altering too much at once.
 * Fixes
 ** NoFall: Ignore players in vehicles when they take fall-damage. Aims at issues with horses.
