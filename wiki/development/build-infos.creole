@@ -37,16 +37,20 @@ Big topics, short- to medium-term.
 Topics that are in focus right now, disregarding fixing bugs.
 * //NCPDocs overhaul (does not concern the plugin).//
 * //morepackets checks: new method of accounting to deal with delay.//
-* Milestone Release (3.10.10)
+* Milestone Release (3.10.10), might be beta.
 ** ETA (upload): 2014/03/27
 ** Fight checks: new methods to deal with latency.
+** CB for MC 1.7.5 native support.
 ** Bug fixes.
 ----
-===3.10.10-SNAPSHOT-sMD5NET-b674(cumulative)===
+===3.10.10-SNAPSHOT-sMD5NET-b675(cumulative)===
+* New
+** fight.reach and fight.direction have been altered.\\Work in progress: In future they will allow hits to register for situations with a lot of latency. Currently only the latest location and those that arrived in the same tick are counted in, also the checking logics is the same as before, for the sake of finding bugs without altering too much at once.
 * Fixes
+** NoFall: Ignore players in vehicles when they take fall-damage. Aims at issues with horses.
 ** NoFall: Potential fix for issues with players that are allowed to fly or in creative mode on logout.
 * Internals
-** Maintain a trace of past locations for players [maintained but not yet used]. Aiming at fight-checks.
+** Maintain a trace of past locations for players. Aiming at fight-checks.
 ===3.10.9-RC-sMD5NET-b673(**release**)===
 ===3.10.9-SNAPSHOT-sMD5NET-b672(cumulative)===
 * Hot topic
