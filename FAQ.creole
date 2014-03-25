@@ -15,11 +15,19 @@ If you would like to suggest or implement another plugin compatibility in Compat
 Because it would slow down the development of NoCheatPlus, we would always have to keep up with the other plugins if those get changed, also changes to NoCheatPlus might break compatibility with other plugins, so we would have to fix those too or remove the broken hooks. Also the testing for those components takes a lot of time and can't really be done by us. We might at some point build in a couple of generic things that will help with //some// compatibility issues without endangering us of getting stuck with compatibility issues.
 
 **Why use NoCheatPlus instead of plugin X?**\\
-It is up to you! NoCheatPlus puts emphasis on configurability allowing you to choose when to kick, ban, log, do anything at all, also allowing to adjust a lot of parameters to tweak checks for your needs. Other plugins like AntiCheat put emphasis on simplicity of configuration. All plugins strive to work fine "out of the box" without need to adapt much. Of course every plugin might have strengths and weaknesses on different fields - we suggest you match your needs against the features of the plugins, and ask if in doubt, feature lists can be incomplete.
+It is up to you! NoCheatPlus puts emphasis on configurability allowing you to choose when to kick, ban, log, do anything at all, also allowing to adjust a lot of parameters to tweak checks for your needs. Other plugins may put emphasis on simplicity of configuration. All plugins strive to work fine "out of the box" without need to adapt much. Of course every plugin might have strengths and weaknesses on different fields - we suggest you match your needs against the features of the plugins, and ask if in doubt, feature lists can be incomplete.
+
+**Can i use NoCheatPlus with another anti-hack plugin?**
+Two plugins usually are not better than one. Just activate the few checks of the other plugin that you assume to be useful, disable the rest. Best bet is to to deactivate either plugins fly checks, or all moving-related checks right away, because those will likely conflict.
 
 **Why do you have commands like /ncp ban, /ncp kick and other?**\\
 Those are auxiliary commands used for NoCheatPlus actions, you can execute them by hand as well.
 
+**Is banning based on check alerts encouraged?**
+We don't encourage banning in general, because checks can have false positives and nowadays cheat clients adapt pretty well to the boundaries set by NoCheatPlus, so the "good ones" won't even create many violations. It does depend on the individual check, how it is affected by latency or lag or randomness, though. With the right choices, temp-banning could make sense for combinations of checks+alert-levels, if they are not too much influenced by random events or lag or latency.
+
 **Where is the "donate" button?**\\
 It has been removed for the time being. We might re-add it once we are in need of donations.
-    
+
+**More: Known Issues...**
+Also have a look at the [[known-issues.creole|Known Issues Page]].

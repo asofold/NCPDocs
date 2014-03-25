@@ -14,16 +14,19 @@ We are currently working on a proper fix for this problem so keep an eye on the 
 
 Additional informations:
 * The higher the latency (server and client) the worse is the hit detection
-* Some players fake those informations on your server and try to make you lower your "Fight" security so always try to reproduce it by yourself
-* The checks "Fight_Reach" and "Fight_Direction" seem to make the biggest trouble
-* If you encounter problems with the Fight_Direction check then set "strict" to false in your configuration file
-* Turning down the "penalty" value for Fight_Direction and Fight_Reach check could help also
+* Some players fake those informations on your server and try to make you lower your "Fight" security so always try to reproduce it by yourself.
+* The checks "fight.reach" and "fight.direction" seem to make the most trouble.
+* If you encounter problems with the fight.direction check then set "strict" to false in your configuration file.
+* Turning down the "penalty" value for fight.direction and fight.reach check could help also.
 
 ===Moving/Passable===
-* If you're stuck in a block, you can only move away from its center, if your feet are inside of a block (not the head) you have to destroy the block to get out. Since build 161 you can still move if your head is free.
-* If a certain block type poses problems, be it a bug or just client mods or server mods or plugins "optimizing" things, you can add the block id to the compatibility.blocks.ignorepassable list, block ids and the Bukkit-related material names should be possible.
+* If a certain block type poses problems, be it a bug or just client mods or server mods or plugins "optimizing" things, you can tweak it by configuration: [[https://github.com/asofold/NCPDocs/blob/master/wiki/development/dev-pinboard.creole#compatibility-section|Compatibility settings]]
 ===Moving/SurvivalFly===
-Velocity handling is problematic, both for flying plugins also for super jumps etc.
+* Velocity handling might conflict with some plugins that provide skills like "super jump".
+* Fly-settings of server and plugins. We recommend to set allow-flight to true rather, and let NCP handling the fly checks, otherwise there can be conflicts leading to new exploits or just trouble.
+** server.properties
+** Multi-World plugins (e.g. MultiVerse): These might have per-world settings for allow-flight.
+** Other anti-hack plugins: Two fly checks would usually conflict, due to differing set-back policies, also due to differing false-positives. Disable all but one, we suggest you enable the one in NCP and disable the others.
 
 ==Compatibility issues==
 Issues that arise from using other client mods, server mods, plugins.
@@ -44,7 +47,7 @@ These provide problems to make compatible, though it is not impossible technical
 * NoCheatPlus will most likely block FakePlayers because of the bukkit superperms not supporting any "offline players". To make them compatible with NoCheatPlus you need to set "FakeJoin" to true so FakePlayers send fake login events to the server (might cause other issues).
 * Placing blocks without any attachment on the ground such as cables or similar will trigger the "AgainstAir" check of NoCheatPlus. To workaround this issue give your default users group the "nocheatplus.checks.blockplace.against.air" permission.
 * Jet packs and other "fly" tools are most likely incompatible with the SurvivalFly check.
-===Spout andCompatNoCheatPlus===
+===Spout and CompatNoCheatPlus===
 CompatNoCheatPlus and Spout seem to have issues, however I am not sure if they were due to unlucky versions mixed (to be tested/updated). You need to disable the Player-class hook in CompatNoCheatPlus for sure! Otherwise NoCheatPlus will get unusable on your spout server.
 ===Passable check===
 The SpoutCraft client seems to allow moving into the corners of fence-arrangements, which is not possible in vanilla. Ladders can be added to the ignorepassable list in the config of NCP.
