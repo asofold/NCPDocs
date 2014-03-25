@@ -25,7 +25,7 @@ Additional informations:
 * Velocity handling might conflict with some plugins that provide skills like "super jump".
 * Fly-settings of server and plugins: We recommend to set allow-flight to true rather, and let NCP handling the fly checks, otherwise there can be conflicts leading to new exploits or just trouble.
 ** server.properties
-** Multi-World plugins (e.g. MultiVerse): These might have per-world settings for allow-flight.
+** Multi-World plugins (e.g. MultiVerse): These might have per-world settings for allow-flight, or other fly-related settings, which might override the servers allow-flight setting.
 ** Other anti-hack plugins: Two fly checks would usually conflict, due to differing set-back policies, also due to differing false-positives. Disable all but one, we suggest you enable the one in NCP and disable the others.
 
 ==Compatibility issues==
