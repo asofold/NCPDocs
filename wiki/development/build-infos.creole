@@ -37,9 +37,13 @@ Big topics, short- to medium-term.
 Topics that are in focus right now, disregarding fixing bugs.
 * //NCPDocs overhaul (does not concern the plugin).//
 * //morepackets checks: new method of accounting to deal with delay.//
+* Fight checks refinement (3.10.11)
+** Direction + Reach: implement refined methods.
+** Speed (and maybe other frequency-related checks): New skipping mechanisms (e.g. probability). 
+** (Bug fixes.)
 * Milestone Release (3.10.10), might be beta.
 ** ETA (upload): 2014/03/27
-** Fight checks: new methods to deal with latency.
+** Fight checks: new methods to deal with latency ~ basic internals.
 ** CB for MC 1.7.5 native support.
 ** Bug fixes.
 ----
@@ -53,6 +57,7 @@ Topics that are in focus right now, disregarding fixing bugs.
 * Internals
 ** Maintain a trace of past locations for players. Aiming at fight-checks.
 ===3.10.9-RC-sMD5NET-b673(**release**)===
+* Release on BukkitDev.
 ===3.10.9-SNAPSHOT-sMD5NET-b672(cumulative)===
 * Hot topic
 ** Dropped compatibility with CB before 1.4.5-R1.0!
