@@ -34,22 +34,33 @@ Big topics, short- to medium-term.
 * New cancelling mechanisms for fight.speed (probability based / minimum frequency).
 * Method for fight.reach and other to account for more latency for moving players.
 ====Scheduled (fixed)====
-Topics that are in focus right now, disregarding fixing bugs.
+Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * //NCPDocs overhaul (does not concern the plugin).//
 * //morepackets checks: new method of accounting to deal with delay.//
-* Fight checks refinement (3.10.11)
+* Fight checks refinement
 ** Direction + Reach: implement refined methods.
 ** Speed (and maybe other frequency-related checks): New skipping mechanisms (e.g. probability). 
 ** (Bug fixes.)
-* Milestone Release (3.10.10), might be beta.
-** ETA (upload): 2014/03/27
+* Milestone Release, might be beta.
+** ETA (upload): POSTPONED (some preparatory implementations are in place)
 ** Fight checks: new methods to deal with latency ~ basic internals.
-** CB for MC 1.7.5 native support.
-** Bug fixes.
+* Bugfix and compatibility release 
+** "Full" UUID compatibility.
+* Bugfix and compatibility release (3.10.10).
+** CB for MC 1.7.5 and 1.7.8 native support.
 ----
-===3.10.10-SNAPSHOT-sMD5NET-b676(cumulative)===
+===3.10.10-SNAPSHOT-sMD5NET-b680(cumulative)===
 * New
-** Dedicated MC 1.7.5 Support (not much tested)
+** Dedicated MC 1.7.8 Support
+** The parameter [uuid] can now be used in the strings section of the configuration.
+* Fixes/Internals
+** Blockplace.fastplace: The violation level will increase a thousand times faster now.
+** Review of command protection features.
+** Warning messages for MCAccess have been reviewed.
+** Added more safety guards.
+===3.10.10-SNAPSHOT-sMD5NET-b676("mostly stable", cumulative)===
+* New
+** Dedicated MC 1.7.5 Support
 ** fight.reach and fight.direction have been altered.\\Work in progress: In future they will allow hits to register for situations with a lot of latency. Currently only the latest location and those that arrived in the same tick are counted in, also the checking logics is the same as before, for the sake of finding bugs without altering too much at once.
 * Fixes
 ** NoFall: Ignore players in vehicles when they take fall-damage. Aims at issues with horses.
