@@ -40,19 +40,22 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Fight checks refinement
 ** Direction + Reach: implement refined methods.
 ** Speed (and maybe other frequency-related checks): New skipping mechanisms (e.g. probability). 
-** (Bug fixes.)
 * Milestone Release, might be beta.
 ** ETA (upload): POSTPONED (some preparatory implementations are in place)
-** Fight checks: new methods to deal with latency ~ basic internals.
-* Bugfix and compatibility release 
+** Fight checks: new methods to deal with latency ~ basic internals for testing the new methods.
+* Logging
+** Fix custom prefixes not working.
+** Option to log all commands that are executed.
+* Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
-* Bugfix and compatibility release (3.10.10).
-** CB for MC 1.7.5 and 1.7.8 native support.
 ----
-===3.10.10-SNAPSHOT-sMD5NET-b680(cumulative)===
+===3.10.10-BETA-sMD5NET-b686(**beta release**)===
+* Planned beta release.
+===3.10.10-SNAPSHOT-sMD5NET-b685(cumulative)===
 * New
-** Dedicated MC 1.7.8 Support
+** Dedicated MC 1.7.8 / 1.7.9 Support
 ** The parameter [uuid] can now be used in the strings section of the configuration.
+** Experimental yaw+pitch correction.
 * Fixes/Internals
 ** Blockplace.fastplace: The violation level will increase a thousand times faster now.
 ** Review of command protection features.
