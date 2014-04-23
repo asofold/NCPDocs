@@ -49,6 +49,10 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
+===3.10.11-SNAPSHOT-sMD5NET-b688(cumulative)===
+* Internals
+** Treat respawn mostly like join. Both the hover and enforcelocation features could now kick in. [Unresolved: Some worlds have the spawn location set underground, but spawn the players above - currently this is conflicting, you should use a simple plugin to set the world spawn manually in such a case.]
+** Apply yaw/pitch correction directly in fight-handling.
 ===3.10.10-BETA-sMD5NET-b686(**beta release**)===
 * Planned beta release.
 ===3.10.10-SNAPSHOT-sMD5NET-b685(cumulative)===
