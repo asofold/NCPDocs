@@ -49,8 +49,20 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
+===3.10.12-SNAPSHOT-sMD5NET-b698(cumulative)===
+* New
+** Allow disabling chat.text violation level reset. This might be subject to further changes in the near future.
+* Fixes
+** Fix instantbow bypass.
+** Fix raytracing safeguard not being initialized correctly for some cases.
+* Config changes
+** Slightly increase default delay setting for fastbreak.
+* Removed
+** Direction correction feature.
+* Internals
+** More safeguards against accidental misuse of temporary Location objects.
 ===3.10.11-BETA-sMD5NET-b690(**planned release**)===
-* Planned beta release.
+* Beta release.
 ===3.10.11-SNAPSHOT-sMD5NET-b689(cumulative)===
 * Fixes
 ** Fix moving events while in vehicles. 
