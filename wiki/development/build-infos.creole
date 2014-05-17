@@ -61,7 +61,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 ** Direction correction feature.
 * Internals
 ** More safeguards against accidental misuse of temporary Location objects.
-===3.10.11-BETA-sMD5NET-b690(**planned release**)===
+===3.10.11-BETA-sMD5NET-b690(**beta release**)===
 * Beta release.
 ===3.10.11-SNAPSHOT-sMD5NET-b689(cumulative)===
 * Fixes
@@ -69,7 +69,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Internals
 ** Treat respawn mostly like join. Both the hover and enforcelocation features could now kick in. [Unresolved: Some worlds have the spawn location set underground, but spawn the players above - currently this is conflicting, you should use a simple plugin to set the world spawn manually in such a case.]
 ** Apply yaw/pitch correction directly in fight-handling. [Likely inoperable, might get removed, simply.]
-===3.10.10-BETA-sMD5NET-b686(**beta release**)===
+===3.10.10-BETA-sMD5NET-b686(--beta release--)===
 * //DEFICIENT: Issues with vehicles.//
 * --Beta release.--
 ===3.10.10-SNAPSHOT-sMD5NET-b685(cumulative)===
@@ -92,6 +92,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 ** NoFall: Potential fix for issues with players that are allowed to fly or in creative mode on logout.
 * Internals
 ** Maintain a trace of past locations for players. Aiming at fight-checks.
+----
 ===3.10.9-RC-sMD5NET-b673(**release**)===
 * Release on BukkitDev.
 ===3.10.9-SNAPSHOT-sMD5NET-b672(cumulative)===
