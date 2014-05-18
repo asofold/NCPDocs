@@ -49,7 +49,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
-===3.10.12-RC-sMD5NET-b691(**planned release**)===
+===3.10.12-RC-sMD5NET-b700(**planned release**)===
 * Planned release.
 ===3.10.12-SNAPSHOT-sMD5NET-b699(cumulative)===
 * New
