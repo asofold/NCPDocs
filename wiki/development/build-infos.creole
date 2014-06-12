@@ -49,8 +49,14 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
+===3.10.13-SNAPSHOT-sMD5NET-b703(cumulative)===
+* New
+** Prevent dead players from doing some things, e.g. interacting, eating. Not all inclusive, yet.
+** (Old:) Add back a compatibility tweak for instant breaking of blocks, used by other plugins.
+* Fixes
+** Prevent bypassing inventory.instantbow with invalidating interaction timing.
 ===3.10.12-RC-sMD5NET-b700(**planned release**)===
-* Planned release.
+* Release on BukkitDev.
 ===3.10.12-SNAPSHOT-sMD5NET-b699(cumulative)===
 * New
 ** Allow disabling chat.text violation level reset. This might be subject to further changes in the near future.
