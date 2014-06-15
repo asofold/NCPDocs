@@ -49,12 +49,16 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
-===3.10.13-SNAPSHOT-sMD5NET-b703(cumulative)===
+===3.10.13-SNAPSHOT-sMD5NET-b704(cumulative)===
 * New
 ** Prevent dead players from doing some things, e.g. interacting, eating. Not all inclusive, yet.
 ** (Old:) Add back a compatibility tweak for instant breaking of blocks, used by other plugins.
 * Fixes
 ** Prevent bypassing inventory.instantbow with invalidating interaction timing.
+** Fix a test failure for building the plugin. 
+* Internals
+** Use the vanilla ban command for "ncp ban", warn on using uuids.
+** Concentrate block-id use to few places.
 ===3.10.12-RC-sMD5NET-b700(**planned release**)===
 * Release on BukkitDev.
 ===3.10.12-SNAPSHOT-sMD5NET-b699(cumulative)===
