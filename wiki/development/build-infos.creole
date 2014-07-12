@@ -49,6 +49,14 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
+===3.10.13-SNAPSHOT-sMD5NET-b713(cumulative)===
+* New
+** Experimental(incomplete): ProtocolLib hook against "magnet"/"repell".
+===3.10.13-SNAPSHOT-sMD5NET-b712(cumulative)===
+* New
+** CraftBukkit for Minecraft 1.7.10 support.
+* Fixes
+** Do make use of child permissions of nocheatplus.checks.blockplace.against.  
 ===3.10.13-SNAPSHOT-sMD5NET-b704(cumulative)===
 * New
 ** Prevent dead players from doing some things, e.g. interacting, eating. Not all inclusive, yet.
