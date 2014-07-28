@@ -49,18 +49,30 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
-===3.10.13-SNAPSHOT-sMD5NET-b715(cumulative)===
-* New
-** Experimental(incomplete): ProtocolLib hook against "magnet"/"repell".
+===3.11.0-SNAPSHOT-sMD5NET-b732(cumulative)===
+* Hot
+** CraftBukkit for Minecraft 1.7.10 support.
+** Packet level checks, currently depending on ProtocolLib:
+*** Flying packet spam prevention (magnet/repell, healing).
+*** Sound distance (some sounds can reveal players whereabouts).
+* Other news or important changes.
+** The moving.morepackets check has been rewritten (vehicles are left untouched for the moment).
+** The speeding permission (survivalfly) now affects all horizontal speeds, including swimming and web.
+** The "inspect" command now includes the game mode of the player.
+** Add or start adding "log" and "reset" commands, stating some statistics for debugging purposes, e.g. silent cancelling.
+** Renamed tempkick to denylogin and unkick to allowlogin (aliases should make it compatible).
+** The most "dangerous" auxiliary (action-) commands can only be run from the console from now on.
 * Fixes
 ** Fix kicking behavior on "illegal moves".
 ** Abort ray-tracing if there is no advance.
 ** Internal position resetting on moving set-backs.
-===3.10.13-SNAPSHOT-sMD5NET-b712(cumulative)===
-* New
-** CraftBukkit for Minecraft 1.7.10 support.
-* Fixes
-** Do make use of child permissions of nocheatplus.checks.blockplace.against.  
+** Do make use of child permissions of nocheatplus.checks.blockplace.against.
+** MILK_BUCKET with fastconsume.
+* Internals
+** Make ConfigManager.getConfig(...) available from all threads (copy on write, pitfall: altering the config during runtime is problematic now).
+** New generic registry for general purpose instances, providing "Counters" for counting things, displayed with the "ncp log counters" command.
+** Minor cleanups, some code, unused API, commands, renames.
+
 ===3.10.13-SNAPSHOT-sMD5NET-b704(cumulative)===
 * New
 ** Prevent dead players from doing some things, e.g. interacting, eating. Not all inclusive, yet.
