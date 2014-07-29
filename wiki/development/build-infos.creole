@@ -55,6 +55,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 ** Packet level checks, currently depending on ProtocolLib:
 *** Flying packet spam prevention (magnet/repell, healing).
 *** Sound distance (some sounds can reveal players whereabouts).
+** "ncp top" command to search violation history for top violations.
 * Other news or important changes.
 ** The moving.morepackets check has been rewritten (vehicles are left untouched for the moment).
 ** The speeding permission (survivalfly) now affects all horizontal speeds, including swimming and web.
