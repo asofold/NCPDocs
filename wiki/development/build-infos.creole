@@ -49,7 +49,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
-===3.11.0-SNAPSHOT-sMD5NET-b737(cumulative)===
+===3.11.0-SNAPSHOT-sMD5NET-b738(cumulative)===
 * Hot
 ** CraftBukkit for Minecraft 1.7.10 support.
 ** Packet level checks, currently depending on ProtocolLib:
@@ -64,12 +64,13 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 ** Renamed tempkick to denylogin, unkick to allowlogin, and kicklist to denylist (aliases should make it compatible).
 ** The most "dangerous" auxiliary (action-) commands can only be run from the console from now on.
 * Fixes
+** MILK_BUCKET with fastconsume.
+** Do make use of child permissions of nocheatplus.checks.blockplace.against.
+** Prevent combined.bedleave kicking, if you reload NCP with a plugin manager.
 ** Fix kicking behavior on "illegal moves".
 ** Abort ray-tracing if there is no advance.
 ** Internal position resetting on moving set-backs.
-** Do make use of child permissions of nocheatplus.checks.blockplace.against.
 ** Ensure ActionFrequency resets with time running backwards. Affects many checks (relevance: rare to never for most servers).
-** MILK_BUCKET with fastconsume.
 * Internals
 ** Make ConfigManager.getConfig(...) available from all threads (copy on write, pitfall: altering the config during runtime is problematic now).
 ** New generic registry for general purpose instances, providing "Counters" for counting things, displayed with the "ncp log counters" command.
