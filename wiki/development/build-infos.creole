@@ -49,7 +49,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
-===3.11.0-SNAPSHOT-sMD5NET-b732(cumulative)===
+===3.11.0-SNAPSHOT-sMD5NET-b736(cumulative)===
 * Hot
 ** CraftBukkit for Minecraft 1.7.10 support.
 ** Packet level checks, currently depending on ProtocolLib:
@@ -61,18 +61,19 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 ** The speeding permission (survivalfly) now affects all horizontal speeds, including swimming and web.
 ** The "inspect" command now includes the game mode of the player.
 ** Add or start adding "log" and "reset" commands, stating some statistics for debugging purposes, e.g. silent cancelling.
-** Renamed tempkick to denylogin and unkick to allowlogin (aliases should make it compatible).
+** Renamed tempkick to denylogin, unkick to allowlogin, and kicklist to denylist (aliases should make it compatible).
 ** The most "dangerous" auxiliary (action-) commands can only be run from the console from now on.
 * Fixes
 ** Fix kicking behavior on "illegal moves".
 ** Abort ray-tracing if there is no advance.
 ** Internal position resetting on moving set-backs.
 ** Do make use of child permissions of nocheatplus.checks.blockplace.against.
+** Ensure ActionFrequency resets with time running backwards. Affects many checks (relevance: rare to never for most servers).
 ** MILK_BUCKET with fastconsume.
 * Internals
 ** Make ConfigManager.getConfig(...) available from all threads (copy on write, pitfall: altering the config during runtime is problematic now).
 ** New generic registry for general purpose instances, providing "Counters" for counting things, displayed with the "ncp log counters" command.
-** Minor cleanups, some code, unused API, commands, renames.
+** Minor cleanups (unused API, commands, renames, indentation/random).
 
 ===3.10.13-SNAPSHOT-sMD5NET-b704(cumulative)===
 * New
