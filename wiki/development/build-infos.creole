@@ -49,7 +49,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
-===3.11.0-SNAPSHOT-sMD5NET-b736(cumulative)===
+===3.11.0-SNAPSHOT-sMD5NET-b737(cumulative)===
 * Hot
 ** CraftBukkit for Minecraft 1.7.10 support.
 ** Packet level checks, currently depending on ProtocolLib:
