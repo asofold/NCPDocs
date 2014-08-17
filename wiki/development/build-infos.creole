@@ -49,6 +49,17 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
+===3.11.1-SNAPSHOT-sMD5NET-b741(cumulative)===
+* Changes
+** Passable raytracing: Removed the vcliponly option, set blockchangeonly to false by default, extend "early exit" check.
+** "ncp inspect": Added op status to message.
+* Fixes
+** Raytracing/Passable: Prevent moving through diagonally closing blocks.
+** Only log certain debug messages if logging.debug is set.
+* Internals
+** Passable raytracing: Added unit tests.
+===3.11.0-RC-sMD5NET-b739===
+* **Release on BukkitDev.**
 ===3.11.0-SNAPSHOT-sMD5NET-b738(cumulative)===
 * Hot
 ** CraftBukkit for Minecraft 1.7.10 support.
@@ -75,7 +86,6 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 ** Make ConfigManager.getConfig(...) available from all threads (copy on write, pitfall: altering the config during runtime is problematic now).
 ** New generic registry for general purpose instances, providing "Counters" for counting things, displayed with the "ncp log counters" command.
 ** Minor cleanups (unused API, commands, renames, indentation/random).
-
 ===3.10.13-SNAPSHOT-sMD5NET-b704(cumulative)===
 * New
 ** Prevent dead players from doing some things, e.g. interacting, eating. Not all inclusive, yet.
