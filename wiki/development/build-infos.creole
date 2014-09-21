@@ -49,14 +49,16 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
-===3.11.1-SNAPSHOT-sMD5NET-b741(cumulative)===
+===3.11.1-SNAPSHOT-sMD5NET-b743(cumulative)===
 * Changes
 ** Passable raytracing: Removed the vcliponly option, set blockchangeonly to false by default, extend "early exit" check.
 ** "ncp inspect": Added op status to message.
 * Fixes
 ** Raytracing/Passable: Prevent moving through diagonally closing blocks.
+** Fix a NullPointerException with command protection.
 ** Only log certain debug messages if logging.debug is set.
 * Internals
+** Refactor parts of velocity handling to prepare for per-axis velocity.
 ** Passable raytracing: Added unit tests.
 ===3.11.0-RC-sMD5NET-b739===
 * **Release on BukkitDev.**
