@@ -49,7 +49,12 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
-===3.11.1-SNAPSHOT-sMD5NET-b743(cumulative)===
+===3.11.2-SNAPSHOT-sMD5NET-b744(cumulative)===
+* Fixes
+** FastBreak: Update timings for obsidian.
+===3.11.1-RC-sMD5NET-b743(**release**)===
+* **Release on BukkitDev.**
+===3.11.1-SNAPSHOT-sMD5NET-b742(cumulative)===
 * Changes
 ** Passable raytracing: Removed the vcliponly option, set blockchangeonly to false by default, extend "early exit" check.
 ** "ncp inspect": Added op status to message.
@@ -60,7 +65,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Internals
 ** Refactor parts of velocity handling to prepare for per-axis velocity.
 ** Passable raytracing: Added unit tests.
-===3.11.0-RC-sMD5NET-b739===
+===3.11.0-RC-sMD5NET-b739(**release**)===
 * **Release on BukkitDev.**
 ===3.11.0-SNAPSHOT-sMD5NET-b738(cumulative)===
 * Hot
@@ -98,7 +103,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Internals
 ** Use the vanilla ban command for "ncp ban", warn on using uuids.
 ** Concentrate block-id use to few places.
-===3.10.12-RC-sMD5NET-b700(**planned release**)===
+===3.10.12-RC-sMD5NET-b700(**release**)===
 * Release on BukkitDev.
 ===3.10.12-SNAPSHOT-sMD5NET-b699(cumulative)===
 * New
