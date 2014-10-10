@@ -49,9 +49,12 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release (3.11.0)
 ** "Full" UUID compatibility.
 ----
-===3.11.2-SNAPSHOT-sMD5NET-b744(cumulative)===
+===3.11.2-SNAPSHOT-sMD5NET-b745(cumulative)===
 * Fixes
 ** FastBreak: Update timings for obsidian.
+** CreativeFly: Do not include velocity to determine the maximum height.
+* Internals
+** Preparations (frozen) for changing vertical velocity handling.
 ===3.11.1-RC-sMD5NET-b743(**release**)===
 * **Release on BukkitDev.**
 ===3.11.1-SNAPSHOT-sMD5NET-b742(cumulative)===
