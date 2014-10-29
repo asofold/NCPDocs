@@ -50,7 +50,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release
 ** "Full" UUID compatibility.
 ----
-===3.11.2-SNAPSHOT-sMD5NET-b750(cumulative)===
+===3.11.2-SNAPSHOT-sMD5NET-b751(cumulative)===
 * New
 ** Experimental Glowstone (server mod) support. This will be much incomplete and not do more than the bukkitapionly-feature, but it might remove the warning at startup and also grow with time :p.
 ** Add block properties for MC 1.8 [probably not 100% correct, effects by slime blocks are not yet supported].
@@ -58,6 +58,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Fixes
 ** FastBreak: Update timings for obsidian.
 ** CreativeFly: Do not include velocity to determine the maximum height.
+** Passable: Make set-back more consistent.
 * Internals
 ** Log logouts if debug is set.
 ** Fix methods used in test-cases (manhattan).
