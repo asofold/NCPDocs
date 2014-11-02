@@ -50,7 +50,7 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 * Bugfix and compatibility release
 ** "Full" UUID compatibility.
 ----
-===3.11.2-SNAPSHOT-sMD5NET-b751(cumulative)===
+===3.11.2-SNAPSHOT-sMD5NET-b752(cumulative)===
 * New
 ** Experimental Glowstone (server mod) support. This will be much incomplete and not do more than the bukkitapionly-feature, but it might remove the warning at startup and also grow with time :p.
 ** Add block properties for MC 1.8 [probably not 100% correct, effects by slime blocks are not yet supported].
@@ -59,10 +59,12 @@ Topics that are in focus right now. We plan on a weekly release cycle, roughly.
 ** FastBreak: Update timings for obsidian.
 ** CreativeFly: Do not include velocity to determine the maximum height.
 ** Passable: Make set-back more consistent.
+** Packet checks: Actually allow enabling/disabling on a per-world basis.
+** Fix methods used in test-cases (manhattan).
 * Internals
 ** Log logouts if debug is set.
-** Fix methods used in test-cases (manhattan).
 ** Unify set-back updating for join and respawn.
+** Optimize TickTask.
 ** Preparations (frozen) for changing vertical velocity handling.
 ===3.11.1-RC-sMD5NET-b743(**release**)===
 * **Release on BukkitDev.**
