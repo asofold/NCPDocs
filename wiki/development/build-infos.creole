@@ -59,6 +59,9 @@ Topics that are in focus right now.
 * New
 ** Logging was reworked. File logging is now done asynchronously and always contains (almost) all console logging as well.
 ** Specify an existing directory to get log files named by date and sequence (e.g. create and use 'logs' in the plugin folder).
+* Internals
+** Configuration is now loaded in onLoad.
+** Dedicated module for CB 1.7.10 (MC 1.7.10).
 ===3.11.2-SNAPSHOT-sMD5NET-b754("mostly stable", cumulative)===
 * New
 ** Add block properties for MC 1.8 [effects by slime blocks are not yet supported].
@@ -79,7 +82,6 @@ Topics that are in focus right now.
 ** Fix optimization of log actions.
 ** Fix methods used in test-cases (manhattan).
 * Internals
-** Dedicated module for CB 1.7.10 (MC 1.7.10).
 ** Various: Code formatting, optimizations (e.g. TickTask), simplifications.
 ** Preparations (frozen) for changing vertical velocity handling.
 ===3.11.1-RC-sMD5NET-b743(**release**)===
