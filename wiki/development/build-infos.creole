@@ -52,12 +52,12 @@ Topics that are in focus right now.
 ** Rolling files, split by size or timing. Backup option (move).
 
 ----
-===3.11.2-SNAPSHOT-sMD5NET-b760(cumulative)===
+===3.11.2-SNAPSHOT-sMD5NET-b761(cumulative)===
 * New
 ** Logging has been reworked. 
 *** File logging is now done asynchronously and always contains what NCP logs to console for initialization and shutdown. Absolute path names can be used now.
 *** Specify an existing directory to get log files named by date and sequence (e.g. create and use 'logs' in the plugin folder).
-*** Most logging for violations is not done directly within the checks anymore, but relayed to an asynchronous task (file). Ingame notifications are still sent directly from the primary thread.
+*** Most logging is now done asynchronously (file, console). Ingame notifications are still sent directly from the primary thread.
 *** Work in progress: Options to control features, balance prefixes, subject to feedback.
 * Internals
 ** Dedicated module for CB 1.7.10 (MC 1.7.10).
