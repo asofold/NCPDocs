@@ -25,7 +25,6 @@ Pretty hard targets, but too far off the schedule to give any ETA.
 * Velocity handling: Add concept to merge / invalidate queued entries better (flying plugins).
 * Velocity handling: Switch to 3d-entries with "exact" per-axis/direction counting.
 * Moving/morepackets: Further invalidate past intervals to be more precise. Maybe include latency estimates.
-
 ====Planned (soon-ish)====
 Big topics, short- to medium-term.
 * Moving/morepackets+survialfly: Attempt to prevent speeding better, probably relate packets and travel-distance.
@@ -46,25 +45,24 @@ Topics that are in focus right now.
 ** Add a config for the net checks for efficient access.
 ** Might integrate config or individual data into PlayerData and config/s into DataManager right away.
 * Logging
-** Log asynchronously (at least file logging, needs a log manager)
-** Allow console and ingame also to be asynchronous (experimental).
+** Allow console and ingame also to be asynchronous (detect if console works async? In-game remains problematic, consider relaying to a task).
 ** Allow to store past logs, e.g. with every restart of the plugin or even reload (!)..
 ** Might provide a command to directly log to a log target (use with actions or as admin for reference).
 ** Option to log all commands that are executed.
 ** Rolling files, split by size or timing. Backup option (move).
 
 ----
-===3.11.2-SNAPSHOT-sMD5NET-b759(cumulative)===
+===3.11.2-SNAPSHOT-sMD5NET-b760(cumulative)===
 * New
 ** Logging has been reworked. 
 *** File logging is now done asynchronously and always contains what NCP logs to console for initialization and shutdown. Absolute path names can be used now.
 *** Specify an existing directory to get log files named by date and sequence (e.g. create and use 'logs' in the plugin folder).
-*** Most logging for violations is not done directly within the checks anymore, but relayed to an asynchronous task (file) or to the TickTask (primary thread, console). Ingame notifications are still sent directly from the primary thread.
+*** Most logging for violations is not done directly within the checks anymore, but relayed to an asynchronous task (file). Ingame notifications are still sent directly from the primary thread.
 *** Work in progress: Options to control features, balance prefixes, subject to feedback.
 * Internals
 ** Dedicated module for CB 1.7.10 (MC 1.7.10).
 ** Catch and log exceptions, if loading chunks fails.
-** Configuration is now loaded in onLoad.
+** Configuration is now loaded early in onLoad.
 ** Internal logging API has been changed.
 ** Optimizations, code formatting.
 ===3.11.2-SNAPSHOT-sMD5NET-b754("mostly stable", cumulative)===
