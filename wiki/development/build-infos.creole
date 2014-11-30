@@ -52,6 +52,15 @@ Topics that are in focus right now.
 ** Rolling files, split by size or timing. Backup option (move).
 
 ----
+===3.12.0-SNAPSHOT-sMD5NET-b764(cumulative)===
+* Hot
+** Basic native support for 1.8/Spigot.
+* New
+** Block codes for JourneyMap caves and rader (covers VoxelMap too).
+* Fixes
+** Fix NullPointerException with the command protection feature.
+* Internals
+** Preparations (fight:location-trace).
 ===3.11.2-SNAPSHOT-sMD5NET-b762(cumulative)===
 * New
 ** Logging has been reworked. 
