@@ -61,9 +61,10 @@ Topics that are in focus right now.
 *** Knockback issues.
 *** Jumping on slime blocks (no pistons).
 *** Fast flying mode (sprint-key ~ ctrl).
-*** Fence gates.
+*** Fence gates [confirmation for fix missing: b765].
 ** Might bring in long waiting points:
 *** Attribute support: speed
+*** Command to trace one player.
 ** Might postpone complex to mend issues:
 *** Slime block + pistons (means: pistons in general).
 
@@ -73,6 +74,7 @@ Topics that are in focus right now.
 ** Basic native support for 1.8/Spigot.
 * New
 ** Block codes for JourneyMap caves and rader (covers VoxelMap too).
+** Per player debug tracing (rudimentary, remove data to turn off).
 * Fixes
 ** Moving: Fix new kinds of fence gates (and fences).
 ** Fix NullPointerException with the command protection feature.
