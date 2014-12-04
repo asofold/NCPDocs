@@ -65,15 +65,16 @@ Topics that are in focus right now.
 ** Might bring in long waiting points:
 *** Attribute support: speed
 ** Might postpone complex to mend issues:
-*** Slime block + pistons (means: pistons in general). 
+*** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b764(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b765(cumulative)===
 * Hot
 ** Basic native support for 1.8/Spigot.
 * New
 ** Block codes for JourneyMap caves and rader (covers VoxelMap too).
 * Fixes
+** Moving: Fix new kinds of fence gates (and fences).
 ** Fix NullPointerException with the command protection feature.
 * Internals
 ** Preparations (fight:location-trace).
