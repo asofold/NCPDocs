@@ -45,39 +45,39 @@ Topics that are in focus right now.
 ** Add a config for the net checks for efficient access.
 ** Might integrate config or individual data into PlayerData and config/s into DataManager right away.
 * Logging (some might get postponed)
+** Add TestNCP core functionality to NCP (log all violations to trace file + ingame, if configured so).
 ** Allow ingame also to be asynchronous (In-game remains problematic, still consider relaying to a primary thread task).
 ** Allow to store past logs, e.g. with every restart of the plugin or even reload (!)..
 ** Might provide a command to directly log to a log target (use with actions or as admin for reference).
 ** Option to log all commands that are executed.
 ** Rolling files, split by size or timing. Backup option (move).
 ** On the fly debug logging.
-*** Trace a player with commands (start/stop).
 *** Start tracing automatically (e.g. a selection of criteria based on what we can't detect directly).
 *** Post-violation trace: Write debug information when a violation happens (e.g. recorded moves).
 *** Many more possibilities...
 ===Milestones now in focus===
 * Release for MC 1.8 [3.12.0 ... likely split into two or three]
-** Resolve most important issues (some unconfirmed or not yet tested by us):
+** Resolve most important issues:
 *** Knockback issues.
 *** Jumping on slime blocks (no pistons).
 *** Fast flying mode (sprint-key ~ ctrl).
-*** Fence gates [confirmation for fix missing: b765].
 ** Might bring in long waiting points:
-*** Attribute support: speed
-*** Command to trace one player.
+*** Attribute support: speed.
 ** Might postpone complex to mend issues:
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b765(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b768(cumulative)===
 * Hot
 ** Basic native support for 1.8/Spigot.
 * New
 ** Block codes for JourneyMap caves and rader (covers VoxelMap too).
 ** Per player debug tracing (rudimentary, remove data to turn off).
 * Fixes
+** SurvivalFly: Add depth strider support.
 ** Moving: Fix new kinds of fence gates (and fences).
 ** Fix NullPointerException with the command protection feature.
+** Logging: Interpret log file as a folder, if no extension is given.
 * Internals
 ** Preparations (fight:location-trace).
 ===3.11.2-SNAPSHOT-sMD5NET-b762(cumulative)===
