@@ -60,22 +60,19 @@ Topics that are in focus right now.
 ** Resolve most important issues:
 *** Knockback issues.
 *** Jumping on slime blocks (no pistons).
-*** Fast flying mode (sprint-key ~ ctrl).
 ** Might bring in long waiting points:
 *** Attribute support: speed.
 ** Might postpone complex to mend issues:
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b769(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b770(cumulative)===
 * Hot
-** Basic native support for 1.8/Spigot.
+** Basic native support for 1.8/Spigot. (Fixed fences/gates, depth strider, maybe fixed flying)
 * New
 ** Block codes for JourneyMap caves and rader (covers VoxelMap too).
 ** Per player debug tracing (rudimentary, remove data to turn off).
 * Fixes
-** SurvivalFly: Add depth strider support.
-** Moving: Fix new kinds of fence gates (and fences).
 ** Fix NullPointerException with the command protection feature.
 ** Logging: Interpret log file as a folder, if no extension is given.
 * Internals
