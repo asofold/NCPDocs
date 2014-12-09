@@ -57,17 +57,15 @@ Topics that are in focus right now.
 *** Many more possibilities...
 ===Milestones now in focus===
 * Release for MC 1.8 [3.12.0 ... likely split into two or three]
-** Resolve most important issues:
-*** Jumping on slime blocks (no pistons).
 ** Should bring in long waiting points:
 *** Attribute support: speed.
 ** Might postpone complex to mend issues:
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b773(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b774(cumulative)===
 * Hot
-** Basic native support for 1.8/Spigot. (Fixed fences/gates, depth strider. Maybe fixed flying, melons, pvp-knock-back.)
+** Basic native support for 1.8/Spigot. (Fixed fences/gates, depth strider. Maybe fixed flying, melons, pvp-knock-back, jumping on slime blocks.)
 * New
 ** Block codes for JourneyMap caves and rader (covers VoxelMap too).
 ** Per player debug tracing (rudimentary, remove data to turn off).
@@ -90,7 +88,7 @@ Topics that are in focus right now.
 ** Catch and log exceptions, if loading chunks fails.
 ** Configuration is now loaded early in onLoad.
 ** Internal logging API has been changed.
-** Optimizations, code formatting.
+** Optimizations, refactoring, code formatting.
 ===3.11.2-SNAPSHOT-sMD5NET-b754("mostly stable", cumulative)===
 * New
 ** Add block properties for MC 1.8 [effects by slime blocks are not yet supported].
