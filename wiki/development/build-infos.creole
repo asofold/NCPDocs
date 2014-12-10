@@ -63,9 +63,9 @@ Topics that are in focus right now.
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b774(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b775(cumulative)===
 * Hot
-** Basic native support for 1.8/Spigot. (Fixed fences/gates, depth strider. Maybe fixed flying, melons, pvp-knock-back, jumping on slime blocks.)
+** Basic native support for 1.8/Spigot. (Attempted to fix: fences/gates, depth strider, flying, melons, pvp-knock-back, jumping on slime blocks.)
 * New
 ** Block codes for JourneyMap caves and rader (covers VoxelMap too).
 ** Per player debug tracing (rudimentary, remove data to turn off).
