@@ -63,14 +63,16 @@ Topics that are in focus right now.
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b780(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b781(cumulative)===
 * New
 ** Passable: Monitor commands and teleportation by commands (correct or cancel, if untracked). Might need configuration for commands.
 * Fixes/Changes
 ** Re-adjust block break timings for melons and pumpkins.
 ** SurvivalFly: Skip some checking if players are not moving any distance.
+** SurvivalFly: Fix low jump detection and a bunny weakness.
 ** Command protection: Make trailing spaces work, catch "x:y" commands even with simple configuration ("y").
 ** Extend the "ncp version" command to show some of the available features.
+** Log file: allow "" and "none" to not use any, prevent failure with invalid naming.
 ===3.12.0-SNAPSHOT-sMD5NET-b776("mostly stable", cumulative)===
 * Hot
 ** Basic native support for 1.8/Spigot. (Attempted to fix: fences/gates, depth strider, flying, melons, pvp-knock-back, jumping on slime blocks.)
