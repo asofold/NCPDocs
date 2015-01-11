@@ -63,7 +63,7 @@ Topics that are in focus right now.
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b784(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b785(cumulative)===
 * New
 ** Passable: Monitor commands and teleportation by commands (correct or cancel, if untracked). Might need configuration for commands.
 ** FlyingFrequency (ProtocolLib) Cancel redundant packets, if many are sent.
@@ -73,6 +73,7 @@ Topics that are in focus right now.
 ** SurvivalFly: Fix low jump detection and a bunny weakness.
 ** Command protection: Make trailing spaces work, catch "x:y" commands even with simple configuration ("y").
 ** Spectator game mode: allow passing through blocks.
+** Enable/disable some features depending on the Minecraft version (knock-back-velocity, enforcing locations).
 ** Extend the "ncp version" command to show some of the available features.
 ** Log file: allow "" and "none" to not use any, prevent failure with invalid naming.
 **  Extend configuration for packet level checks, optimize.
