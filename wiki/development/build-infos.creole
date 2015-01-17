@@ -63,14 +63,14 @@ Topics that are in focus right now.
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b785(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b787(cumulative)===
 * New
 ** Passable: Monitor commands and teleportation by commands (correct or cancel, if untracked). Might need configuration for commands.
-** FlyingFrequency (ProtocolLib) Cancel redundant packets, if many are sent.
+** FlyingFrequency (ProtocolLib) Cancel redundant packets.
 * Fixes/Changes
 ** Re-adjust block break timings for melons and pumpkins.
 ** SurvivalFly: Skip some checking if players are not moving any distance.
-** SurvivalFly: Fix low jump detection and a bunny weakness.
+** SurvivalFly: Fix knockback, low jump detection, a bunny weakness.
 ** Command protection: Make trailing spaces work, catch "x:y" commands even with simple configuration ("y").
 ** Spectator game mode: allow passing through blocks.
 ** Enable/disable some features depending on the Minecraft version (knock-back-velocity, enforcing locations).
