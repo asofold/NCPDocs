@@ -63,9 +63,10 @@ Topics that are in focus right now.
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b787(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b788(cumulative)===
 * New
 ** Passable: Monitor commands and teleportation by commands (correct or cancel, if untracked). Might need configuration for commands.
+** Gutenberg: Prevent creating books with more than 50 pages.
 ** FlyingFrequency (ProtocolLib) Cancel redundant packets.
 * Fixes/Changes
 ** Re-adjust block break timings for melons and pumpkins.
