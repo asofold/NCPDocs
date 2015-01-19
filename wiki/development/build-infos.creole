@@ -57,13 +57,17 @@ Topics that are in focus right now.
 *** Many more possibilities...
 ===Milestones now in focus===
 * Release for MC 1.8 [3.12.0 ... likely split into two or three]
+** Planned:
+*** Basic repair of fight checks.
+*** Provide NCP over a maven repository.
+*** Various fixes.
 ** Should bring in long waiting points:
 *** Attribute support: speed.
 ** Might postpone complex to mend issues:
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b788(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b791(cumulative)===
 * New
 ** Passable: Monitor commands and teleportation by commands (correct or cancel, if untracked). Might need configuration for commands.
 ** Gutenberg: Prevent creating books with more than 50 pages.
@@ -72,12 +76,18 @@ Topics that are in focus right now.
 ** Re-adjust block break timings for melons and pumpkins.
 ** SurvivalFly: Skip some checking if players are not moving any distance.
 ** SurvivalFly: Fix knockback, low jump detection, a bunny weakness.
+** Fix breaking ore blocks with pickaxes.
+** Fix putting mob eggs on item frames.
 ** Command protection: Make trailing spaces work, catch "x:y" commands even with simple configuration ("y").
 ** Spectator game mode: allow passing through blocks.
 ** Enable/disable some features depending on the Minecraft version (knock-back-velocity, enforcing locations).
 ** Extend the "ncp version" command to show some of the available features.
 ** Log file: allow "" and "none" to not use any, prevent failure with invalid naming.
 **  Extend configuration for packet level checks, optimize.
+* Removed
+** Removed the knockback (fight) check.
+* Internals
+** Alter exemption-API and accessibility.
 ===3.12.0-SNAPSHOT-sMD5NET-b776("mostly stable", cumulative)===
 * Hot
 ** Basic native support for 1.8/Spigot. (Attempted to fix: fences/gates, depth strider, flying, melons, pvp-knock-back, jumping on slime blocks.)
