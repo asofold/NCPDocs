@@ -67,11 +67,29 @@ Topics that are in focus right now.
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b791(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b781(cumulative)===
+* New
+** [Net] Keepalivefrequency: Prevent spamming, improve Godmode.
+* Fixes/Changes
+** Ensure packet level checks can process asynchronous packets.
+** Fixes for Fight.Direction.
+** Fight.Godmode: use data from ProtocolLib hooks too.
+** Fix issue with logging on disabling the plugin.
+** Version detection fixes.
+** Creativefly uses per-game-mode settings now.
+** Alter debug logging output/config.
+* Internals
+** Removed some deprecated methods and interfaces (!).
+** Various: cleanup, refactor, simplify.
+===3.12.0-SNAPSHOT-sMD5NET-b793(cumulative)===
+* New
+** FlyingFrequency (ProtocolLib) Cancel redundant packets.
+* Fixes/Changes
+**  Extend configuration for packet level checks, optimize.
+===3.12.0-SNAPSHOT-sMD5NET-b791("mostly stable", cumulative)===
 * New
 ** Passable: Monitor commands and teleportation by commands (correct or cancel, if untracked). Might need configuration for commands.
 ** Gutenberg: Prevent creating books with more than 50 pages.
-** FlyingFrequency (ProtocolLib) Cancel redundant packets.
 * Fixes/Changes
 ** Re-adjust block break timings for melons and pumpkins.
 ** SurvivalFly: Skip some checking if players are not moving any distance.
