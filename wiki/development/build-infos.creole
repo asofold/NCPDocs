@@ -67,17 +67,20 @@ Topics that are in focus right now.
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b802(cumulative)===
+===3.12.0-SNAPSHOT-sMD5NET-b804(cumulative)===
 * New
 ** [Net] Keepalivefrequency: Prevent spamming, improve Godmode.
-* Fixes/Changes
+* Fixes
 ** Critical fix for testing for exemption.
 ** Ensure packet level checks can process asynchronous packets.
+** Reduce false positives with survivalfly and ray-tracing (passable).
+** Prevent abusing NoFall to accumulate velocity too easily.
 ** Fixes for Fight.Direction.
-** Fight.Godmode: use data from ProtocolLib hooks too.
 ** Fix issue with logging on disabling the plugin.
 ** Version detection fixes.
+* Other Changes
 ** Creativefly uses per-game-mode settings now.
+** Fight.Godmode: use data from ProtocolLib hooks too.
 ** Alter debug logging output/config.
 * Internals
 ** Removed some deprecated methods and interfaces (!).
