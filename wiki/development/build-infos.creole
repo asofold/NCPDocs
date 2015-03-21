@@ -56,7 +56,7 @@ Topics that are in focus right now.
 *** Post-violation trace: Write debug information when a violation happens (e.g. recorded moves).
 *** Many more possibilities...
 ===Milestones now in focus===
-* Release for MC 1.8 [3.12.0 ... likely split into two or three]
+* Release for MC 1.8 [3.12.x ... likely split into two or three]
 ** Planned:
 *** Basic repair of fight checks.
 *** Provide NCP over a maven repository.
