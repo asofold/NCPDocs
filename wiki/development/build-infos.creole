@@ -67,7 +67,8 @@ Topics that are in focus right now.
 *** Slime block + pistons (means: pistons in general).
 
 ----
-===3.12.0-SNAPSHOT-sMD5NET-b805(cumulative)===
+===3.12.0-BETA-sASO-b812(cumulative)===
+* Planned beta release on BukkitDev (not built on Jenkins!).
 * New
 ** MC 1.8.3 compatibility [BLIND].
 * Changes
