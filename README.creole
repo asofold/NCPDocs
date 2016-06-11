@@ -1,3 +1,11 @@
+=DEPRECATED=
+
+This repository is deprecated and out of date.
+
+The documentation is no hosted at:
+
+https://github.com/NoCheatPlus/Docs/wiki
+
 =NCPDocs=
 Welcome to the NCPDocs! This page will explain everything that you need to know about NoCheatPlus.
 
